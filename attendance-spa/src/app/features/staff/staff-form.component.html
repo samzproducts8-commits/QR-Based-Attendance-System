@@ -1,0 +1,99 @@
+<div class="page staff-form">
+  <div class="page__head">
+    <div>
+      <h1 class="page__title">{{ isEditMode ? 'Edit Staff' : 'Register Staff' }}</h1>
+      <p class="page__subtitle">
+        {{ isEditMode ? 'Update employee details.' : 'Add a new employee to the attendance system.' }}
+      </p>
+    </div>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" class="surface-card staff-form__card">
+    <section class="staff-form__section">
+      <h3 class="staff-form__section-title">Personal Information</h3>
+      <div class="staff-form__grid">
+        <mat-form-field appearance="outline">
+          <mat-label>Full Name</mat-label>
+          <input matInput formControlName="fullName" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Gender</mat-label>
+          <mat-select formControlName="gender">
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Date of Birth</mat-label>
+          <input matInput [matDatepicker]="dobPicker" formControlName="dateOfBirth" />
+          <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+          <mat-datepicker #dobPicker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Phone Number</mat-label>
+          <input matInput formControlName="phoneNumber" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Address (optional)</mat-label>
+          <input matInput formControlName="address" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Emergency Contact (optional)</mat-label>
+          <input matInput formControlName="emergencyContact" />
+        </mat-form-field>
+      </div>
+    </section>
+
+    <div class="staff-form__divider"></div>
+
+    <section class="staff-form__section">
+      <h3 class="staff-form__section-title">Employment</h3>
+      <div class="staff-form__grid">
+        <mat-form-field appearance="outline">
+          <mat-label>Department</mat-label>
+          <mat-select formControlName="departmentId">
+            <mat-option *ngFor="let d of departments" [value]="d.departmentId">{{ d.departmentName }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Job Title</mat-label>
+          <input matInput formControlName="jobTitle" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Employment Date</mat-label>
+          <input matInput [matDatepicker]="empPicker" formControlName="employmentDate" />
+          <mat-datepicker-toggle matSuffix [for]="empPicker"></mat-datepicker-toggle>
+          <mat-datepicker #empPicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </section>
+
+    <ng-container *ngIf="!isEditMode">
+      <div class="staff-form__divider"></div>
+      <section class="staff-form__section">
+        <h3 class="staff-form__section-title">Profile Photo</h3>
+        <app-photo-upload (fileSelected)="onPhotoSelected($event)"></app-photo-upload>
+      </section>
+    </ng-container>
+
+    <div class="staff-form__actions">
+      <button mat-flat-button color="primary" type="submit" [disabled]="submitting">
+        <mat-icon *ngIf="!submitting">save</mat-icon>
+        {{ submitting ? 'Saving…' : 'Save' }}
+      </button>
+    </div>
+  </form>
+</div>

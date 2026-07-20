@@ -1,0 +1,29 @@
+.staff-list {
+  &__panel {
+    padding: var(--sp-4) var(--sp-5) var(--sp-2);
+  }
+
+  &__toolbar {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    padding: var(--sp-2) 0 var(--sp-4);
+  }
+
+  &__search {
+    width: 340px;
+    max-width: 100%;
+
+    .mat-icon { color: var(--text-faint); margin-right: 4px; }
+  }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    padding: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .staff-list__search { width: 100%; }
+}

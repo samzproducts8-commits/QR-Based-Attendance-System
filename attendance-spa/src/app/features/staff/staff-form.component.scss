@@ -1,0 +1,43 @@
+.staff-form {
+  max-width: 860px;
+
+  &__card {
+    padding: var(--sp-8);
+  }
+
+  &__section-title {
+    margin: 0 0 var(--sp-5);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-strong);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px var(--sp-6);
+  }
+
+  &__divider {
+    height: 1px;
+    background: var(--border-subtle);
+    margin: var(--sp-6) 0;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--sp-3);
+    margin-top: var(--sp-8);
+
+    button .mat-icon { margin-right: 6px; font-size: 18px; width: 18px; height: 18px; }
+  }
+
+  /* Make every field span full column width */
+  mat-form-field { width: 100%; }
+}
+
+@media (max-width: 720px) {
+  .staff-form__grid { grid-template-columns: 1fr; }
+  .staff-form__card { padding: var(--sp-5); }
+}

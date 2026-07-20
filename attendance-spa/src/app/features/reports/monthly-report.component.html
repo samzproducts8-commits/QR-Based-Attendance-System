@@ -1,0 +1,35 @@
+<div class="monthly-report">
+  <div class="monthly-report__header">
+    <h2>Monthly Attendance Summary</h2>
+    <mat-form-field appearance="outline">
+      <mat-label>Year</mat-label>
+      <input matInput type="number" [(ngModel)]="year" (change)="load()" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Month</mat-label>
+      <input matInput type="number" min="1" max="12" [(ngModel)]="month" (change)="load()" />
+    </mat-form-field>
+    <button mat-stroked-button (click)="export('xlsx')" [disabled]="exporting">Export Excel</button>
+    <button mat-stroked-button (click)="export('pdf')" [disabled]="exporting">Export PDF</button>
+  </div>
+
+  <mat-progress-spinner *ngIf="loading" mode="indeterminate" diameter="32"></mat-progress-spinner>
+
+  <table mat-table [dataSource]="summary?.staffSummaries ?? []" class="monthly-report__table" *ngIf="!loading">
+    <ng-container matColumnDef="staff">
+      <th mat-header-cell *matHeaderCellDef>Staff</th>
+      <td mat-cell *matCellDef="let s">{{ s.staffName }} ({{ s.department }})</td>
+    </ng-container>
+    <ng-container matColumnDef="slots">
+      <th mat-header-cell *matHeaderCellDef>Per-Slot Counts</th>
+      <td mat-cell *matCellDef="let s">
+        <span *ngFor="let slot of s.slotSummaries" class="monthly-report__slot">
+          {{ slot.slotName }}: {{ slot.onTimeCount }} on-time / {{ slot.lateCount }} late / {{ slot.absentCount }} absent
+        </span>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['staff','slots']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['staff','slots'];"></tr>
+  </table>
+</div>

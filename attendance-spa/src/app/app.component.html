@@ -1,0 +1,51 @@
+<ng-container *ngIf="(showChrome$ | async); else bareOutlet">
+  <mat-sidenav-container class="app-shell">
+    <mat-sidenav mode="side" opened class="app-shell__sidenav">
+      <div class="app-shell__brand">
+        <span class="app-shell__brand-mark">
+          <mat-icon>qr_code_2</mat-icon>
+        </span>
+        <span class="app-shell__brand-text">QR Attendance</span>
+      </div>
+
+      <mat-nav-list class="app-shell__nav">
+        <a mat-list-item routerLink="/staff" routerLinkActive="is-active"
+           *ngIf="authService.hasAnyRole(['Admin','HR'])">
+          <mat-icon matListItemIcon>badge</mat-icon>
+          <span matListItemTitle>Staff</span>
+        </a>
+        <a mat-list-item routerLink="/slots" routerLinkActive="is-active"
+           *ngIf="authService.hasRole('Admin')">
+          <mat-icon matListItemIcon>schedule</mat-icon>
+          <span matListItemTitle>Attendance Slots</span>
+        </a>
+        <a mat-list-item routerLink="/reports/daily" routerLinkActive="is-active"
+           *ngIf="authService.hasAnyRole(['Admin','HR'])">
+          <mat-icon matListItemIcon>bar_chart</mat-icon>
+          <span matListItemTitle>Reports</span>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <mat-toolbar class="app-shell__toolbar">
+        <span class="app-shell__page-name">Dashboard</span>
+        <span class="app-shell__spacer"></span>
+        <div class="app-shell__user" *ngIf="(authService.currentUser$ | async) as user">
+          <span class="app-shell__avatar">{{ (user.username || '?').charAt(0).toUpperCase() }}</span>
+          <span class="app-shell__username">{{ user.username }}</span>
+        </div>
+        <button mat-stroked-button class="app-shell__logout" (click)="logout()">
+          <mat-icon>logout</mat-icon>
+          Logout
+        </button>
+      </mat-toolbar>
+
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>
+
+<ng-template #bareOutlet>
+  <router-outlet></router-outlet>
+</ng-template>

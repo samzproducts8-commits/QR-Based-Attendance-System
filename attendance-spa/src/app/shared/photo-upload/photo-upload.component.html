@@ -1,0 +1,22 @@
+<div class="photo-upload">
+  <label class="photo-upload__label">{{ label }}</label>
+
+  <div class="photo-upload__preview" *ngIf="previewUrl">
+    <img [src]="previewUrl" alt="Photo preview" />
+  </div>
+
+  <button type="button" mat-stroked-button (click)="fileInput.click()">
+    <mat-icon>upload</mat-icon>
+    Choose PNG file
+  </button>
+
+  <input
+    #fileInput
+    type="file"
+    accept=".png"
+    hidden
+    (change)="onFileChange($event)"
+  />
+
+  <p class="photo-upload__error" *ngIf="errorMessage">{{ errorMessage }}</p>
+</div>

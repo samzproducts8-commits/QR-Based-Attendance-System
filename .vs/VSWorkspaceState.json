@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\Attendance.Application",
+    "\\src\\Attendance.Application\\DTOs",
+    "\\src\\Attendance.Application\\Services",
+    "\\src\\Attendance.Infrastructure",
+    "\\src\\Attendance.Infrastructure\\Data",
+    "\\src\\Attendance.Infrastructure\\Data\\Configurations",
+    "\\src\\Attendance.Infrastructure\\Models",
+    "\\src\\Attendance.Infrastructure\\Repositories"
+  ],
+  "SelectedNode": "\\src\\Attendance.Application\\Interfaces\\IStaffRepository.cs",
+  "PreviewInSolutionExplorer": false
+}

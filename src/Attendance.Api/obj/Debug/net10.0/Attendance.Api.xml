@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Attendance.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Attendance.Api.BackgroundServices.QrTokenExpiryBackgroundService">
+            <summary>
+            Timer service that sweeps stale QR tokens: every few seconds it transitions
+            <c>Active</c> tokens past their <c>ExpiresAt</c> to <c>Expired</c>, which
+            also triggers generation of a replacement token pushed to the kiosk —
+            so the screen is never left showing a dead code.
+            </summary>
+            <remarks>
+            Satisfies Requirement 3.7 (task 6.3).  Interval configurable via
+            <c>QrToken:SweepIntervalSeconds</c> (default 5).
+            </remarks>
+        </member>
+        <member name="T:Attendance.Api.Controllers.AttendanceController">
+            <summary>
+            The scan endpoint (core feature) and the employee's own history
+            (Requirements 3.3–3.12, 5.4, 5.5).
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.AttendanceController.Scan(Attendance.Application.DTOs.ScanRequestDto)">
+            <summary>
+            Records an attendance event: atomically consumes the scanned QR token,
+            resolves the current slot, and inserts the log.  The staff identity
+            comes exclusively from the caller's JWT — the token itself carries no
+            identity (Requirement 3.1).
+            </summary>
+            <response code="200">Attendance recorded; body carries the greeting message.</response>
+            <response code="404">Token not recognised.</response>
+            <response code="409">Token already used, or slot already recorded today.</response>
+            <response code="410">Token expired.</response>
+            <response code="422">No attendance slot open at this time.</response>
+        </member>
+        <member name="M:Attendance.Api.Controllers.AttendanceController.MyHistory(System.Nullable{System.DateOnly},System.Nullable{System.DateOnly})">
+            <summary>
+            Returns the authenticated employee's own attendance history
+            (Requirement 5.5 / Property 9: records are filtered by the staff id in
+            the caller's JWT, never by a client-supplied id).
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.AttendanceController.GetStaffId">
+            <summary>
+            Extracts the linked staff id from the JWT's <c>staffId</c> claim;
+            null for accounts with no staff record.
+            </summary>
+        </member>
+        <member name="T:Attendance.Api.Controllers.AuthController">
+            <summary>
+            Issues and refreshes JWT tokens against the ASP.NET Identity store
+            (Requirement 5.1).
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.AuthController.Login(Attendance.Application.DTOs.LoginRequest)">
+            <summary>Validates credentials and returns an access/refresh token pair.</summary>
+            <response code="200">Credentials valid — token pair issued.</response>
+            <response code="401">Unknown user or wrong password.</response>
+        </member>
+        <member name="M:Attendance.Api.Controllers.AuthController.Refresh(Attendance.Application.DTOs.RefreshRequest)">
+            <summary>
+            Exchanges a valid refresh token for a brand-new access/refresh pair
+            (refresh token rotation).
+            </summary>
+            <response code="200">Refresh token valid — new pair issued.</response>
+            <response code="401">Refresh token invalid or expired.</response>
+        </member>
+        <member name="T:Attendance.Api.Controllers.DepartmentController">
+            <summary>
+            Minimal department lookup/management supporting the staff registration
+            form's department dropdown (Requirement 1.2 — staff must belong to a
+            department).
+            </summary>
+        </member>
+        <member name="T:Attendance.Api.Controllers.DepartmentController.DepartmentDto">
+            <summary>Read model for a department.</summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.DepartmentController.DepartmentDto.#ctor(System.Int32,System.String,System.Boolean)">
+            <summary>Read model for a department.</summary>
+        </member>
+        <member name="T:Attendance.Api.Controllers.DepartmentController.CreateDepartmentRequest">
+            <summary>Payload for creating a department.</summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.DepartmentController.CreateDepartmentRequest.#ctor(System.String)">
+            <summary>Payload for creating a department.</summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.DepartmentController.GetAll">
+            <summary>Returns all active departments ordered by name.</summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.DepartmentController.Create(Attendance.Api.Controllers.DepartmentController.CreateDepartmentRequest)">
+            <summary>Creates a new department.</summary>
+            <response code="409">A department with the same name already exists.</response>
+        </member>
+        <member name="T:Attendance.Api.Controllers.QrSessionController">
+            <summary>
+            QR session token administration (Requirements 3.1, 3.2).
+            The rotation itself is event-driven (scan success or expiry sweep); these
+            endpoints let an admin bootstrap/inspect the kiosk token.
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.QrSessionController.Generate">
+            <summary>
+            Forces generation of a fresh token and pushes it to all kiosk screens —
+            used to kick off the display when the kiosk first goes live.
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.QrSessionController.GetCurrent">
+            <summary>
+            Returns the currently active token (generating one when none exists) —
+            for admin monitoring.
+            </summary>
+        </member>
+        <member name="T:Attendance.Api.Controllers.ReportController">
+            <summary>
+            Daily and monthly attendance reports plus Excel/PDF exports
+            (Requirements 4.1–4.5, 5.4).
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.ReportController.Daily(System.DateOnly,System.Nullable{System.Int32})">
+            <summary>
+            Daily attendance sheet(s): one staff member when <paramref name="staffId"/>
+            is given, otherwise all active staff.
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.ReportController.Monthly(System.Int32,System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>Monthly summary, optionally filtered by staff or department.</summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.ReportController.ExportDaily(System.DateOnly,System.String)">
+            <summary>Streams the daily report as a downloadable .xlsx or .pdf file.</summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.ReportController.ExportMonthly(System.Int32,System.Int32,System.String)">
+            <summary>Streams the monthly report as a downloadable .xlsx or .pdf file.</summary>
+        </member>
+        <member name="T:Attendance.Api.Controllers.SlotConfigController">
+            <summary>
+            Attendance time-slot configuration CRUD (Requirements 2.1–2.5, 5.4).
+            Changes take effect immediately — no redeploy needed (Requirement 2.3).
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.SlotConfigController.GetAll">
+            <summary>Returns all slot configurations ordered by start time.</summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.SlotConfigController.Create(Attendance.Application.DTOs.CreateSlotRequest)">
+            <summary>Creates a new slot configuration.</summary>
+            <response code="400">EndTime not after StartTime, unknown slot name, or overlapping window.</response>
+        </member>
+        <member name="M:Attendance.Api.Controllers.SlotConfigController.Update(System.Int32,Attendance.Application.DTOs.UpdateSlotRequest)">
+            <summary>Updates an existing slot configuration.</summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.SlotConfigController.Deactivate(System.Int32)">
+            <summary>
+            Deactivates a slot configuration (soft delete — historical logs
+            referencing it are preserved).
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.SlotConfigController.Delete(System.Int32)">
+            <summary>
+            Permanently deletes a slot configuration. Allowed only when no
+            attendance log references it.
+            </summary>
+            <response code="409">Attendance records reference this slot; deactivate it instead.</response>
+        </member>
+        <member name="T:Attendance.Api.Controllers.StaffController">
+            <summary>
+            Staff registration and management (Requirements 1.1–1.8, 5.3, 5.4).
+            Thin controller: request-shape validation only, all business rules live in
+            <see cref="T:Attendance.Application.Interfaces.IStaffService"/>.
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.StaffController.Create(Attendance.Application.DTOs.CreateStaffRequest,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Registers a new staff member with a mandatory PNG profile photo
+            (multipart/form-data).
+            </summary>
+            <response code="201">Staff created; body carries the new record with its EMP-XXXX code.</response>
+            <response code="400">Photo failed PNG validation (extension / MIME / magic bytes).</response>
+            <response code="409">Email already registered.</response>
+        </member>
+        <member name="M:Attendance.Api.Controllers.StaffController.Update(System.Int32,Attendance.Application.DTOs.UpdateStaffRequest)">
+            <summary>Updates the mutable fields of an existing staff record.</summary>
+            or UPDATE STAFF with the created staff information.
+        </member>
+        <member name="M:Attendance.Api.Controllers.StaffController.Deactivate(System.Int32)">
+            <summary>
+            Soft-deletes a staff member (sets status Inactive; attendance history
+            is preserved — Requirement 1.6).
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.StaffController.Delete(System.Int32)">
+            <summary>
+            Permanently deletes a staff member and all dependent data (attendance
+            history, linked login, profile photo). Irreversible — prefer
+            <see cref="M:Attendance.Api.Controllers.StaffController.Deactivate(System.Int32)"/> to preserve history (Requirement 1.6).
+            </summary>
+            <response code="204">Staff and all dependent data were deleted.</response>
+            <response code="404">No staff member with the given id exists.</response>
+        </member>
+        <member name="M:Attendance.Api.Controllers.StaffController.GetById(System.Int32)">
+            <summary>Returns one staff record.</summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.StaffController.GetAll(Attendance.Application.DTOs.StaffFilterRequest)">
+            <summary>Returns a paginated, filterable staff list.</summary>
+        </member>
+        <member name="T:Attendance.Api.Hubs.AttendanceHub">
+            <summary>
+            SignalR hub that pushes freshly generated QR codes to connected kiosk
+            screens in real time.
+            </summary>
+            <remarks>
+            <para>
+            Client-side event: <c>ReceiveQrCode(base64Png, tokenValue, expiresAt)</c>.
+            </para>
+            <para>
+            Deliberately anonymous: the kiosk is a public display screen (an office
+            entrance monitor/tablet) meant to run unattended all day, and the QR
+            payload it broadcasts carries no security value worth gating behind a
+            login — it is a random, single-use, ~15-second-lived token with no
+            employee identity embedded (see docs/QR-Security.md). Gating this hub
+            behind auth would only force the kiosk to be logged in and would break
+            every ~15 minutes when its access token expired, with no benefit.
+            Recording an attendance event (the actual sensitive action) still
+            requires a full Employee-role JWT via <c>POST /api/attendance/scan</c>.
+            Satisfies Requirements 6.1–6.3.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:Attendance.Api.Hubs.AttendanceHub.ReceiveQrCode">
+            <summary>Client-side event name for incoming QR updates.</summary>
+        </member>
+        <member name="M:Attendance.Api.Hubs.AttendanceHub.RequestCurrentQr">
+            <summary>
+            Called by a kiosk right after connecting (or reconnecting) so it
+            immediately receives the current QR code instead of waiting for the
+            next rotation (Requirement 6.2).  Generates a fresh token when none
+            is active.
+            </summary>
+        </member>
+        <member name="T:Attendance.Api.Middleware.ExceptionHandlingMiddleware">
+            <summary>
+            Global exception handler: converts every unhandled exception into a
+            consistent RFC 7807 <see cref="T:Microsoft.AspNetCore.Mvc.ProblemDetails"/> JSON response and logs it.
+            Stack traces are never included in the response body.
+            </summary>
+            <remarks>
+            Satisfies Requirement 7.5 and the design's error-handling table:
+            <list type="bullet">
+              <item>PhotoValidationException / ValidationException → 400</item>
+              <item>NotFoundException / KeyNotFoundException → 404</item>
+              <item>DuplicateAttendanceException / DuplicateEmailException / TokenAlreadyUsedException / SlotInUseException → 409</item>
+              <item>TokenExpiredException → 410</item>
+              <item>OutsideScheduleException → 422</item>
+              <item>anything else → 500</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="T:Attendance.Api.Services.AttendanceHubContext">
+            <summary>
+            Bridges the Application layer's <see cref="T:Attendance.Application.Interfaces.IAttendanceHubContext"/>
+            abstraction to the concrete SignalR <see cref="T:Microsoft.AspNetCore.SignalR.IHubContext`1"/>,
+            keeping <c>QrSessionService</c> free of any SignalR dependency.
+            </summary>
+            <remarks>
+            Satisfies Requirement 3.6 / 6.1.
+            </remarks>
+        </member>
+        <member name="M:Attendance.Api.Services.AttendanceHubContext.SendNewQrCodeAsync(System.String,System.Guid,System.DateTime)">
+            <inheritdoc />
+        </member>
+        <member name="T:Attendance.Api.Services.JwtTokenService">
+            <summary>
+            Issues and validates the JWT pair (access + refresh) used by the Angular
+            SPA.  Access tokens are short-lived; refresh tokens are longer-lived JWTs
+            carrying a <c>token_type=refresh</c> claim and are rotated on every
+            refresh call (Requirement 5.1).
+            </summary>
+        </member>
+        <member name="F:Attendance.Api.Services.JwtTokenService.StaffIdClaim">
+            <summary>Custom claim carrying the linked Staff primary key.</summary>
+        </member>
+        <member name="M:Attendance.Api.Services.JwtTokenService.CreateAccessToken(Attendance.Infrastructure.Models.ApplicationUser,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates the access token for an authenticated user.
+            Claims: name identifier, user name, one role claim per role, and the
+            linked <c>staffId</c> for Employee accounts (used by the scan endpoint
+            to attribute attendance — Requirement 5.5).
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Services.JwtTokenService.CreateRefreshToken(Attendance.Infrastructure.Models.ApplicationUser)">
+            <summary>
+            Creates the refresh token: same identity, no roles, marked with
+            <c>token_type=refresh</c> so it can never be used as an access token
+            against role-guarded endpoints.
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Services.JwtTokenService.ValidateRefreshToken(System.String)">
+            <summary>
+            Validates a refresh token and returns the user id it was issued to,
+            or <see langword="null"/> when the token is invalid, expired, or not a
+            refresh token.
+            </summary>
+        </member>
+        <member name="T:Attendance.Api.Services.NetworkHelper">
+            <summary>
+            Detects this machine's LAN IPv4 address so the QR deep link
+            (<c>Kiosk:ScanBaseUrl = "auto"</c>) always points at whatever address the
+            router assigned — surviving DHCP reassignments and network changes without
+            any config edits.
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Services.NetworkHelper.DetectLanIpv4">
+            <summary>
+            Returns the machine's outbound LAN IPv4, or <see langword="null"/>
+            when none can be determined (no network at all).
+            </summary>
+        </member>
+        <member name="T:Program">
+            <summary>Exposed for WebApplicationFactory-based integration tests (task 21).</summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type)">
+            <summary>
+            Generates a documentation comment ID for a type.
+            Example: T:Namespace.Outer+Inner`1 becomes T:Namespace.Outer.Inner`1
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.PropertyInfo)">
+            <summary>
+            Generates a documentation comment ID for a property.
+            Example: P:Namespace.ContainingType.PropertyName or for an indexer P:Namespace.ContainingType.Item(System.Int32)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type,System.String)">
+            <summary>
+            Generates a documentation comment ID for a property given its container type and property name.
+            Example: P:Namespace.ContainingType.PropertyName
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.MethodInfo)">
+            <summary>
+            Generates a documentation comment ID for a method (or constructor).
+            For example:
+              M:Namespace.ContainingType.MethodName(ParamType1,ParamType2)~ReturnType
+              M:Namespace.ContainingType.#ctor(ParamType)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.GetTypeDocId(System.Type,System.Boolean,System.Boolean)">
+            <summary>
+            Generates a documentation ID string for a type.
+            This method handles nested types (replacing '+' with '.'),
+            generic types, arrays, pointers, by-ref types, and generic parameters.
+            The <paramref name="includeGenericArguments"/> flag controls whether
+            constructed generic type arguments are emitted, while <paramref name="omitGenericArity"/>
+            controls whether the generic arity marker (e.g. "`1") is appended.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.NormalizeDocId(System.String)">
+            <summary>
+            Normalizes a documentation comment ID to match the compiler-style format.
+            Strips the return type suffix for ordinary methods but retains it for conversion operators.
+            </summary>
+            <param name="docId">The documentation comment ID to normalize.</param>
+            <returns>The normalized documentation comment ID.</returns>
+        </member>
+    </members>
+</doc>

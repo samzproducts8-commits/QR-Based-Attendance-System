@@ -1,0 +1,35 @@
+<div class="page staff-list">
+  <div class="page__head">
+    <div>
+      <h1 class="page__title">Staff</h1>
+      <p class="page__subtitle">Manage employees registered in the attendance system.</p>
+    </div>
+    <button mat-flat-button color="primary" (click)="createNew()">
+      <mat-icon>person_add</mat-icon>
+      Register Staff
+    </button>
+  </div>
+
+  <div class="surface-card staff-list__panel">
+    <div class="staff-list__toolbar">
+      <mat-form-field appearance="outline" class="staff-list__search" subscriptSizing="dynamic">
+        <mat-icon matPrefix>search</mat-icon>
+        <mat-label>Search</mat-label>
+        <input matInput [(ngModel)]="searchText" (keyup.enter)="load()" placeholder="Name, code, or email" />
+      </mat-form-field>
+    </div>
+
+    <div class="staff-list__loading" *ngIf="loading">
+      <mat-progress-spinner mode="indeterminate" diameter="36"></mat-progress-spinner>
+    </div>
+
+    <app-data-table
+      *ngIf="!loading"
+      [columns]="columns"
+      [rows]="staff"
+      [actions]="actions"
+      (rowClick)="onRowClick($event)"
+      (actionClick)="onAction($event)">
+    </app-data-table>
+  </div>
+</div>

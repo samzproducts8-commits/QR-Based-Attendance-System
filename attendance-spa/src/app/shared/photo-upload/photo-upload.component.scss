@@ -1,0 +1,25 @@
+.photo-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 320px;
+
+  &__label {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__preview img {
+    max-width: 160px;
+    max-height: 160px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  &__error {
+    color: #b00020;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+}

@@ -1,0 +1,77 @@
+<div class="scan-confirm">
+  <!-- ── Success ─────────────────────────────────────────────────────── -->
+  <div class="scan-confirm__success" *ngIf="result">
+    <mat-icon class="scan-confirm__success-icon">check_circle</mat-icon>
+    <h1>{{ result.greetingMessage }}</h1>
+    <p>{{ result.slotName }} · {{ result.statusLabel }}</p>
+    <button mat-stroked-button (click)="reset()">Scan Another</button>
+  </div>
+
+  <!-- ── Scan / record ───────────────────────────────────────────────── -->
+  <ng-container *ngIf="!result">
+    <h1>Scan Attendance</h1>
+
+    <!-- Recording spinner while the API call is in flight -->
+    <div class="scan-confirm__recording" *ngIf="submitting">
+      <mat-progress-spinner mode="indeterminate" diameter="48"></mat-progress-spinner>
+      <p>Recording your attendance…</p>
+    </div>
+
+    <ng-container *ngIf="!submitting">
+      <!-- Live camera preview (html5-qrcode renders the video into this div) -->
+      <ng-container *ngIf="!manualEntry">
+        <div class="scan-confirm__camera">
+          <div [id]="readerElementId" class="scan-confirm__reader"></div>
+        </div>
+
+        <p class="scan-confirm__hint" *ngIf="cameraState === 'starting'">Starting camera…</p>
+        <p class="scan-confirm__hint" *ngIf="cameraState === 'scanning'">
+          Point your camera at the QR code on the kiosk
+        </p>
+
+        <button mat-button class="scan-confirm__manual-link" (click)="useManualEntry()">
+          Enter code manually
+        </button>
+      </ng-container>
+
+      <!-- Manual entry (fallback, or when camera is unavailable) -->
+      <ng-container *ngIf="manualEntry">
+        <div class="scan-confirm__camera-notice" *ngIf="cameraState === 'denied'">
+          <mat-icon>videocam_off</mat-icon>
+          <span>Camera permission is blocked. Allow it in your browser settings, or enter the code below.</span>
+        </div>
+        <div class="scan-confirm__camera-notice" *ngIf="cameraState === 'unavailable'">
+          <mat-icon>videocam_off</mat-icon>
+          <span>No camera was found on this device. Enter the code below.</span>
+        </div>
+        <div class="scan-confirm__camera-notice" *ngIf="cameraState === 'insecure'">
+          <mat-icon>lock</mat-icon>
+          <span>The camera needs a secure (HTTPS) connection. Open the HTTPS link, or enter the code below.</span>
+        </div>
+        <div class="scan-confirm__camera-notice" *ngIf="cameraState === 'error'">
+          <mat-icon>error_outline</mat-icon>
+          <span>Couldn't start the camera. Enter the code below.</span>
+        </div>
+
+        <mat-form-field appearance="outline" class="scan-confirm__field">
+          <mat-label>QR Code Value</mat-label>
+          <input matInput [(ngModel)]="token" (keyup.enter)="submit()" autocomplete="off" />
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" class="scan-confirm__submit" (click)="submit()">
+          Confirm
+        </button>
+
+        <button mat-button class="scan-confirm__manual-link" *ngIf="cameraState === 'idle' || cameraState === 'scanning'" (click)="startCamera()">
+          Use camera instead
+        </button>
+      </ng-container>
+
+      <!-- Scan/record error -->
+      <div class="scan-confirm__error" *ngIf="errorMessage">
+        <mat-icon>error_outline</mat-icon>
+        <span>{{ errorMessage }}</span>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

@@ -1,0 +1,56 @@
+<div class="page daily-report">
+  <div class="page__head">
+    <div>
+      <h1 class="page__title">Daily Attendance Report</h1>
+      <p class="page__subtitle">Per-employee slot status for the selected day.</p>
+    </div>
+    <div class="daily-report__controls">
+      <mat-form-field appearance="outline" subscriptSizing="dynamic" class="daily-report__date">
+        <mat-label>Date</mat-label>
+        <input matInput type="date" [(ngModel)]="date" (change)="load()" />
+      </mat-form-field>
+      <button mat-stroked-button (click)="export('xlsx')" [disabled]="exporting">
+        <mat-icon>grid_on</mat-icon> Export Excel
+      </button>
+      <button mat-stroked-button (click)="export('pdf')" [disabled]="exporting">
+        <mat-icon>picture_as_pdf</mat-icon> Export PDF
+      </button>
+    </div>
+  </div>
+
+  <div class="daily-report__loading" *ngIf="loading">
+    <mat-progress-spinner mode="indeterminate" diameter="36"></mat-progress-spinner>
+  </div>
+
+  <div class="surface-card daily-report__table-wrap" *ngIf="!loading">
+    <table mat-table [dataSource]="sheets" class="daily-report__table">
+      <ng-container matColumnDef="staff">
+        <th mat-header-cell *matHeaderCellDef>Staff</th>
+        <td mat-cell *matCellDef="let sheet">
+          <div class="daily-report__staff">
+            <span class="daily-report__avatar">{{ (sheet.staffName || '?').charAt(0).toUpperCase() }}</span>
+            <span class="daily-report__staff-name">{{ sheet.staffName }}</span>
+          </div>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="slots">
+        <th mat-header-cell *matHeaderCellDef>Slots</th>
+        <td mat-cell *matCellDef="let sheet">
+          <div class="daily-report__chips">
+            <span *ngFor="let entry of sheet.entries" [class]="badgeClass(entry.statusLabel)">
+              {{ entry.slotName }}: {{ entry.statusLabel }}
+            </span>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['staff','slots']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['staff','slots'];"></tr>
+    </table>
+
+    <div class="daily-report__empty" *ngIf="sheets.length === 0">
+      <mat-icon>event_busy</mat-icon>
+      <span>No attendance records for this date.</span>
+    </div>
+  </div>
+</div>

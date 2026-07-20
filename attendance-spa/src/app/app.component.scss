@@ -1,0 +1,110 @@
+.app-shell {
+  height: 100vh;
+
+  &__sidenav {
+    width: 248px;
+    background: var(--surface-card);
+    border-right: 1px solid var(--border-subtle);
+  }
+
+  /* Brand block at the top of the sidenav */
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 64px;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  &__brand-mark {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, var(--brand-500), var(--brand-700));
+    color: #fff;
+    box-shadow: var(--shadow-xs);
+
+    mat-icon { font-size: 22px; width: 22px; height: 22px; }
+  }
+  &__brand-text {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-strong);
+    letter-spacing: -0.01em;
+  }
+
+  /* Nav list */
+  &__nav {
+    padding: 12px 12px 0;
+
+    .mat-mdc-list-item {
+      border-radius: 10px;
+      margin-bottom: 4px;
+      height: 46px;
+      color: var(--text-body);
+
+      .mat-icon { color: var(--text-muted); }
+
+      &:hover { background: var(--surface-hover); }
+
+      &.is-active {
+        background: var(--brand-50);
+        color: var(--brand-700);
+        font-weight: 600;
+
+        .mat-icon { color: var(--brand-600); }
+        .mdc-list-item__primary-text { color: var(--brand-700); font-weight: 600; }
+      }
+    }
+  }
+
+  /* Toolbar */
+  &__toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 64px;
+    padding: 0 24px;
+  }
+
+  &__page-name {
+    font-weight: 600;
+    font-size: 1.05rem;
+    opacity: .95;
+  }
+
+  &__spacer { flex: 1 1 auto; }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 16px;
+  }
+  &__avatar {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .18);
+    border: 1px solid rgba(255, 255, 255, .35);
+    font-weight: 700;
+    font-size: .85rem;
+  }
+  &__username {
+    font-weight: 500;
+    font-size: .9rem;
+    opacity: .95;
+  }
+
+  &__logout {
+    --mdc-outlined-button-outline-color: rgba(255, 255, 255, .45);
+    color: #fff !important;
+
+    .mat-icon { margin-right: 4px; font-size: 18px; width: 18px; height: 18px; }
+    &:hover { background: rgba(255, 255, 255, .12); }
+  }
+}

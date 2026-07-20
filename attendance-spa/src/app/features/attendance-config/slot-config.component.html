@@ -1,0 +1,89 @@
+<div class="page slot-config">
+  <div class="page__head">
+    <div>
+      <h1 class="page__title">Attendance Time Slots</h1>
+      <p class="page__subtitle">Define the daily check-in / check-out windows and grace periods.</p>
+    </div>
+  </div>
+
+  <mat-card class="slot-config__form">
+    <h3 class="slot-config__form-title">{{ editingSlotId ? 'Edit Slot' : 'Add Slot' }}</h3>
+    <form [formGroup]="form" (ngSubmit)="save()" class="slot-config__form-grid">
+      <mat-form-field appearance="outline">
+        <mat-label>Slot</mat-label>
+        <mat-select formControlName="slotName">
+          <mat-option *ngFor="let name of slotNames" [value]="name">{{ name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Start Time</mat-label>
+        <input matInput type="time" formControlName="startTime" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>End Time</mat-label>
+        <input matInput type="time" formControlName="endTime" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Grace Period (min)</mat-label>
+        <input matInput type="number" formControlName="gracePeriodMinutes" min="0" />
+      </mat-form-field>
+
+      <div class="slot-config__controls">
+        <mat-checkbox formControlName="isMandatory" color="primary">Mandatory</mat-checkbox>
+        <div class="slot-config__actions">
+          <button mat-button type="button" (click)="newSlot()" *ngIf="editingSlotId">Cancel</button>
+          <button mat-flat-button color="primary" type="submit">
+            {{ editingSlotId ? 'Update' : 'Create' }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </mat-card>
+
+  <div class="surface-card slot-config__table-wrap">
+    <table mat-table [dataSource]="slots" class="slot-config__table">
+      <ng-container matColumnDef="slotName">
+        <th mat-header-cell *matHeaderCellDef>Slot</th>
+        <td mat-cell *matCellDef="let s"><strong>{{ s.slotName }}</strong></td>
+      </ng-container>
+      <ng-container matColumnDef="window">
+        <th mat-header-cell *matHeaderCellDef>Window</th>
+        <td mat-cell *matCellDef="let s">{{ formatTime(s.startTime) }} – {{ formatTime(s.endTime) }}</td>
+      </ng-container>
+      <ng-container matColumnDef="grace">
+        <th mat-header-cell *matHeaderCellDef>Grace</th>
+        <td mat-cell *matCellDef="let s">{{ s.gracePeriodMinutes }} min</td>
+      </ng-container>
+      <ng-container matColumnDef="mandatory">
+        <th mat-header-cell *matHeaderCellDef>Mandatory</th>
+        <td mat-cell *matCellDef="let s">
+          <span class="chip" [ngClass]="s.isMandatory ? 'chip--info' : 'chip--muted'">
+            {{ s.isMandatory ? 'Yes' : 'No' }}
+          </span>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="active">
+        <th mat-header-cell *matHeaderCellDef>Active</th>
+        <td mat-cell *matCellDef="let s">
+          <span class="chip" [ngClass]="s.isActive ? 'chip--ok' : 'chip--muted'">
+            {{ s.isActive ? 'Active' : 'Inactive' }}
+          </span>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef class="slot-config__actions-head">Actions</th>
+        <td mat-cell *matCellDef="let s" class="slot-config__row-actions">
+          <button mat-button (click)="edit(s)">Edit</button>
+          <button mat-button color="warn" (click)="delete(s)">Delete</button>
+          <button mat-button color="warn" (click)="deactivate(s)" *ngIf="s.isActive">Deactivate</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['slotName','window','grace','mandatory','active','actions']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['slotName','window','grace','mandatory','active','actions'];"></tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,210 @@
+/* =====================================================================
+   QR Attendance — Global Design System
+   Refined blue, light theme. Layered on top of Angular Material (azure-blue).
+   All visual only: tokens, typography, surfaces, tables, forms, chips.
+   ===================================================================== */
+
+/* ---------- Design tokens ---------- */
+:root {
+  /* Brand blue scale */
+  --brand-50:  #eef4fb;
+  --brand-100: #d6e6f7;
+  --brand-200: #adcdee;
+  --brand-300: #7fb0e4;
+  --brand-400: #4a8ed6;
+  --brand-500: #1f6fc4;
+  --brand-600: #1565c0;   /* primary */
+  --brand-700: #0f4c92;
+  --brand-800: #0d3f78;
+  --brand-900: #0a2f5a;
+
+  /* Neutral / surface scale */
+  --surface-canvas: #f4f6fa;   /* app background */
+  --surface-card:   #ffffff;
+  --surface-muted:  #f8fafc;
+  --surface-hover:  #f1f5fb;
+
+  --border-subtle: #e6eaf1;
+  --border-strong: #d3dae5;
+
+  /* Text */
+  --text-strong:  #16233a;
+  --text-body:    #334155;
+  --text-muted:   #64748b;
+  --text-faint:   #94a3b8;
+  --text-on-brand:#ffffff;
+
+  /* Semantic (status) */
+  --ok-bg:   #e7f6ec;  --ok-fg:   #1b7a3d;
+  --warn-bg: #fff3e0;  --warn-fg: #b45309;
+  --bad-bg:  #fdecec;  --bad-fg:  #c02626;
+  --info-bg: #e8f1fd;  --info-fg: #1565c0;
+
+  /* Spacing scale */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 20px; --sp-6: 24px; --sp-8: 32px; --sp-10: 40px; --sp-12: 48px;
+
+  /* Radius */
+  --r-sm: 8px;  --r-md: 12px; --r-lg: 16px; --r-pill: 999px;
+
+  /* Elevation */
+  --shadow-xs: 0 1px 2px rgba(16, 33, 60, .06);
+  --shadow-sm: 0 1px 3px rgba(16, 33, 60, .08), 0 1px 2px rgba(16, 33, 60, .04);
+  --shadow-md: 0 4px 12px rgba(16, 33, 60, .08), 0 2px 4px rgba(16, 33, 60, .04);
+  --shadow-lg: 0 12px 28px rgba(16, 33, 60, .12);
+}
+
+/* ---------- Base ---------- */
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--surface-canvas);
+  color: var(--text-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4 { color: var(--text-strong); letter-spacing: -0.01em; }
+h1 { font-size: 1.75rem; font-weight: 700; margin: 0 0 var(--sp-2); }
+h2 { font-size: 1.4rem;  font-weight: 700; margin: 0 0 var(--sp-4); }
+h3 { font-size: 1.1rem;  font-weight: 600; margin: 0 0 var(--sp-3); }
+
+/* ---------- Layout primitives (reusable across pages) ---------- */
+.page {
+  padding: var(--sp-8);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.page__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-6);
+  flex-wrap: wrap;
+}
+.page__title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+.page__subtitle {
+  margin: 2px 0 0;
+  color: var(--text-muted);
+  font-size: .875rem;
+}
+
+/* Card surface */
+.surface-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- Status chips (semantic) ---------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: var(--r-pill);
+  font-size: .78rem;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.chip::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: .9;
+}
+.chip--ok    { background: var(--ok-bg);   color: var(--ok-fg); }
+.chip--warn  { background: var(--warn-bg); color: var(--warn-fg); }
+.chip--bad   { background: var(--bad-bg);  color: var(--bad-fg); }
+.chip--info  { background: var(--info-bg); color: var(--info-fg); }
+.chip--muted { background: #eef1f6; color: var(--text-muted); }
+.chip--muted::before { opacity: .5; }
+
+/* =====================================================================
+   Angular Material component refinements
+   ===================================================================== */
+
+/* Toolbar */
+.mat-toolbar.mat-primary,
+.app-shell__toolbar {
+  background: linear-gradient(180deg, var(--brand-600), var(--brand-700)) !important;
+  color: var(--text-on-brand) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Buttons — a touch more presence */
+.mat-mdc-raised-button,
+.mat-mdc-unelevated-button,
+.mat-mdc-outlined-button,
+.mat-mdc-button {
+  --mdc-filled-button-container-shape: var(--r-md);
+  --mdc-outlined-button-container-shape: var(--r-md);
+  --mdc-text-button-container-shape: var(--r-md);
+  letter-spacing: .01em;
+  font-weight: 600;
+}
+.mat-mdc-unelevated-button.mat-primary {
+  box-shadow: var(--shadow-xs);
+}
+
+/* Cards */
+.mat-mdc-card {
+  border-radius: var(--r-lg) !important;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm) !important;
+}
+
+/* Form fields — tighten default outline density */
+.mat-mdc-form-field {
+  --mat-form-field-container-height: 52px;
+}
+.mat-mdc-form-field-subscript-wrapper {
+  /* reclaim wasted hint/error space when unused */
+  min-height: 4px;
+}
+
+/* Tables */
+.mat-mdc-table {
+  background: transparent;
+  width: 100%;
+}
+.mat-mdc-header-row {
+  background: var(--surface-muted);
+}
+.mat-mdc-header-cell {
+  color: var(--text-muted) !important;
+  font-weight: 700 !important;
+  font-size: .75rem !important;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-strong) !important;
+}
+.mat-mdc-cell {
+  color: var(--text-body) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+}
+.mat-mdc-row {
+  transition: background-color .12s ease;
+}
+.mat-mdc-row:hover {
+  background: var(--surface-hover);
+}
+.mat-mdc-paginator {
+  background: transparent;
+  color: var(--text-muted);
+}
+
+/* Nav list (sidenav) active state handled in app shell scss */
+
+/* Snackbar tweaks kept default */

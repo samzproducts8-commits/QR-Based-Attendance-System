@@ -1,0 +1,21 @@
+<div class="kiosk-fullscreen">
+  <div class="kiosk-fullscreen__reconnecting" *ngIf="status === 'reconnecting' || status === 'connecting'">
+    Reconnecting…
+  </div>
+
+  <ng-container *ngIf="status === 'error'; else normal">
+    <p class="kiosk-fullscreen__error">{{ errorMessage || 'Connection failed.' }}</p>
+    <button mat-stroked-button (click)="connect()" color="primary">Retry</button>
+  </ng-container>
+
+  <ng-template #normal>
+    <ng-container *ngIf="qrImageSrc; else waiting">
+      <img [src]="qrImageSrc" alt="Attendance QR Code" class="kiosk-fullscreen__qr" />
+      <p class="kiosk-fullscreen__hint">Scan with your mobile device to record attendance</p>
+    </ng-container>
+
+    <ng-template #waiting>
+      <p class="kiosk-fullscreen__hint">Waiting for QR code…</p>
+    </ng-template>
+  </ng-template>
+</div>

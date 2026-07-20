@@ -1,0 +1,104 @@
+.scan-confirm {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  gap: 12px;
+
+  h1 {
+    font-size: 1.6rem;
+    margin: 0 0 8px;
+  }
+
+  &__camera {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #10131a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // html5-qrcode injects a <video> here; force it to fill the square frame.
+  &__reader {
+    width: 100%;
+    height: 100%;
+
+    ::ng-deep video {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
+  }
+
+  &__hint {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+  }
+
+  &__field {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  &__submit {
+    width: 100%;
+    max-width: 400px;
+    padding: 14px 0;
+    font-size: 1.15rem;
+  }
+
+  &__manual-link {
+    font-size: 0.9rem;
+  }
+
+  &__recording {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__camera-notice {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 400px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #fff4e5;
+    color: #8a5300;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  &__error {
+    margin-top: 8px;
+    color: #b00020;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 400px;
+  }
+
+  &__success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__success-icon {
+    color: #2e7d32;
+    font-size: 64px;
+    width: 64px;
+    height: 64px;
+  }
+}

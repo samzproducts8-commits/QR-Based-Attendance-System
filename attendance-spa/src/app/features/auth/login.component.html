@@ -1,0 +1,42 @@
+<div class="login-page">
+  <mat-card class="login-card">
+    <div class="login-card__brand">
+      <span class="login-card__mark"><mat-icon>qr_code_2</mat-icon></span>
+      <h1 class="login-card__title">QR Attendance</h1>
+      <p class="login-card__subtitle">Sign in to continue</p>
+    </div>
+
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username" autocomplete="username" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            [type]="hidePassword ? 'password' : 'text'"
+            formControlName="password"
+            autocomplete="current-password"
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            type="button"
+            (click)="hidePassword = !hidePassword"
+            [attr.aria-label]="hidePassword ? 'Show password' : 'Hide password'"
+            [attr.aria-pressed]="!hidePassword"
+          >
+            <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" type="submit" class="full-width" [disabled]="submitting">
+          {{ submitting ? 'Signing in…' : 'Sign In' }}
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

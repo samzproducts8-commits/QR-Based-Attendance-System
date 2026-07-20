@@ -1,0 +1,76 @@
+.daily-report {
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    flex-wrap: wrap;
+
+    button .mat-icon {
+      font-size: 18px;
+      width: 18px;
+      height: 18px;
+      margin-right: 4px;
+    }
+  }
+
+  &__date { width: 170px; }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  &__table-wrap {
+    padding: var(--sp-2) var(--sp-4);
+    overflow-x: auto;
+  }
+
+  &__table {
+    width: 100%;
+
+    /* Report rows aren't navigable — no pointer cursor */
+    tr[mat-row] { cursor: default; }
+  }
+
+  &__staff {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__avatar {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--brand-50);
+    color: var(--brand-700);
+    font-weight: 700;
+    font-size: .8rem;
+    flex: 0 0 auto;
+  }
+
+  &__staff-name { font-weight: 600; color: var(--text-strong); }
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 0;
+  }
+
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 48px 24px;
+    color: var(--text-faint);
+
+    .mat-icon { font-size: 40px; width: 40px; height: 40px; opacity: .6; }
+    span { font-size: .9rem; }
+  }
+}

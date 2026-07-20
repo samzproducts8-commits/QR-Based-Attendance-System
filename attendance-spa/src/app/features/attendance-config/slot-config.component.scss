@@ -1,0 +1,60 @@
+.slot-config {
+  &__form {
+    padding: var(--sp-6) !important;
+    margin-bottom: var(--sp-6);
+  }
+
+  &__form-title {
+    margin: 0 0 var(--sp-5);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-strong);
+  }
+
+  &__form-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-2) var(--sp-4);
+    align-items: start;
+
+    mat-form-field { width: 100%; }
+  }
+
+  &__controls {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-4);
+    padding-top: var(--sp-1);
+  }
+
+  &__actions {
+    display: flex;
+    gap: var(--sp-2);
+  }
+
+  &__table-wrap {
+    padding: var(--sp-2) var(--sp-4);
+    overflow-x: auto;
+  }
+
+  &__table {
+    width: 100%;
+  }
+
+  &__actions-head { text-align: right; }
+
+  &__row-actions {
+    text-align: right;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 900px) {
+  .slot-config__form-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .slot-config__form-grid { grid-template-columns: 1fr; }
+  .slot-config__controls { flex-direction: column; align-items: stretch; }
+}
