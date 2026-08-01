@@ -46,7 +46,6 @@ dotnet run --urls "http://localhost:5080"
 On first run the app migrates the database and seeds:
 - The four default attendance slots (MorningIn, LunchOut, LunchIn, EveningOut)
 - Roles: `Admin`, `HR`, `Employee`
-- A default admin login — **username `admin`, password `Admin@123!`**
 - Five default departments
 
 Swagger UI: `http://localhost:5080/swagger`. Click **Authorize**, paste the JWT
