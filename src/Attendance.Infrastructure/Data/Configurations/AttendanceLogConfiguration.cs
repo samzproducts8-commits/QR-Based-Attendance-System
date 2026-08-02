@@ -36,6 +36,10 @@ public class AttendanceLogConfiguration : IEntityTypeConfiguration<AttendanceLog
             .IsRequired()
             .HasConversion<byte>();
 
+        builder.Property(e => e.AbsenceReason)
+            .IsRequired(false)
+            .HasMaxLength(500);
+
         // Composite unique constraint (StaffId, SlotId, EventDate) — one record per slot per day
         builder.HasIndex(e => new { e.StaffId, e.SlotId, e.EventDate })
             .IsUnique()

@@ -124,12 +124,53 @@ public sealed class AttendanceService : IAttendanceService
 
         var entries = slots
             .OrderBy(s => s.StartTime)
-            .Select(slot => logsBySlot.TryGetValue(slot.SlotId, out var log)
-                ? new DailySlotEntry(slot.SlotId, slot.SlotName, log.EventTimestamp, StatusLabelOf(log.StatusFlag))
-                : new DailySlotEntry(slot.SlotId, slot.SlotName, null, slot.IsMandatory ? AbsentLabel : NotRecordedLabel))
+            .Select(slot =>
+            {
+                if (logsBySlot.TryGetValue(slot.SlotId, out var log))
+                {
+                    return new DailySlotEntry(
+                        slot.SlotId,
+                        slot.SlotName,
+                        log.StatusFlag == AttendanceStatus.Absent ? null : log.EventTimestamp,
+                        StatusLabelOf(log.StatusFlag),
+                        log.AbsenceReason);
+                }
+
+                return new DailySlotEntry(
+                    slot.SlotId,
+                    slot.SlotName,
+                    null,
+                    slot.IsMandatory ? AbsentLabel : NotRecordedLabel,
+                    null);
+            })
             .ToList();
 
         return new DailyAttendanceSheet(staff.StaffId, staff.FullName, date, entries);
+    }
+
+    // -------------------------------------------------------------------------
+    // Absence Reasons
+    // -------------------------------------------------------------------------
+
+    /// <inheritdoc/>
+    public async Task SetAbsenceReasonAsync(SetAbsenceReasonDto dto)
+    {
+        StaffSnapshot? staff = await _repository.GetStaffSnapshotAsync(dto.StaffId)
+            ?? throw new NotFoundException($"Staff member {dto.StaffId} was not found.");
+
+        IReadOnlyList<SlotWindow> slots = await _repository.GetActiveSlotWindowsAsync();
+        SlotWindow? slot = slots.FirstOrDefault(s => s.SlotId == dto.SlotId);
+
+        if (slot is null)
+            throw new NotFoundException($"Attendance slot {dto.SlotId} was not found or is not active.");
+
+        if (!slot.IsMandatory)
+            throw new BusinessRuleException($"Absence reasons can only be documented for mandatory slots.");
+
+        if (string.IsNullOrWhiteSpace(dto.Reason))
+            throw new BusinessRuleException("Absence reason cannot be empty.");
+
+        await _repository.SetAbsenceReasonAsync(dto.StaffId, dto.SlotId, dto.Date, dto.Reason.Trim());
     }
 
     // -------------------------------------------------------------------------
@@ -169,10 +210,11 @@ public sealed class AttendanceService : IAttendanceService
                 {
                     var slotLogs = staffLogs[slot.SlotId].ToList();
                     // ManualEntry counts as an on-time presence for summary purposes.
-                    int onTime = slotLogs.Count(l => l.StatusFlag != AttendanceStatus.Late);
+                    // Absent logs (with absence reason) count toward absence/no-scan.
+                    int onTime = slotLogs.Count(l => l.StatusFlag == AttendanceStatus.OnTime || l.StatusFlag == AttendanceStatus.ManualEntry);
                     int late   = slotLogs.Count(l => l.StatusFlag == AttendanceStatus.Late);
-                    int daysWithLog = slotLogs.Select(l => l.EventDate).Distinct().Count();
-                    int absent = slot.IsMandatory ? Math.Max(0, workingDays - daysWithLog) : 0;
+                    int daysWithPresenceLog = slotLogs.Where(l => l.StatusFlag != AttendanceStatus.Absent).Select(l => l.EventDate).Distinct().Count();
+                    int absent = slot.IsMandatory ? Math.Max(0, workingDays - daysWithPresenceLog) : 0;
 
                     return new SlotMonthlySummary(slot.SlotId, slot.SlotName, onTime, late, absent);
                 })
@@ -258,6 +300,7 @@ public sealed class AttendanceService : IAttendanceService
         AttendanceStatus.OnTime      => "On Time",
         AttendanceStatus.Late        => "Late",
         AttendanceStatus.ManualEntry => "Manual Entry",
+        AttendanceStatus.Absent      => "Absent",
         _                            => status.ToString()
     };
 

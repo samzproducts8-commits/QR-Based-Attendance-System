@@ -61,6 +61,42 @@
     padding: 8px 0;
   }
 
+  &__chip-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__reason-text {
+    font-style: italic;
+    font-weight: 400;
+    margin-left: 4px;
+    opacity: 0.9;
+  }
+
+  &__reason-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted, #718096);
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.06);
+      color: var(--brand-700, #2b6cb0);
+    }
+
+    .mat-icon {
+      font-size: 16px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
   &__empty {
     display: flex;
     flex-direction: column;

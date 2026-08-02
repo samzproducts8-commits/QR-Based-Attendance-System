@@ -82,6 +82,7 @@ public sealed class ExceptionHandlingMiddleware
         SlotInUseException            => (StatusCodes.Status409Conflict, "Slot in use"),
         TokenExpiredException         => (StatusCodes.Status410Gone, "QR code expired"),
         OutsideScheduleException      => (StatusCodes.Status422UnprocessableEntity, "Outside attendance window"),
+        BusinessRuleException         => (StatusCodes.Status422UnprocessableEntity, "Business rule violation"),
         _                             => (StatusCodes.Status500InternalServerError, "Server error")
     };
 }

@@ -148,7 +148,8 @@ public sealed class AttendanceRepository : IAttendanceRepository
                 l.SlotId,
                 l.EventTimestamp,
                 l.EventDate,
-                (Application.Enums.AttendanceStatus)(byte)l.StatusFlag))
+                (Application.Enums.AttendanceStatus)(byte)l.StatusFlag,
+                l.AbsenceReason))
             .ToListAsync();
     }
 
@@ -173,7 +174,41 @@ public sealed class AttendanceRepository : IAttendanceRepository
                 l.SlotId,
                 l.EventTimestamp,
                 l.EventDate,
-                (Application.Enums.AttendanceStatus)(byte)l.StatusFlag))
+                (Application.Enums.AttendanceStatus)(byte)l.StatusFlag,
+                l.AbsenceReason))
             .ToListAsync();
+    }
+
+    /// <inheritdoc />
+    public async Task SetAbsenceReasonAsync(int staffId, int slotId, DateOnly date, string reason)
+    {
+        var existingLog = await _context.AttendanceLogs
+            .FirstOrDefaultAsync(l => l.StaffId == staffId && l.SlotId == slotId && l.EventDate == date);
+
+        if (existingLog is not null)
+        {
+            if (existingLog.StatusFlag != AttendanceStatus.Absent)
+            {
+                throw new BusinessRuleException(
+                    "Cannot set an absence reason for a slot where the employee was recorded as present.");
+            }
+
+            existingLog.AbsenceReason = reason;
+        }
+        else
+        {
+            var newLog = new AttendanceLog
+            {
+                StaffId = staffId,
+                SlotId = slotId,
+                EventDate = date,
+                EventTimestamp = date.ToDateTime(TimeOnly.MinValue, DateTimeKind.Utc),
+                StatusFlag = AttendanceStatus.Absent,
+                AbsenceReason = reason
+            };
+            _context.AttendanceLogs.Add(newLog);
+        }
+
+        await _context.SaveChangesAsync();
     }
 }

@@ -133,6 +133,9 @@
         <member name="M:Attendance.Api.Controllers.ReportController.ExportMonthly(System.Int32,System.Int32,System.String)">
             <summary>Streams the monthly report as a downloadable .xlsx or .pdf file.</summary>
         </member>
+        <member name="M:Attendance.Api.Controllers.ReportController.SetAbsenceReason(Attendance.Application.DTOs.SetAbsenceReasonDto)">
+            <summary>Sets or updates the absence reason for an employee's missed mandatory slot.</summary>
+        </member>
         <member name="T:Attendance.Api.Controllers.SlotConfigController">
             <summary>
             Attendance time-slot configuration CRUD (Requirements 2.1–2.5, 5.4).

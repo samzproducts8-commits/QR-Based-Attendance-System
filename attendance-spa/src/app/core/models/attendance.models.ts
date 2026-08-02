@@ -29,6 +29,7 @@ export interface DailySlotEntry {
   slotName: string;
   eventTimestamp: string | null;
   statusLabel: string;
+  absenceReason?: string | null;
 }
 
 export interface DailyAttendanceSheet {

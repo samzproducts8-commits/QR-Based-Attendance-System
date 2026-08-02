@@ -37,9 +37,22 @@
         <th mat-header-cell *matHeaderCellDef>Slots</th>
         <td mat-cell *matCellDef="let sheet">
           <div class="daily-report__chips">
-            <span *ngFor="let entry of sheet.entries" [class]="badgeClass(entry.statusLabel)">
-              {{ entry.slotName }}: {{ entry.statusLabel }}
-            </span>
+            <div *ngFor="let entry of sheet.entries" class="daily-report__chip-wrap">
+              <span [class]="badgeClass(entry.statusLabel)">
+                {{ entry.slotName }}: {{ entry.statusLabel }}
+                <span *ngIf="entry.absenceReason" class="daily-report__reason-text">
+                  ({{ entry.absenceReason }})
+                </span>
+              </span>
+              <button
+                *ngIf="entry.statusLabel === 'Absent'"
+                type="button"
+                class="daily-report__reason-btn"
+                [title]="entry.absenceReason ? 'Edit absence reason' : 'Add absence reason'"
+                (click)="openAbsenceReasonDialog(sheet, entry)">
+                <mat-icon>{{ entry.absenceReason ? 'edit' : 'add_comment' }}</mat-icon>
+              </button>
+            </div>
           </div>
         </td>
       </ng-container>

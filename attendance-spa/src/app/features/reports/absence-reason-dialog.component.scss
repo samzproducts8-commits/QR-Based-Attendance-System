@@ -1,0 +1,24 @@
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 360px;
+  max-width: 480px;
+  padding-top: 8px;
+}
+
+.meta-info {
+  background: var(--surface-bg-subtle, #f5f7fa);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+
+  p {
+    margin: 4px 0;
+    color: var(--text-secondary, #4a5568);
+  }
+}
+
+.full-width {
+  width: 100%;
+}

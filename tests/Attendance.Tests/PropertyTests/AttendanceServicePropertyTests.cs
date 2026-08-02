@@ -322,7 +322,8 @@ public class AttendanceServiceProperty8_ReportCompleteness
                 SlotId: s.SlotId,
                 EventTimestamp: new DateTime(2026, 7, 6, s.StartTime.Hour, s.StartTime.Minute, 0, DateTimeKind.Utc),
                 EventDate: date,
-                StatusFlag: s.SlotId % 2 == 0 ? AttendanceStatus.Late : AttendanceStatus.OnTime))
+                StatusFlag: s.SlotId % 2 == 0 ? AttendanceStatus.Late : AttendanceStatus.OnTime,
+                AbsenceReason: null))
             .ToList();
 
         var (service, _) = AttendanceServiceBuilder.Build(repo =>
@@ -388,7 +389,8 @@ public class AttendanceServiceProperty8_ReportCompleteness
                     id++, 42, slot.SlotId,
                     new DateTime(year, month, d, slot.StartTime.Hour, slot.StartTime.Minute, 0, DateTimeKind.Utc),
                     new DateOnly(year, month, d),
-                    d % 3 == 0 ? AttendanceStatus.Late : AttendanceStatus.OnTime));
+                    d % 3 == 0 ? AttendanceStatus.Late : AttendanceStatus.OnTime,
+                    null));
             }
         }
 

@@ -5,6 +5,7 @@ import { AuthGuard } from '../../core/guards/auth.guard';
 import { RoleGuard } from '../../core/guards/role.guard';
 import { DailyReportComponent } from './daily-report.component';
 import { MonthlyReportComponent } from './monthly-report.component';
+import { AbsenceReasonDialogComponent } from './absence-reason-dialog.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [DailyReportComponent, MonthlyReportComponent],
+  declarations: [DailyReportComponent, MonthlyReportComponent, AbsenceReasonDialogComponent],
   imports: [SharedModule, RouterModule.forChild(routes)]
 })
 export class ReportsModule {}

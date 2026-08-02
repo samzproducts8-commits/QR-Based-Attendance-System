@@ -89,6 +89,18 @@ public sealed class ReportController : ControllerBase
         return FileResult(bytes, exportFormat, $"monthly-attendance-{year}-{month:D2}");
     }
 
+    /// <summary>Sets or updates the absence reason for an employee's missed mandatory slot.</summary>
+    [HttpPut("absence-reason")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status422UnprocessableEntity)]
+    public async Task<IActionResult> SetAbsenceReason([FromBody] SetAbsenceReasonDto dto)
+    {
+        await _attendanceService.SetAbsenceReasonAsync(dto);
+        return NoContent();
+    }
+
     private static bool TryParseFormat(string format, out ExportFormat exportFormat)
     {
         switch (format.ToLowerInvariant())

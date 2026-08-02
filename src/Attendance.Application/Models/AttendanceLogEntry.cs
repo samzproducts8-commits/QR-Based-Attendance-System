@@ -12,12 +12,14 @@ namespace Attendance.Application.Models;
 /// <param name="SlotId">Slot configuration the event was recorded against.</param>
 /// <param name="EventTimestamp">UTC timestamp of the scan.</param>
 /// <param name="EventDate">Calendar date of the scan (fast lookup key).</param>
-/// <param name="StatusFlag">Computed status: OnTime, Late, or ManualEntry.</param>
+/// <param name="StatusFlag">Computed status: OnTime, Late, ManualEntry, or Absent.</param>
+/// <param name="AbsenceReason">Admin-entered reason for absence, or null.</param>
 public sealed record AttendanceLogEntry(
     long AttendanceLogId,
     int StaffId,
     int SlotId,
     DateTime EventTimestamp,
     DateOnly EventDate,
-    AttendanceStatus StatusFlag
+    AttendanceStatus StatusFlag,
+    string? AbsenceReason
 );

@@ -126,4 +126,17 @@ public interface IAttendanceService
     /// <param name="toDate">Optional inclusive upper bound.</param>
     Task<IReadOnlyList<AttendanceHistoryEntry>> GetHistoryAsync(
         int staffId, DateOnly? fromDate = null, DateOnly? toDate = null);
+
+    /// <summary>
+    /// Sets or updates the absence reason for a staff member's missed
+    /// mandatory slot on a specific date.  Admin/HR only.
+    /// </summary>
+    /// <param name="dto">The absence reason details.</param>
+    /// <exception cref="Exceptions.NotFoundException">
+    /// Thrown when the slot does not exist or is not active.
+    /// </exception>
+    /// <exception cref="Exceptions.BusinessRuleException">
+    /// Thrown when the slot is not mandatory or the employee was actually present.
+    /// </exception>
+    Task SetAbsenceReasonAsync(DTOs.SetAbsenceReasonDto dto);
 }

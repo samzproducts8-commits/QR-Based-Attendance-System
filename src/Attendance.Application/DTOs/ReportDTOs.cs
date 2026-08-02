@@ -28,11 +28,16 @@ public record DailyAttendanceSheet(
 /// <param name="StatusLabel">
 /// "On Time", "Late", or "Absent" (Requirement 4.5).
 /// </param>
+/// <param name="AbsenceReason">
+/// Admin-entered reason for absence, or <see langword="null"/> when not absent
+/// or no reason has been recorded.
+/// </param>
 public record DailySlotEntry(
     int SlotId,
     string SlotName,
     DateTime? EventTimestamp,
-    string StatusLabel
+    string StatusLabel,
+    string? AbsenceReason
 );
 
 /// <summary>

@@ -100,6 +100,10 @@ namespace Attendance.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("AttendanceLogId"));
 
+                    b.Property<string>("AbsenceReason")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
                     b.Property<DateOnly>("EventDate")
                         .HasColumnType("date");
 

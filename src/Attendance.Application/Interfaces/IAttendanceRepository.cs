@@ -73,4 +73,12 @@ public interface IAttendanceRepository
         DateOnly toDate,
         int? staffId = null,
         int? departmentId = null);
+
+    /// <summary>
+    /// Upserts an <c>AttendanceLog</c> row with <c>StatusFlag = Absent</c>
+    /// and the provided reason text.  If a log already exists for the given
+    /// (staff, slot, date) with a non-Absent status, throws
+    /// <see cref="Exceptions.BusinessRuleException"/>.
+    /// </summary>
+    Task SetAbsenceReasonAsync(int staffId, int slotId, DateOnly date, string reason);
 }

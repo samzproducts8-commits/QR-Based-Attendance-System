@@ -13,6 +13,7 @@ public class AttendanceLog
     public DateTime EventTimestamp { get; set; }
     public DateOnly EventDate { get; set; }
     public AttendanceStatus StatusFlag { get; set; }
+    public string? AbsenceReason { get; set; }
 
     // Navigation properties
     public Staff Staff { get; set; } = null!;

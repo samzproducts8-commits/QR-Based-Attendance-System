@@ -32,6 +32,10 @@ export class ReportApiService {
     const params = new HttpParams().set('year', year).set('month', month).set('format', format);
     return this.http.get(`${this.baseUrl}/monthly/export`, { params, responseType: 'blob' });
   }
+
+  setAbsenceReason(staffId: number, slotId: number, date: string, reason: string): Observable<void> {
+    return this.http.put<void>(`${this.baseUrl}/absence-reason`, { staffId, slotId, date, reason });
+  }
 }
 
 /** Triggers a browser download for a Blob response. */

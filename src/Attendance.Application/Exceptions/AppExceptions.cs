@@ -77,3 +77,13 @@ public sealed class SlotInUseException : Exception
 {
     public SlotInUseException(string message) : base(message) { }
 }
+
+/// <summary>
+/// Thrown when an operation violates a business rule that doesn't fit a more
+/// specific exception (e.g. attempting to mark a present employee as absent).
+/// Mapped to HTTP 422 (Requirement 7.5).
+/// </summary>
+public sealed class BusinessRuleException : Exception
+{
+    public BusinessRuleException(string message) : base(message) { }
+}

@@ -413,3 +413,210 @@ Attendance.Application.Exceptions.DuplicateAttendanceException: You have already
 2026-08-02 19:26:47.098 +03:00 [INF] HTTP POST /api/attendance/scan responded 200 in 22.6888 ms
 2026-08-02 19:26:47.113 +03:00 [INF] HTTP GET /api/attendance/my-history responded 200 in 14.6640 ms
 2026-08-02 19:26:47.117 +03:00 [INF] Application is shutting down...
+2026-08-02 20:53:33.156 +03:00 [WRN] The 'StaffStatus' property 'Status' on entity type 'Staff' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value 'Inactive', since this is the CLR default for the 'StaffStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2026-08-02 20:53:34.506 +03:00 [INF] Seeded 4 attendance slot(s): MorningIn, LunchOut, LunchIn, EveningOut
+2026-08-02 20:53:34.540 +03:00 [INF] Seeded 5 department(s): Administration, Engineering, Finance, Human Resources, Operations
+2026-08-02 20:53:34.646 +03:00 [INF] Created role 'Admin'.
+2026-08-02 20:53:34.654 +03:00 [INF] Created role 'HR'.
+2026-08-02 20:53:34.656 +03:00 [INF] Created role 'Employee'.
+2026-08-02 20:53:34.884 +03:00 [INF] Seeded admin user 'admin' with role 'Admin'.
+2026-08-02 20:53:34.887 +03:00 [INF] Kiosk QR deep-link base: http://192.168.1.2:4200/scan — phones must be able to reach this host.
+2026-08-02 20:53:34.941 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-02 20:53:34.941 +03:00 [INF] Hosting environment: Development
+2026-08-02 20:53:34.941 +03:00 [INF] Content root path: C:\employer\src\Attendance.Api
+2026-08-02 20:53:35.279 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 268.9565 ms
+2026-08-02 20:53:35.298 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpMaxRequestBodySizeFeature.
+2026-08-02 20:53:35.346 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpRequestBodySizeFeature.
+2026-08-02 20:53:35.572 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:35.646 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:35.651 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:35.675 +03:00 [INF] HTTP POST /api/staff responded 201 in 376.8680 ms
+2026-08-02 20:53:35.739 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 55.5214 ms
+2026-08-02 20:53:35.742 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpMaxRequestBodySizeFeature.
+2026-08-02 20:53:35.745 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpRequestBodySizeFeature.
+2026-08-02 20:53:35.747 +03:00 [ERR] HTTP POST /api/staff responded 500 in 4.8203 ms
+Attendance.Application.Exceptions.PhotoValidationException: Only PNG images are accepted. Received: .jpg
+   at Attendance.Application.Services.StaffService.CreateStaffAsync(CreateStaffRequest request, IFormFile photo) in C:\employer\src\Attendance.Application\Services\StaffService.cs:line 48
+   at Attendance.Api.Controllers.StaffController.Create(CreateStaffRequest request, IFormFile photo) in C:\employer\src\Attendance.Api\Controllers\StaffController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-02 20:53:35.776 +03:00 [WRN] Request fault 400 on POST /api/staff: Only PNG images are accepted. Received: .jpg
+2026-08-02 20:53:35.834 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 48.2721 ms
+2026-08-02 20:53:35.836 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpMaxRequestBodySizeFeature.
+2026-08-02 20:53:35.837 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpRequestBodySizeFeature.
+2026-08-02 20:53:35.839 +03:00 [ERR] HTTP POST /api/staff responded 500 in 3.1596 ms
+Attendance.Application.Exceptions.PhotoValidationException: File content is not a valid PNG image.
+   at Attendance.Application.Services.StaffService.CreateStaffAsync(CreateStaffRequest request, IFormFile photo) in C:\employer\src\Attendance.Application\Services\StaffService.cs:line 48
+   at Attendance.Api.Controllers.StaffController.Create(CreateStaffRequest request, IFormFile photo) in C:\employer\src\Attendance.Api\Controllers\StaffController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-02 20:53:35.840 +03:00 [WRN] Request fault 400 on POST /api/staff: File content is not a valid PNG image.
+2026-08-02 20:53:35.917 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 44.9086 ms
+2026-08-02 20:53:35.919 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpMaxRequestBodySizeFeature.
+2026-08-02 20:53:35.919 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpRequestBodySizeFeature.
+2026-08-02 20:53:35.943 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:35.989 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:35.992 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:35.995 +03:00 [INF] HTTP POST /api/staff responded 201 in 76.4848 ms
+2026-08-02 20:53:36.048 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 51.9368 ms
+2026-08-02 20:53:36.134 +03:00 [INF] QR scan attempt: StaffId=2 Token=fd5dcb54… Outcome="TokenExpired" Ip=null
+2026-08-02 20:53:36.137 +03:00 [INF] HTTP POST /api/attendance/scan responded 410 in 46.7506 ms
+2026-08-02 20:53:36.193 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 46.3468 ms
+2026-08-02 20:53:36.194 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpMaxRequestBodySizeFeature.
+2026-08-02 20:53:36.194 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpRequestBodySizeFeature.
+2026-08-02 20:53:36.199 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:36.253 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:36.256 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:36.259 +03:00 [INF] HTTP POST /api/staff responded 201 in 65.2820 ms
+2026-08-02 20:53:36.305 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 45.2921 ms
+2026-08-02 20:53:36.326 +03:00 [INF] HTTP POST /api/qr/generate responded 200 in 20.0449 ms
+2026-08-02 20:53:36.340 +03:00 [INF] QR scan attempt: StaffId=3 Token=e71a1d56… Outcome="Success" Ip=null
+2026-08-02 20:53:36.415 +03:00 [INF] HTTP POST /api/attendance/scan responded 200 in 85.8214 ms
+2026-08-02 20:53:36.498 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 53.8451 ms
+2026-08-02 20:53:36.498 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpMaxRequestBodySizeFeature.
+2026-08-02 20:53:36.499 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpRequestBodySizeFeature.
+2026-08-02 20:53:36.503 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:36.552 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:36.555 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:36.558 +03:00 [INF] HTTP POST /api/staff responded 201 in 59.1246 ms
+2026-08-02 20:53:36.607 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 48.4970 ms
+2026-08-02 20:53:36.617 +03:00 [INF] HTTP POST /api/qr/generate responded 200 in 7.3887 ms
+2026-08-02 20:53:36.624 +03:00 [INF] QR scan attempt: StaffId=4 Token=7d902176… Outcome="Success" Ip=null
+2026-08-02 20:53:36.628 +03:00 [INF] HTTP POST /api/attendance/scan responded 200 in 10.5156 ms
+2026-08-02 20:53:36.630 +03:00 [INF] QR scan attempt: StaffId=4 Token=7d902176… Outcome="TokenAlreadyUsed" Ip=null
+2026-08-02 20:53:36.630 +03:00 [INF] HTTP POST /api/attendance/scan responded 409 in 1.8867 ms
+2026-08-02 20:53:36.687 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 51.3756 ms
+2026-08-02 20:53:36.688 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpMaxRequestBodySizeFeature.
+2026-08-02 20:53:36.689 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpRequestBodySizeFeature.
+2026-08-02 20:53:36.698 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:36.745 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:36.778 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:36.780 +03:00 [INF] HTTP POST /api/staff responded 201 in 91.8606 ms
+2026-08-02 20:53:36.828 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 46.3569 ms
+2026-08-02 20:53:36.834 +03:00 [INF] HTTP POST /api/qr/generate responded 200 in 5.1798 ms
+2026-08-02 20:53:36.841 +03:00 [INF] QR scan attempt: StaffId=5 Token=6d24272f… Outcome="Success" Ip=null
+2026-08-02 20:53:36.846 +03:00 [INF] HTTP POST /api/attendance/scan responded 200 in 11.3628 ms
+2026-08-02 20:53:36.851 +03:00 [INF] HTTP POST /api/qr/generate responded 200 in 4.8965 ms
+2026-08-02 20:53:36.857 +03:00 [INF] QR scan attempt: StaffId=5 Token=0be10c6f… Outcome="Success" Ip=null
+2026-08-02 20:53:36.862 +03:00 [ERR] HTTP POST /api/attendance/scan responded 500 in 10.2414 ms
+Attendance.Application.Exceptions.DuplicateAttendanceException: You have already checked in for this slot today.
+   at Attendance.Application.Services.AttendanceService.RecordAttendanceAsync(Int32 staffId, Int32 qrSessionId) in C:\employer\src\Attendance.Application\Services\AttendanceService.cs:line 63
+   at Attendance.Api.Controllers.AttendanceController.Scan(ScanRequestDto request) in C:\employer\src\Attendance.Api\Controllers\AttendanceController.cs:line 68
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-02 20:53:36.863 +03:00 [WRN] Request fault 409 on POST /api/attendance/scan: You have already checked in for this slot today.
+2026-08-02 20:53:36.918 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 50.3444 ms
+2026-08-02 20:53:36.919 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpMaxRequestBodySizeFeature.
+2026-08-02 20:53:36.919 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpRequestBodySizeFeature.
+2026-08-02 20:53:36.924 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:36.971 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:36.976 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:36.979 +03:00 [INF] HTTP POST /api/staff responded 201 in 59.8212 ms
+2026-08-02 20:53:37.029 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 49.0835 ms
+2026-08-02 20:53:37.033 +03:00 [INF] QR scan attempt: StaffId=6 Token=25715b07… Outcome="TokenNotFound" Ip=null
+2026-08-02 20:53:37.033 +03:00 [INF] HTTP POST /api/attendance/scan responded 404 in 3.8426 ms
+2026-08-02 20:53:37.092 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 46.5334 ms
+2026-08-02 20:53:37.093 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpMaxRequestBodySizeFeature.
+2026-08-02 20:53:37.093 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpRequestBodySizeFeature.
+2026-08-02 20:53:37.100 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:37.148 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:37.151 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:37.153 +03:00 [INF] HTTP POST /api/staff responded 201 in 60.2224 ms
+2026-08-02 20:53:37.205 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 51.5588 ms
+2026-08-02 20:53:37.212 +03:00 [INF] HTTP POST /api/qr/generate responded 200 in 6.1373 ms
+2026-08-02 20:53:37.219 +03:00 [INF] QR scan attempt: StaffId=7 Token=35ae1d17… Outcome="Success" Ip=null
+2026-08-02 20:53:37.222 +03:00 [INF] HTTP POST /api/attendance/scan responded 200 in 9.2773 ms
+2026-08-02 20:53:37.267 +03:00 [INF] HTTP GET /api/reports/monthly responded 200 in 43.8946 ms
+2026-08-02 20:53:37.331 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 46.0720 ms
+2026-08-02 20:53:37.332 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpMaxRequestBodySizeFeature.
+2026-08-02 20:53:37.332 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpRequestBodySizeFeature.
+2026-08-02 20:53:37.337 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:37.384 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:37.388 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:37.391 +03:00 [INF] HTTP POST /api/staff responded 201 in 58.9954 ms
+2026-08-02 20:53:37.444 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 52.6150 ms
+2026-08-02 20:53:37.451 +03:00 [INF] HTTP POST /api/qr/generate responded 200 in 6.2947 ms
+2026-08-02 20:53:37.462 +03:00 [INF] QR scan attempt: StaffId=8 Token=75540f0d… Outcome="Success" Ip=null
+2026-08-02 20:53:37.466 +03:00 [INF] HTTP POST /api/attendance/scan responded 200 in 13.6485 ms
+2026-08-02 20:53:37.499 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 31.9880 ms
+2026-08-02 20:53:37.509 +03:00 [INF] HTTP GET /api/staff responded 401 in 2.5861 ms
+2026-08-02 20:53:37.563 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 50.3440 ms
+2026-08-02 20:53:37.566 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpMaxRequestBodySizeFeature.
+2026-08-02 20:53:37.566 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpRequestBodySizeFeature.
+2026-08-02 20:53:37.571 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:37.618 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:37.622 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:37.625 +03:00 [INF] HTTP POST /api/staff responded 201 in 59.6598 ms
+2026-08-02 20:53:37.674 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 47.8985 ms
+2026-08-02 20:53:37.678 +03:00 [INF] HTTP GET /api/staff responded 403 in 2.4938 ms
+2026-08-02 20:53:37.784 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 47.5355 ms
+2026-08-02 20:53:37.786 +03:00 [INF] HTTP GET /api/slots responded 403 in 0.5828 ms
+2026-08-02 20:53:37.864 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 61.7277 ms
+2026-08-02 20:53:37.866 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpMaxRequestBodySizeFeature.
+2026-08-02 20:53:37.867 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpRequestBodySizeFeature.
+2026-08-02 20:53:37.873 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:37.924 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:37.927 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:37.929 +03:00 [INF] HTTP POST /api/staff responded 201 in 63.3007 ms
+2026-08-02 20:53:37.979 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 47.9474 ms
+2026-08-02 20:53:37.979 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpMaxRequestBodySizeFeature.
+2026-08-02 20:53:37.980 +03:00 [WRN] A request body size limit could not be applied. This server does not support the IHttpRequestBodySizeFeature.
+2026-08-02 20:53:37.984 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:38.030 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:38.034 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-02 20:53:38.037 +03:00 [INF] HTTP POST /api/staff responded 201 in 57.3583 ms
+2026-08-02 20:53:38.081 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 44.1274 ms
+2026-08-02 20:53:38.087 +03:00 [INF] HTTP POST /api/qr/generate responded 200 in 4.4017 ms
+2026-08-02 20:53:38.093 +03:00 [INF] QR scan attempt: StaffId=10 Token=fae040ce… Outcome="Success" Ip=null
+2026-08-02 20:53:38.096 +03:00 [INF] HTTP POST /api/attendance/scan responded 200 in 8.8301 ms
+2026-08-02 20:53:38.100 +03:00 [INF] HTTP POST /api/qr/generate responded 200 in 3.6816 ms
+2026-08-02 20:53:38.110 +03:00 [INF] QR scan attempt: StaffId=11 Token=ec0e7611… Outcome="Success" Ip=null
+2026-08-02 20:53:38.114 +03:00 [INF] HTTP POST /api/attendance/scan responded 200 in 13.0677 ms
+2026-08-02 20:53:38.130 +03:00 [INF] HTTP GET /api/attendance/my-history responded 200 in 15.3592 ms
+2026-08-02 20:53:38.136 +03:00 [INF] Application is shutting down...

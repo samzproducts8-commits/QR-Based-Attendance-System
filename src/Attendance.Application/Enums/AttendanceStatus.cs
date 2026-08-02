@@ -13,5 +13,8 @@ public enum AttendanceStatus : byte
     Late = 1,
 
     /// <summary>Attendance was entered manually by HR / Admin (not via QR scan).</summary>
-    ManualEntry = 2
+    ManualEntry = 2,
+
+    /// <summary>Employee was absent — row created when admin records an absence reason.</summary>
+    Absent = 3
 }
