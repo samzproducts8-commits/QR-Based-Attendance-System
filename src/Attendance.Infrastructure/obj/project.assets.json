@@ -4727,31 +4727,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\temes\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\samuel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\PROJECTS\\employer\\src\\Attendance.Infrastructure\\Attendance.Infrastructure.csproj",
+      "projectUniqueName": "C:\\employer\\src\\Attendance.Infrastructure\\Attendance.Infrastructure.csproj",
       "projectName": "Attendance.Infrastructure",
-      "projectPath": "C:\\PROJECTS\\employer\\src\\Attendance.Infrastructure\\Attendance.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\temes\\.nuget\\packages\\",
-      "outputPath": "C:\\PROJECTS\\employer\\src\\Attendance.Infrastructure\\obj\\",
+      "projectPath": "C:\\employer\\src\\Attendance.Infrastructure\\Attendance.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\samuel\\.nuget\\packages\\",
+      "outputPath": "C:\\employer\\src\\Attendance.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\temes\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\samuel\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4759,8 +4752,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\PROJECTS\\employer\\src\\Attendance.Application\\Attendance.Application.csproj": {
-              "projectPath": "C:\\PROJECTS\\employer\\src\\Attendance.Application\\Attendance.Application.csproj"
+            "C:\\employer\\src\\Attendance.Application\\Attendance.Application.csproj": {
+              "projectPath": "C:\\employer\\src\\Attendance.Application\\Attendance.Application.csproj"
             }
           }
         }
@@ -4829,7 +4822,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

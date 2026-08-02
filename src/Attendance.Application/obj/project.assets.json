@@ -402,31 +402,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\temes\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\samuel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\PROJECTS\\employer\\src\\Attendance.Application\\Attendance.Application.csproj",
+      "projectUniqueName": "C:\\employer\\src\\Attendance.Application\\Attendance.Application.csproj",
       "projectName": "Attendance.Application",
-      "projectPath": "c:\\PROJECTS\\employer\\src\\Attendance.Application\\Attendance.Application.csproj",
-      "packagesPath": "C:\\Users\\temes\\.nuget\\packages\\",
-      "outputPath": "c:\\PROJECTS\\employer\\src\\Attendance.Application\\obj\\",
+      "projectPath": "C:\\employer\\src\\Attendance.Application\\Attendance.Application.csproj",
+      "packagesPath": "C:\\Users\\samuel\\.nuget\\packages\\",
+      "outputPath": "C:\\employer\\src\\Attendance.Application\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\temes\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\samuel\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -485,7 +478,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

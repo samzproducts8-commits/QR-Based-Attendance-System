@@ -188,7 +188,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
 app.UseStaticFiles();                               // serves wwwroot/staff-photos/…
 app.UseCors(CorsPolicy);
 app.UseAuthentication();

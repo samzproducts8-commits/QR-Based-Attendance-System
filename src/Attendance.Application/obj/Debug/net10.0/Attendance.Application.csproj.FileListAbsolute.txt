@@ -13,3 +13,16 @@ C:\PROJECTS\employer\src\Attendance.Application\obj\Debug\net10.0\ref\Attendance
 C:\PROJECTS\employer\src\Attendance.Application\bin\verify\Attendance.Application.deps.json
 C:\PROJECTS\employer\src\Attendance.Application\bin\verify\Attendance.Application.dll
 C:\PROJECTS\employer\src\Attendance.Application\bin\verify\Attendance.Application.pdb
+C:\employer\src\Attendance.Application\bin\Debug\net10.0\Attendance.Application.deps.json
+C:\employer\src\Attendance.Application\bin\Debug\net10.0\Attendance.Application.dll
+C:\employer\src\Attendance.Application\bin\Debug\net10.0\Attendance.Application.pdb
+C:\employer\src\Attendance.Application\obj\Debug\net10.0\Attendance.Application.csproj.AssemblyReference.cache
+C:\employer\src\Attendance.Application\obj\Debug\net10.0\Attendance.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\employer\src\Attendance.Application\obj\Debug\net10.0\Attendance.Application.AssemblyInfoInputs.cache
+C:\employer\src\Attendance.Application\obj\Debug\net10.0\Attendance.Application.AssemblyInfo.cs
+C:\employer\src\Attendance.Application\obj\Debug\net10.0\Attendance.Application.csproj.CoreCompileInputs.cache
+C:\employer\src\Attendance.Application\obj\Debug\net10.0\Attendance.Application.sourcelink.json
+C:\employer\src\Attendance.Application\obj\Debug\net10.0\Attendance.Application.dll
+C:\employer\src\Attendance.Application\obj\Debug\net10.0\refint\Attendance.Application.dll
+C:\employer\src\Attendance.Application\obj\Debug\net10.0\Attendance.Application.pdb
+C:\employer\src\Attendance.Application\obj\Debug\net10.0\ref\Attendance.Application.dll

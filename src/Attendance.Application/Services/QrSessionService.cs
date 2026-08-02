@@ -152,9 +152,10 @@ public sealed class QrSessionService : IQrSessionService
     {
         int expiredCount = await _repository.ExpireStaleTokensAsync();
 
-        // If any tokens were expired, regenerate the kiosk QR code so the
-        // display is never left showing a dead token.
-        if (expiredCount > 0)
+        // If any tokens were expired or no active token exists yet,
+        // generate a new token so the kiosk display always has a valid code.
+        QrSessionSnapshot? activeToken = await _repository.GetActiveTokenAsync();
+        if (expiredCount > 0 || activeToken is null)
         {
             await GenerateNewTokenAsync();
         }

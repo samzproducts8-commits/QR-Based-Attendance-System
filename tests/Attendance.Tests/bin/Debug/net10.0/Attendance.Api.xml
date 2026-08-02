@@ -180,6 +180,7 @@
         </member>
         <member name="M:Attendance.Api.Controllers.StaffController.Update(System.Int32,Attendance.Application.DTOs.UpdateStaffRequest)">
             <summary>Updates the mutable fields of an existing staff record.</summary>
+            or UPDATE STAFF with the created staff information.
         </member>
         <member name="M:Attendance.Api.Controllers.StaffController.Deactivate(System.Int32)">
             <summary>
