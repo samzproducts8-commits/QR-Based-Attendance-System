@@ -136,4 +136,67 @@ public sealed class ReportIntegrationTests
         var morning = staffSummary.SlotSummaries.Single(s => s.SlotName == "MorningIn");
         Assert.Equal(1, morning.OnTimeCount + morning.LateCount);
     }
+
+    [Fact]
+    public async Task LiveDashboard_ReturnsExpectedMetrics()
+    {
+        await ArrangeTwoSlotsAsync();
+
+        var admin = _factory.CreateClient();
+        var adminAuth = await ApiTestHelpers.LoginAsync(admin, ApiTestHelpers.AdminUser, ApiTestHelpers.AdminPassword);
+        ApiTestHelpers.SetBearer(admin, adminAuth.AccessToken);
+
+        var metrics = await admin.GetFromJsonAsync<LiveDashboardMetricsDto>(
+            "/api/reports/live-dashboard", ApiTestHelpers.Json);
+
+        Assert.NotNull(metrics);
+        Assert.True(metrics!.TotalActiveStaff >= 0);
+        Assert.NotNull(metrics.RecentActivities);
+    }
+
+    [Fact]
+    public async Task PayrollReport_ReturnsMonthlyPayrollSummary()
+    {
+        await ArrangeTwoSlotsAsync();
+
+        var admin = _factory.CreateClient();
+        var adminAuth = await ApiTestHelpers.LoginAsync(admin, ApiTestHelpers.AdminUser, ApiTestHelpers.AdminPassword);
+        ApiTestHelpers.SetBearer(admin, adminAuth.AccessToken);
+
+        var now = DateTimeHelper.OfficeNow();
+        var payroll = await admin.GetFromJsonAsync<MonthlyPayrollSummaryDto>(
+            $"/api/reports/payroll?year={now.Year}&month={now.Month}", ApiTestHelpers.Json);
+
+        Assert.NotNull(payroll);
+        Assert.Equal(now.Year, payroll!.Year);
+        Assert.Equal(now.Month, payroll.Month);
+        Assert.NotNull(payroll.StaffSummaries);
+    }
+
+    [Fact]
+    public async Task PayrollExport_ReturnsCsvAndXlsxFiles()
+    {
+        await ArrangeTwoSlotsAsync();
+
+        var admin = _factory.CreateClient();
+        var adminAuth = await ApiTestHelpers.LoginAsync(admin, ApiTestHelpers.AdminUser, ApiTestHelpers.AdminPassword);
+        ApiTestHelpers.SetBearer(admin, adminAuth.AccessToken);
+
+        var now = DateTimeHelper.OfficeNow();
+
+        // CSV Export
+        var csvResponse = await admin.GetAsync($"/api/reports/payroll/export?year={now.Year}&month={now.Month}&format=csv");
+        csvResponse.EnsureSuccessStatusCode();
+        Assert.Equal("text/csv", csvResponse.Content.Headers.ContentType?.MediaType);
+        string csvText = await csvResponse.Content.ReadAsStringAsync();
+        Assert.Contains("Employee Code", csvText);
+        Assert.Contains("Total Days Worked", csvText);
+
+        // XLSX Export
+        var xlsxResponse = await admin.GetAsync($"/api/reports/payroll/export?year={now.Year}&month={now.Month}&format=xlsx");
+        xlsxResponse.EnsureSuccessStatusCode();
+        Assert.Equal("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", xlsxResponse.Content.Headers.ContentType?.MediaType);
+        byte[] xlsxBytes = await xlsxResponse.Content.ReadAsByteArrayAsync();
+        Assert.NotEmpty(xlsxBytes);
+    }
 }

@@ -86,6 +86,86 @@ public sealed class ReportExportHelper : IReportExporter
     }
 
     // -------------------------------------------------------------------------
+    // Payroll Summary Export (CSV / Excel)
+    // -------------------------------------------------------------------------
+
+    /// <inheritdoc />
+    public byte[] ExportPayroll(MonthlyPayrollSummaryDto summary, ExportFormat format)
+    {
+        string title = $"Monthly Payroll Summary — {summary.Year}-{summary.Month:D2}";
+        var header = new List<string>
+        {
+            "Employee Code",
+            "Employee Name",
+            "Department",
+            "Total Days Worked",
+            "Total Hours",
+            "Overtime Hours",
+            "Late Penalties",
+            "Unpaid Absences"
+        };
+
+        var rows = summary.StaffSummaries.Select(staff => new List<string>
+        {
+            staff.UniqueCode,
+            staff.FullName,
+            staff.Department,
+            staff.TotalDaysWorked.ToString(),
+            staff.TotalHours.ToString("F2"),
+            staff.OvertimeHours.ToString("F2"),
+            staff.LatePenalties.ToString(),
+            staff.UnpaidAbsences.ToString()
+        }).ToList();
+
+        if (format == ExportFormat.Csv)
+        {
+            return BuildCsv(header, rows);
+        }
+
+        // Include summary row for Excel
+        var summaryRow = new List<string>
+        {
+            "TOTAL",
+            $"{summary.TotalStaff} Staff",
+            "-",
+            summary.TotalDaysWorked.ToString(),
+            summary.TotalHoursWorked.ToString("F2"),
+            summary.TotalOvertimeHours.ToString("F2"),
+            summary.TotalLatePenalties.ToString(),
+            summary.TotalUnpaidAbsences.ToString()
+        };
+
+        var allRows = new List<List<string>>(rows) { summaryRow };
+        return BuildXlsx(title, "Payroll Summary", header, allRows);
+    }
+
+    private static byte[] BuildCsv(List<string> header, List<List<string>> rows)
+    {
+        var sb = new System.Text.StringBuilder();
+
+        // Write header
+        sb.AppendLine(string.Join(",", header.Select(EscapeCsvField)));
+
+        // Write rows
+        foreach (var row in rows)
+        {
+            sb.AppendLine(string.Join(",", row.Select(EscapeCsvField)));
+        }
+
+        return System.Text.Encoding.UTF8.GetBytes(sb.ToString());
+    }
+
+    private static string EscapeCsvField(string field)
+    {
+        if (string.IsNullOrEmpty(field)) return "";
+        if (field.Contains(',') || field.Contains('"') || field.Contains('\n') || field.Contains('\r'))
+        {
+            return $"\"{field.Replace("\"", "\"\"")}\"";
+        }
+        return field;
+    }
+
+    // -------------------------------------------------------------------------
     // Excel rendering (ClosedXML)
     // -------------------------------------------------------------------------
 

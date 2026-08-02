@@ -2,13 +2,29 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import { DailyAttendanceSheet, MonthlySummary } from '../models/attendance.models';
+import { DailyAttendanceSheet, MonthlySummary, LiveDashboardMetrics, MonthlyPayrollSummary } from '../models/attendance.models';
 
 @Injectable({ providedIn: 'root' })
 export class ReportApiService {
   private readonly baseUrl = `${environment.apiUrl}/reports`;
 
   constructor(private readonly http: HttpClient) {}
+
+  getLiveDashboard(): Observable<LiveDashboardMetrics> {
+    return this.http.get<LiveDashboardMetrics>(`${this.baseUrl}/live-dashboard`);
+  }
+
+  getMonthlyPayroll(year: number, month: number, departmentId?: number): Observable<MonthlyPayrollSummary> {
+    let params = new HttpParams().set('year', year).set('month', month);
+    if (departmentId) params = params.set('departmentId', departmentId);
+    return this.http.get<MonthlyPayrollSummary>(`${this.baseUrl}/payroll`, { params });
+  }
+
+  exportPayroll(year: number, month: number, format: 'csv' | 'xlsx', departmentId?: number): Observable<Blob> {
+    let params = new HttpParams().set('year', year).set('month', month).set('format', format);
+    if (departmentId) params = params.set('departmentId', departmentId);
+    return this.http.get(`${this.baseUrl}/payroll/export`, { params, responseType: 'blob' });
+  }
 
   getDaily(date: string, staffId?: number): Observable<DailyAttendanceSheet[]> {
     let params = new HttpParams().set('date', date);

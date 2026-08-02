@@ -31,4 +31,12 @@ public interface IReportExporter
     /// <param name="format">Xlsx or Pdf.</param>
     /// <returns>The raw bytes of the generated file.</returns>
     byte[] ExportMonthly(MonthlySummary summary, ExportFormat format);
+
+    /// <summary>
+    /// Renders a monthly payroll summary report in CSV or Excel (XLSX) format.
+    /// </summary>
+    /// <param name="summary">The aggregated payroll data.</param>
+    /// <param name="format">Csv or Xlsx.</param>
+    /// <returns>The raw bytes of the generated file.</returns>
+    byte[] ExportPayroll(MonthlyPayrollSummaryDto summary, ExportFormat format);
 }

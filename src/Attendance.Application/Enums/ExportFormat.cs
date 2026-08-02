@@ -9,5 +9,8 @@ public enum ExportFormat
     Xlsx = 0,
 
     /// <summary>PDF document (.pdf)</summary>
-    Pdf = 1
+    Pdf = 1,
+
+    /// <summary>Comma-separated values (.csv)</summary>
+    Csv = 2
 }

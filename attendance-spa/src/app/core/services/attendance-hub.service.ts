@@ -3,6 +3,8 @@ import * as signalR from '@microsoft/signalr';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 
+import { LiveDashboardMetrics } from '../models/attendance.models';
+
 export interface KioskQrUpdate {
   base64Png: string;
   tokenValue: string;
@@ -11,14 +13,6 @@ export interface KioskQrUpdate {
 
 export type HubConnectionStatus = 'connecting' | 'connected' | 'reconnecting' | 'disconnected' | 'error';
 
-/**
- * Wraps the SignalR connection to /hubs/attendance so the kiosk component
- * receives live QR code pushes (Requirements 6.1–6.5).
- *
- * The hub connection is deliberately anonymous — no JWT is attached — since
- * the kiosk is a public, unattended display and the QR payload it receives
- * carries no security value (see AttendanceHub / docs/QR-Security.md).
- */
 @Injectable({ providedIn: 'root' })
 export class AttendanceHubService {
   private connection: signalR.HubConnection | null = null;
@@ -26,19 +20,15 @@ export class AttendanceHubService {
   private readonly qrUpdateSubject = new BehaviorSubject<KioskQrUpdate | null>(null);
   readonly qrUpdate$: Observable<KioskQrUpdate | null> = this.qrUpdateSubject.asObservable();
 
+  private readonly liveDashboardSubject = new BehaviorSubject<LiveDashboardMetrics | null>(null);
+  readonly liveDashboardUpdate$: Observable<LiveDashboardMetrics | null> = this.liveDashboardSubject.asObservable();
+
   private readonly statusSubject = new BehaviorSubject<HubConnectionStatus>('disconnected');
   readonly status$: Observable<HubConnectionStatus> = this.statusSubject.asObservable();
 
   private readonly errorSubject = new BehaviorSubject<string | null>(null);
   readonly error$: Observable<string | null> = this.errorSubject.asObservable();
 
-  /**
-   * Connects to the hub. Never throws — connection failures (server
-   * unreachable, network drop, etc.) are surfaced via {@link status$}
-   * (= 'error') and {@link error$} instead of an unhandled promise
-   * rejection, so the UI can show a clear message instead of
-   * "Waiting for QR code…" forever.
-   */
   async connect(): Promise<void> {
     if (this.connection) {
       return;
@@ -51,6 +41,10 @@ export class AttendanceHubService {
 
     this.connection.on('ReceiveQrCode', (base64Png: string, tokenValue: string, expiresAt: string) => {
       this.qrUpdateSubject.next({ base64Png, tokenValue, expiresAt });
+    });
+
+    this.connection.on('ReceiveLiveDashboardUpdate', (metrics: LiveDashboardMetrics) => {
+      this.liveDashboardSubject.next(metrics);
     });
 
     this.connection.onreconnecting(() => this.statusSubject.next('reconnecting'));

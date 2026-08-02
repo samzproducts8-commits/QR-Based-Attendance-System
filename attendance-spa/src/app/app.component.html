@@ -9,6 +9,16 @@
       </div>
 
       <mat-nav-list class="app-shell__nav">
+        <a mat-list-item routerLink="/reports/live-dashboard" routerLinkActive="is-active"
+           *ngIf="authService.hasAnyRole(['Admin','HR'])">
+          <mat-icon matListItemIcon>dashboard</mat-icon>
+          <span matListItemTitle>Live Dashboard</span>
+        </a>
+        <a mat-list-item routerLink="/reports/payroll" routerLinkActive="is-active"
+           *ngIf="authService.hasAnyRole(['Admin','HR'])">
+          <mat-icon matListItemIcon>payments</mat-icon>
+          <span matListItemTitle>Payroll Export</span>
+        </a>
         <a mat-list-item routerLink="/staff" routerLinkActive="is-active"
            *ngIf="authService.hasAnyRole(['Admin','HR'])">
           <mat-icon matListItemIcon>badge</mat-icon>
@@ -22,7 +32,7 @@
         <a mat-list-item routerLink="/reports/daily" routerLinkActive="is-active"
            *ngIf="authService.hasAnyRole(['Admin','HR'])">
           <mat-icon matListItemIcon>bar_chart</mat-icon>
-          <span matListItemTitle>Reports</span>
+          <span matListItemTitle>Attendance Reports</span>
         </a>
       </mat-nav-list>
     </mat-sidenav>

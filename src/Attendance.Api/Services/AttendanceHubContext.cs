@@ -25,4 +25,9 @@ public sealed class AttendanceHubContext : IAttendanceHubContext
     public Task SendNewQrCodeAsync(string base64Image, Guid tokenValue, DateTime expiresAt)
         => _hubContext.Clients.All.SendAsync(
             AttendanceHub.ReceiveQrCode, base64Image, tokenValue, expiresAt);
+
+    /// <inheritdoc />
+    public Task NotifyLiveDashboardUpdatedAsync(Attendance.Application.DTOs.LiveDashboardMetricsDto metrics)
+        => _hubContext.Clients.All.SendAsync(
+            AttendanceHub.ReceiveLiveDashboardUpdate, metrics);
 }

@@ -20,4 +20,10 @@ public interface IAttendanceHubContext
     /// <param name="tokenValue">The GUID embedded in the QR code.</param>
     /// <param name="expiresAt">UTC expiry timestamp of the token.</param>
     Task SendNewQrCodeAsync(string base64Image, Guid tokenValue, DateTime expiresAt);
+
+    /// <summary>
+    /// Pushes live dashboard metrics to connected clients in real time.
+    /// </summary>
+    /// <param name="metrics">The current live dashboard metrics.</param>
+    Task NotifyLiveDashboardUpdatedAsync(DTOs.LiveDashboardMetricsDto metrics);
 }

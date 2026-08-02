@@ -21,11 +21,16 @@ public sealed class AttendanceService : IAttendanceService
 
     private readonly IAttendanceRepository _repository;
     private readonly IReportExporter _exporter;
+    private readonly IAttendanceHubContext? _hubContext;
 
-    public AttendanceService(IAttendanceRepository repository, IReportExporter exporter)
+    public AttendanceService(
+        IAttendanceRepository repository,
+        IReportExporter exporter,
+        IAttendanceHubContext? hubContext = null)
     {
         _repository = repository;
         _exporter   = exporter;
+        _hubContext = hubContext;
     }
 
     // -------------------------------------------------------------------------
@@ -73,6 +78,8 @@ public sealed class AttendanceService : IAttendanceService
 
         string statusLabel = StatusLabelOf(statusFlag);
         string greeting    = FormatGreeting(staff.FullName, slot.SlotName, now, statusLabel);
+
+        _ = NotifyLiveDashboardAsync();
 
         return new AttendanceRecordDto(staff.FullName, slot.SlotName, now, statusLabel, greeting);
     }
@@ -171,6 +178,7 @@ public sealed class AttendanceService : IAttendanceService
             throw new BusinessRuleException("Absence reason cannot be empty.");
 
         await _repository.SetAbsenceReasonAsync(dto.StaffId, dto.SlotId, dto.Date, dto.Reason.Trim());
+        _ = NotifyLiveDashboardAsync();
     }
 
     // -------------------------------------------------------------------------
@@ -322,5 +330,196 @@ public sealed class AttendanceService : IAttendanceService
         };
 
         return $"{salutation}, {staffName} — {slotName} recorded at {timestamp:hh:mm tt}. {statusLabel}!";
+    }
+
+    // -------------------------------------------------------------------------
+    // Real-time Live Dashboard & Payroll
+    // -------------------------------------------------------------------------
+
+    /// <inheritdoc/>
+    public async Task<LiveDashboardMetricsDto> GetLiveDashboardMetricsAsync()
+    {
+        DateOnly today = DateOnly.FromDateTime(DateTimeHelper.OfficeNow());
+
+        IReadOnlyList<StaffSnapshot> activeStaff = await _repository.GetActiveStaffAsync();
+        IReadOnlyList<SlotWindow> slots          = await _repository.GetActiveSlotWindowsAsync();
+        IReadOnlyList<AttendanceLogEntry> logs   = await _repository.GetLogsForRangeAsync(today, today);
+        IReadOnlyList<DailyAttendanceSheet> sheets = await GetDailySheetsAsync(today);
+
+        var slotNames = slots.ToDictionary(s => s.SlotId, s => s.SlotName);
+        var staffNames = activeStaff.ToDictionary(s => s.StaffId, s => s.FullName);
+
+        int totalActiveStaff = activeStaff.Count;
+        int totalActiveCheckIns = logs
+            .Where(l => l.StatusFlag != AttendanceStatus.Absent)
+            .Select(l => l.StaffId)
+            .Distinct()
+            .Count();
+
+        int lateArrivals = logs
+            .Where(l => l.StatusFlag == AttendanceStatus.Late)
+            .Select(l => l.StaffId)
+            .Distinct()
+            .Count();
+
+        int onLeaveEmployees = logs
+            .Where(l => l.StatusFlag == AttendanceStatus.Absent && !string.IsNullOrWhiteSpace(l.AbsenceReason))
+            .Select(l => l.StaffId)
+            .Distinct()
+            .Count();
+
+        int unexcusedAbsences = sheets
+            .SelectMany(s => s.Entries)
+            .Count(e => e.StatusLabel == AbsentLabel && string.IsNullOrWhiteSpace(e.AbsenceReason));
+
+        var recentActivities = logs
+            .Where(l => l.StatusFlag != AttendanceStatus.Absent)
+            .OrderByDescending(l => l.EventTimestamp)
+            .Take(15)
+            .Select(l => new RecentActivityDto(
+                l.AttendanceLogId,
+                l.StaffId,
+                staffNames.TryGetValue(l.StaffId, out var name) ? name : $"Staff {l.StaffId}",
+                slotNames.TryGetValue(l.SlotId, out var sName) ? sName : $"Slot {l.SlotId}",
+                l.EventTimestamp,
+                StatusLabelOf(l.StatusFlag)))
+            .ToList();
+
+        return new LiveDashboardMetricsDto(
+            today,
+            totalActiveStaff,
+            totalActiveCheckIns,
+            lateArrivals,
+            onLeaveEmployees,
+            unexcusedAbsences,
+            recentActivities);
+    }
+
+    /// <inheritdoc/>
+    public async Task<MonthlyPayrollSummaryDto> GetMonthlyPayrollSummaryAsync(
+        int year, int month, int? departmentId = null)
+    {
+        var firstDay = new DateOnly(year, month, 1);
+        var lastDay  = new DateOnly(year, month, DateTime.DaysInMonth(year, month));
+
+        IReadOnlyList<StaffSnapshot> staffList =
+            await _repository.GetActiveStaffAsync(null, departmentId);
+        IReadOnlyList<SlotWindow> slots = await _repository.GetActiveSlotWindowsAsync();
+        IReadOnlyList<AttendanceLogEntry> logs =
+            await _repository.GetLogsForRangeAsync(firstDay, lastDay, null, departmentId);
+
+        int workingDays = CountWorkingDays(firstDay, lastDay);
+        var logsByStaff = logs.ToLookup(l => l.StaffId);
+
+        var staffSummaries = staffList.Select(s =>
+        {
+            var staffLogs = logsByStaff[s.StaffId].ToList();
+            var logsBySlot = staffLogs.ToLookup(l => l.SlotId);
+
+            int daysWorked = staffLogs
+                .Where(l => l.StatusFlag != AttendanceStatus.Absent)
+                .Select(l => l.EventDate)
+                .Distinct()
+                .Count();
+
+            decimal totalHours = 0m;
+            var workedLogs = staffLogs.Where(l => l.StatusFlag != AttendanceStatus.Absent).ToList();
+            foreach (var log in workedLogs)
+            {
+                var slot = slots.FirstOrDefault(sl => sl.SlotId == log.SlotId);
+                if (slot is not null)
+                {
+                    double slotHours = (slot.EndTime - slot.StartTime).TotalHours;
+                    if (slotHours < 0) slotHours += 24;
+                    totalHours += (decimal)slotHours;
+                }
+            }
+            totalHours = Math.Round(totalHours, 2);
+
+            var logsByDay = workedLogs.GroupBy(l => l.EventDate);
+            decimal overtimeHours = 0m;
+            foreach (var dayGroup in logsByDay)
+            {
+                decimal dayHours = 0m;
+                foreach (var log in dayGroup)
+                {
+                    var slot = slots.FirstOrDefault(sl => sl.SlotId == log.SlotId);
+                    if (slot is not null)
+                    {
+                        double sHours = (slot.EndTime - slot.StartTime).TotalHours;
+                        if (sHours < 0) sHours += 24;
+                        dayHours += (decimal)sHours;
+                    }
+                }
+                if (dayHours > 8.0m)
+                {
+                    overtimeHours += (dayHours - 8.0m);
+                }
+            }
+            overtimeHours = Math.Round(overtimeHours, 2);
+
+            int latePenalties = staffLogs.Count(l => l.StatusFlag == AttendanceStatus.Late);
+
+            int unpaidAbsences = 0;
+            foreach (var slot in slots.Where(sl => sl.IsMandatory))
+            {
+                var slotLogs = logsBySlot[slot.SlotId].ToList();
+                int presenceCount = slotLogs.Count(l => l.StatusFlag != AttendanceStatus.Absent);
+                int excusedCount  = slotLogs.Count(l => l.StatusFlag == AttendanceStatus.Absent && !string.IsNullOrWhiteSpace(l.AbsenceReason));
+                int missingCount  = Math.Max(0, workingDays - presenceCount);
+                unpaidAbsences += Math.Max(0, missingCount - excusedCount);
+            }
+
+            return new StaffPayrollSummaryDto(
+                s.StaffId,
+                s.UniqueCode,
+                s.FullName,
+                s.DepartmentName,
+                daysWorked,
+                totalHours,
+                overtimeHours,
+                latePenalties,
+                unpaidAbsences);
+        }).ToList();
+
+        int totalStaff = staffSummaries.Count;
+        int sumDaysWorked = staffSummaries.Sum(s => s.TotalDaysWorked);
+        decimal sumHoursWorked = staffSummaries.Sum(s => s.TotalHours);
+        decimal sumOvertimeHours = staffSummaries.Sum(s => s.OvertimeHours);
+        int sumLatePenalties = staffSummaries.Sum(s => s.LatePenalties);
+        int sumUnpaidAbsences = staffSummaries.Sum(s => s.UnpaidAbsences);
+
+        return new MonthlyPayrollSummaryDto(
+            year,
+            month,
+            totalStaff,
+            sumDaysWorked,
+            sumHoursWorked,
+            sumOvertimeHours,
+            sumLatePenalties,
+            sumUnpaidAbsences,
+            staffSummaries);
+    }
+
+    /// <inheritdoc/>
+    public async Task<byte[]> ExportPayrollSummaryAsync(
+        int year, int month, ExportFormat format, int? departmentId = null)
+    {
+        MonthlyPayrollSummaryDto summary = await GetMonthlyPayrollSummaryAsync(year, month, departmentId);
+        return _exporter.ExportPayroll(summary, format);
+    }
+
+    private async Task NotifyLiveDashboardAsync()
+    {
+        if (_hubContext is null) return;
+        try
+        {
+            LiveDashboardMetricsDto metrics = await GetLiveDashboardMetricsAsync();
+            await _hubContext.NotifyLiveDashboardUpdatedAsync(metrics);
+        }
+        catch
+        {
+            // Background push failure should not impact core API workflows
+        }
     }
 }

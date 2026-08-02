@@ -1,0 +1,156 @@
+<div class="payroll-report">
+  <!-- Header bar -->
+  <div class="payroll-report__header">
+    <div>
+      <h1>Automated Monthly Payroll Export</h1>
+      <p class="payroll-report__subtitle">One-click summary export formatted for standard payroll processing</p>
+    </div>
+    <div class="payroll-report__export-buttons">
+      <button mat-flat-button color="accent" (click)="export('csv')" [disabled]="exportingCsv || loading">
+        <mat-icon *ngIf="!exportingCsv">download</mat-icon>
+        <mat-icon *ngIf="exportingCsv" class="spin">refresh</mat-icon>
+        Export CSV
+      </button>
+      <button mat-flat-button color="primary" (click)="export('xlsx')" [disabled]="exportingXlsx || loading">
+        <mat-icon *ngIf="!exportingXlsx">description</mat-icon>
+        <mat-icon *ngIf="exportingXlsx" class="spin">refresh</mat-icon>
+        Export Excel (.xlsx)
+      </button>
+    </div>
+  </div>
+
+  <!-- Filters & Controls Bar -->
+  <mat-card class="payroll-report__controls">
+    <mat-card-content class="controls-content">
+      <div class="filter-group">
+        <mat-form-field appearance="outline" class="select-field">
+          <mat-label>Month</mat-label>
+          <mat-select [(value)]="selectedMonth" (selectionChange)="loadPayroll()">
+            <mat-option *ngFor="let m of months" [value]="m.value">{{ m.label }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="select-field">
+          <mat-label>Year</mat-label>
+          <mat-select [(value)]="selectedYear" (selectionChange)="loadPayroll()">
+            <mat-option *ngFor="let y of years" [value]="y">{{ y }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="search-group">
+        <mat-form-field appearance="outline" class="search-field">
+          <mat-label>Search employee or code</mat-label>
+          <input matInput [(ngModel)]="searchTerm" (ngModelChange)="filterStaff()" placeholder="e.g. John or EMP-001">
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+
+        <button mat-icon-button (click)="loadPayroll()" matTooltip="Reload payroll data">
+          <mat-icon>refresh</mat-icon>
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-progress-bar *ngIf="loading" mode="indeterminate" class="payroll-report__progress"></mat-progress-bar>
+
+  <div *ngIf="errorMessage" class="payroll-report__error">
+    <mat-icon>error_outline</mat-icon>
+    <span>{{ errorMessage }}</span>
+  </div>
+
+  <div *ngIf="payrollSummary" class="payroll-report__content">
+    <!-- Summary KPIs Grid -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <span class="kpi-card__label">Total Staff</span>
+        <span class="kpi-card__value">{{ payrollSummary.totalStaff }}</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-card__label">Total Days Worked</span>
+        <span class="kpi-card__value">{{ payrollSummary.totalDaysWorked }}</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-card__label">Total Worked Hours</span>
+        <span class="kpi-card__value">{{ payrollSummary.totalHoursWorked | number:'1.2-2' }} h</span>
+      </div>
+      <div class="kpi-card kpi-card--accent">
+        <span class="kpi-card__label">Overtime Hours</span>
+        <span class="kpi-card__value">{{ payrollSummary.totalOvertimeHours | number:'1.2-2' }} h</span>
+      </div>
+      <div class="kpi-card kpi-card--warning">
+        <span class="kpi-card__label">Late Penalties</span>
+        <span class="kpi-card__value">{{ payrollSummary.totalLatePenalties }}</span>
+      </div>
+      <div class="kpi-card kpi-card--danger">
+        <span class="kpi-card__label">Unpaid Absences</span>
+        <span class="kpi-card__value">{{ payrollSummary.totalUnpaidAbsences }}</span>
+      </div>
+    </div>
+
+    <!-- Employee Payroll Summary Table -->
+    <mat-card class="table-card">
+      <mat-card-content>
+        <div class="table-responsive" *ngIf="filteredStaff.length > 0; else emptyState">
+          <table class="payroll-table">
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Employee Name</th>
+                <th>Department</th>
+                <th class="text-right">Days Worked</th>
+                <th class="text-right">Total Hours</th>
+                <th class="text-right">Overtime</th>
+                <th class="text-right">Late Penalties</th>
+                <th class="text-right">Unpaid Absences</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let staff of filteredStaff">
+                <td>
+                  <span class="code-badge">{{ staff.uniqueCode }}</span>
+                </td>
+                <td class="font-bold">{{ staff.fullName }}</td>
+                <td>{{ staff.department }}</td>
+                <td class="text-right font-semibold">{{ staff.totalDaysWorked }}</td>
+                <td class="text-right font-semibold">{{ staff.totalHours | number:'1.2-2' }} h</td>
+                <td class="text-right">
+                  <span [class.overtime-badge]="staff.overtimeHours > 0">
+                    {{ staff.overtimeHours | number:'1.2-2' }} h
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span [class.late-badge]="staff.latePenalties > 0">
+                    {{ staff.latePenalties }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span [class.unpaid-badge]="staff.unpaidAbsences > 0">
+                    {{ staff.unpaidAbsences }}
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="summary-footer-row">
+                <td colspan="3"><strong>MONTH TOTALS</strong></td>
+                <td class="text-right"><strong>{{ payrollSummary.totalDaysWorked }}</strong></td>
+                <td class="text-right"><strong>{{ payrollSummary.totalHoursWorked | number:'1.2-2' }} h</strong></td>
+                <td class="text-right"><strong>{{ payrollSummary.totalOvertimeHours | number:'1.2-2' }} h</strong></td>
+                <td class="text-right"><strong>{{ payrollSummary.totalLatePenalties }}</strong></td>
+                <td class="text-right"><strong>{{ payrollSummary.totalUnpaidAbsences }}</strong></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <ng-template #emptyState>
+          <div class="empty-payroll">
+            <mat-icon>search_off</mat-icon>
+            <p>No payroll records found for the selected month or search query.</p>
+          </div>
+        </ng-template>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

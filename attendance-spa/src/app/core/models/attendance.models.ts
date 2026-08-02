@@ -60,6 +60,49 @@ export interface MonthlySummary {
   staffSummaries: StaffMonthlySummary[];
 }
 
+export interface RecentActivity {
+  attendanceLogId: number;
+  staffId: number;
+  staffName: string;
+  slotName: string;
+  eventTimestamp: string;
+  statusLabel: string;
+}
+
+export interface LiveDashboardMetrics {
+  date: string;
+  totalActiveStaff: number;
+  totalActiveCheckIns: number;
+  lateArrivals: number;
+  onLeaveEmployees: number;
+  unexcusedAbsences: number;
+  recentActivities: RecentActivity[];
+}
+
+export interface StaffPayrollSummary {
+  staffId: number;
+  uniqueCode: string;
+  fullName: string;
+  department: string;
+  totalDaysWorked: number;
+  totalHours: number;
+  overtimeHours: number;
+  latePenalties: number;
+  unpaidAbsences: number;
+}
+
+export interface MonthlyPayrollSummary {
+  year: number;
+  month: number;
+  totalStaff: number;
+  totalDaysWorked: number;
+  totalHoursWorked: number;
+  totalOvertimeHours: number;
+  totalLatePenalties: number;
+  totalUnpaidAbsences: number;
+  staffSummaries: StaffPayrollSummary[];
+}
+
 /** Structured API error shape (RFC 7807 ProblemDetails) returned by the backend. */
 export interface ProblemDetails {
   status: number;

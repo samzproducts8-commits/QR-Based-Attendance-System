@@ -1,0 +1,269 @@
+.payroll-report {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0 0 4px 0;
+      color: #1e293b;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+  }
+
+  &__export-buttons {
+    display: flex;
+    gap: 12px;
+
+    button {
+      border-radius: 8px;
+      padding: 6px 18px;
+      font-weight: 600;
+    }
+  }
+
+  &__controls {
+    border-radius: 12px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+    margin-bottom: 24px;
+
+    .controls-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px !important;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+  }
+
+  &__progress {
+    margin-bottom: 16px;
+    border-radius: 4px;
+  }
+
+  &__error {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    padding: 14px 18px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+  }
+}
+
+.filter-group {
+  display: flex;
+  gap: 12px;
+}
+
+.select-field {
+  width: 150px;
+  ::ng-deep .mat-mdc-text-field-wrapper {
+    height: 48px;
+  }
+}
+
+.search-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-field {
+  width: 260px;
+  ::ng-deep .mat-mdc-text-field-wrapper {
+    height: 48px;
+  }
+}
+
+/* KPI Cards Grid */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.kpi-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+
+  &__label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  &__value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  &--accent {
+    border-top: 3px solid #10b981;
+    .kpi-card__value { color: #059669; }
+  }
+
+  &--warning {
+    border-top: 3px solid #f59e0b;
+    .kpi-card__value { color: #d97706; }
+  }
+
+  &--danger {
+    border-top: 3px solid #ef4444;
+    .kpi-card__value { color: #dc2626; }
+  }
+}
+
+/* Payroll Table */
+.table-card {
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid #e2e8f0;
+
+  mat-card-content {
+    padding: 0 !important;
+  }
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.payroll-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #475569;
+    background: #f8fafc;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  td {
+    padding: 14px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+  }
+
+  tr:hover td {
+    background-color: #f8fafc;
+  }
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.code-badge {
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 700;
+  background: #f1f5f9;
+  color: #334155;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.overtime-badge {
+  color: #059669;
+  font-weight: 700;
+  background: #dcfce7;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.late-badge {
+  color: #b45309;
+  font-weight: 700;
+  background: #fef3c7;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.unpaid-badge {
+  color: #b91c1c;
+  font-weight: 700;
+  background: #fee2e2;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.summary-footer-row {
+  background: #f1f5f9 !important;
+  td {
+    border-top: 2px solid #cbd5e1;
+    font-size: 14px;
+    color: #0f172a;
+  }
+}
+
+.empty-payroll {
+  text-align: center;
+  padding: 48px 20px;
+  color: #94a3b8;
+
+  mat-icon {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 15px;
+  }
+}
+
+.spin {
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

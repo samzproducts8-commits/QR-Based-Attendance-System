@@ -139,4 +139,19 @@ public interface IAttendanceService
     /// Thrown when the slot is not mandatory or the employee was actually present.
     /// </exception>
     Task SetAbsenceReasonAsync(DTOs.SetAbsenceReasonDto dto);
+
+    /// <summary>
+    /// Returns real-time metrics for today's live dashboard.
+    /// </summary>
+    Task<LiveDashboardMetricsDto> GetLiveDashboardMetricsAsync();
+
+    /// <summary>
+    /// Returns monthly payroll summary data formatted for standard payroll processing.
+    /// </summary>
+    Task<MonthlyPayrollSummaryDto> GetMonthlyPayrollSummaryAsync(int year, int month, int? departmentId = null);
+
+    /// <summary>
+    /// Generates and streams a downloadable monthly payroll export file (CSV or XLSX).
+    /// </summary>
+    Task<byte[]> ExportPayrollSummaryAsync(int year, int month, ExportFormat format, int? departmentId = null);
 }

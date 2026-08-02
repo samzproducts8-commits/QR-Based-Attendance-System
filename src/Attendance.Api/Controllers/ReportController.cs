@@ -18,12 +18,60 @@ public sealed class ReportController : ControllerBase
     private const string XlsxContentType =
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
     private const string PdfContentType = "application/pdf";
+    private const string CsvContentType = "text/csv";
 
     private readonly IAttendanceService _attendanceService;
 
     public ReportController(IAttendanceService attendanceService)
     {
         _attendanceService = attendanceService;
+    }
+
+    /// <summary>
+    /// Returns real-time metrics and recent activities for the live HR dashboard.
+    /// </summary>
+    [HttpGet("live-dashboard")]
+    [ProducesResponseType<LiveDashboardMetricsDto>(StatusCodes.Status200OK)]
+    public async Task<IActionResult> LiveDashboard()
+    {
+        return Ok(await _attendanceService.GetLiveDashboardMetricsAsync());
+    }
+
+    /// <summary>
+    /// Returns monthly aggregated payroll summary formatted for standard payroll processing.
+    /// </summary>
+    [HttpGet("payroll")]
+    [ProducesResponseType<MonthlyPayrollSummaryDto>(StatusCodes.Status200OK)]
+    public async Task<IActionResult> Payroll(
+        [FromQuery] int year,
+        [FromQuery] int month,
+        [FromQuery] int? departmentId = null)
+    {
+        if (month is < 1 or > 12)
+            return BadRequest(new { error = "Month must be between 1 and 12." });
+
+        return Ok(await _attendanceService.GetMonthlyPayrollSummaryAsync(year, month, departmentId));
+    }
+
+    /// <summary>
+    /// Streams the monthly payroll summary as a downloadable .csv or .xlsx file.
+    /// </summary>
+    [HttpGet("payroll/export")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<IActionResult> ExportPayroll(
+        [FromQuery] int year,
+        [FromQuery] int month,
+        [FromQuery] string format = "csv",
+        [FromQuery] int? departmentId = null)
+    {
+        if (month is < 1 or > 12)
+            return BadRequest(new { error = "Month must be between 1 and 12." });
+
+        if (!TryParseFormat(format, out ExportFormat exportFormat))
+            return BadRequest(new { error = "Format must be 'csv' or 'xlsx'." });
+
+        byte[] bytes = await _attendanceService.ExportPayrollSummaryAsync(year, month, exportFormat, departmentId);
+        return FileResult(bytes, exportFormat, $"payroll-summary-{year}-{month:D2}");
     }
 
     /// <summary>
@@ -105,6 +153,7 @@ public sealed class ReportController : ControllerBase
     {
         switch (format.ToLowerInvariant())
         {
+            case "csv":  exportFormat = ExportFormat.Csv;  return true;
             case "xlsx": exportFormat = ExportFormat.Xlsx; return true;
             case "pdf":  exportFormat = ExportFormat.Pdf;  return true;
             default:     exportFormat = default;           return false;
@@ -112,7 +161,10 @@ public sealed class ReportController : ControllerBase
     }
 
     private FileContentResult FileResult(byte[] bytes, ExportFormat format, string baseName)
-        => format == ExportFormat.Xlsx
-            ? File(bytes, XlsxContentType, $"{baseName}.xlsx")
-            : File(bytes, PdfContentType, $"{baseName}.pdf");
+        => format switch
+        {
+            ExportFormat.Csv  => File(bytes, CsvContentType, $"{baseName}.csv"),
+            ExportFormat.Xlsx => File(bytes, XlsxContentType, $"{baseName}.xlsx"),
+            _                 => File(bytes, PdfContentType, $"{baseName}.pdf")
+        };
 }

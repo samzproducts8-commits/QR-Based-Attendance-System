@@ -118,6 +118,21 @@
             (Requirements 4.1–4.5, 5.4).
             </summary>
         </member>
+        <member name="M:Attendance.Api.Controllers.ReportController.LiveDashboard">
+            <summary>
+            Returns real-time metrics and recent activities for the live HR dashboard.
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.ReportController.Payroll(System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Returns monthly aggregated payroll summary formatted for standard payroll processing.
+            </summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.ReportController.ExportPayroll(System.Int32,System.Int32,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Streams the monthly payroll summary as a downloadable .csv or .xlsx file.
+            </summary>
+        </member>
         <member name="M:Attendance.Api.Controllers.ReportController.Daily(System.DateOnly,System.Nullable{System.Int32})">
             <summary>
             Daily attendance sheet(s): one staff member when <paramref name="staffId"/>
@@ -232,6 +247,9 @@
         <member name="F:Attendance.Api.Hubs.AttendanceHub.ReceiveQrCode">
             <summary>Client-side event name for incoming QR updates.</summary>
         </member>
+        <member name="F:Attendance.Api.Hubs.AttendanceHub.ReceiveLiveDashboardUpdate">
+            <summary>Client-side event name for real-time live dashboard metric updates.</summary>
+        </member>
         <member name="M:Attendance.Api.Hubs.AttendanceHub.RequestCurrentQr">
             <summary>
             Called by a kiosk right after connecting (or reconnecting) so it
@@ -269,6 +287,9 @@
             </remarks>
         </member>
         <member name="M:Attendance.Api.Services.AttendanceHubContext.SendNewQrCodeAsync(System.String,System.Guid,System.DateTime)">
+            <inheritdoc />
+        </member>
+        <member name="M:Attendance.Api.Services.AttendanceHubContext.NotifyLiveDashboardUpdatedAsync(Attendance.Application.DTOs.LiveDashboardMetricsDto)">
             <inheritdoc />
         </member>
         <member name="T:Attendance.Api.Services.JwtTokenService">

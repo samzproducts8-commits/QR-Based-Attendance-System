@@ -1,0 +1,150 @@
+<div class="live-dashboard">
+  <!-- Header section -->
+  <div class="live-dashboard__header">
+    <div class="live-dashboard__title-group">
+      <h1>HR Analytics & Live Dashboard</h1>
+      <div class="live-dashboard__badge">
+        <span class="live-pulse"></span>
+        <span class="live-text">LIVE REAL-TIME</span>
+      </div>
+    </div>
+    <div class="live-dashboard__actions">
+      <span class="live-dashboard__timestamp" *ngIf="lastUpdated">
+        Updated: {{ lastUpdated | date:'HH:mm:ss' }}
+      </span>
+      <button mat-flat-button color="primary" (click)="loadMetrics()" [disabled]="loading">
+        <mat-icon [class.spin]="loading">refresh</mat-icon>
+        Refresh
+      </button>
+    </div>
+  </div>
+
+  <mat-progress-bar *ngIf="loading" mode="indeterminate" class="live-dashboard__progress"></mat-progress-bar>
+
+  <div *ngIf="errorMessage" class="live-dashboard__error">
+    <mat-icon>error_outline</mat-icon>
+    <span>{{ errorMessage }}</span>
+  </div>
+
+  <div *ngIf="metrics" class="live-dashboard__content">
+    <!-- Stat Cards Grid -->
+    <div class="stats-grid">
+      <!-- Active Check-ins -->
+      <mat-card class="stat-card stat-card--checkins">
+        <mat-card-content>
+          <div class="stat-card__icon-wrapper">
+            <mat-icon>how_to_reg</mat-icon>
+          </div>
+          <div class="stat-card__data">
+            <span class="stat-card__label">Active Check-ins Today</span>
+            <div class="stat-card__value">
+              {{ metrics.totalActiveCheckIns }}
+              <span class="stat-card__total">/ {{ metrics.totalActiveStaff }}</span>
+            </div>
+            <div class="stat-card__subtext">
+              <strong>{{ getCheckInPercentage() }}%</strong> staff checked in
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <!-- Late Arrivals -->
+      <mat-card class="stat-card stat-card--late">
+        <mat-card-content>
+          <div class="stat-card__icon-wrapper">
+            <mat-icon>schedule</mat-icon>
+          </div>
+          <div class="stat-card__data">
+            <span class="stat-card__label">Late Arrivals</span>
+            <div class="stat-card__value">{{ metrics.lateArrivals }}</div>
+            <div class="stat-card__subtext">
+              Recorded after slot grace window
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <!-- On-Leave Employees -->
+      <mat-card class="stat-card stat-card--leave">
+        <mat-card-content>
+          <div class="stat-card__icon-wrapper">
+            <mat-icon>event_busy</mat-icon>
+          </div>
+          <div class="stat-card__data">
+            <span class="stat-card__label">On-Leave Employees</span>
+            <div class="stat-card__value">{{ metrics.onLeaveEmployees }}</div>
+            <div class="stat-card__subtext">
+              Documented & approved leaves
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <!-- Unexcused Absences -->
+      <mat-card class="stat-card stat-card--unexcused">
+        <mat-card-content>
+          <div class="stat-card__icon-wrapper">
+            <mat-icon>person_off</mat-icon>
+          </div>
+          <div class="stat-card__data">
+            <span class="stat-card__label">Unexcused Absences</span>
+            <div class="stat-card__value">{{ metrics.unexcusedAbsences }}</div>
+            <div class="stat-card__subtext">
+              Mandatory slots without reason
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- Recent Activity Stream -->
+    <mat-card class="activity-card">
+      <mat-card-header class="activity-card__header">
+        <mat-card-title>
+          <mat-icon>stream</mat-icon>
+          Live Activity Stream
+        </mat-card-title>
+        <span class="activity-card__subtitle">Recent employee scans recorded today</span>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="activity-table-wrapper" *ngIf="metrics.recentActivities.length > 0; else noActivity">
+          <table class="activity-table">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Employee Name</th>
+                <th>Attendance Slot</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let activity of metrics.recentActivities">
+                <td class="cell-time">
+                  <mat-icon class="clock-icon">schedule</mat-icon>
+                  {{ activity.eventTimestamp | date:'hh:mm:ss a' }}
+                </td>
+                <td class="cell-name">
+                  <strong>{{ activity.staffName }}</strong>
+                </td>
+                <td>
+                  <span class="slot-pill">{{ activity.slotName }}</span>
+                </td>
+                <td>
+                  <span class="status-badge" [ngClass]="getStatusClass(activity.statusLabel)">
+                    {{ activity.statusLabel }}
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ng-template #noActivity>
+          <div class="no-activity">
+            <mat-icon>inbox</mat-icon>
+            <p>No check-in activity recorded yet for today.</p>
+          </div>
+        </ng-template>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

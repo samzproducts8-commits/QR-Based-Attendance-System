@@ -30,6 +30,9 @@ public sealed class AttendanceHub : Hub
     /// <summary>Client-side event name for incoming QR updates.</summary>
     public const string ReceiveQrCode = "ReceiveQrCode";
 
+    /// <summary>Client-side event name for real-time live dashboard metric updates.</summary>
+    public const string ReceiveLiveDashboardUpdate = "ReceiveLiveDashboardUpdate";
+
     private readonly IQrSessionService _qrSessionService;
 
     public AttendanceHub(IQrSessionService qrSessionService)

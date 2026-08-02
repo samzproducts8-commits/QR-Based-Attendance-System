@@ -23,6 +23,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 import { PhotoUploadComponent } from './photo-upload/photo-upload.component';
 import { DataTableComponent } from './data-table/data-table.component';
@@ -38,6 +39,7 @@ const MATERIAL_MODULES = [
   MatPaginatorModule,
   MatSortModule,
   MatProgressSpinnerModule,
+  MatProgressBarModule,
   MatSnackBarModule,
   MatToolbarModule,
   MatSidenavModule,
