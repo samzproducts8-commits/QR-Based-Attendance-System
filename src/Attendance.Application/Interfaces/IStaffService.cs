@@ -92,4 +92,24 @@ public interface IStaffService
     /// results and total count metadata.
     /// </returns>
     Task<PagedResult<StaffDto>> GetAllAsync(StaffFilterRequest filter);
+
+    /// <summary>
+    /// Generates a base64-encoded PNG QR code for the staff member identified
+    /// by <paramref name="staffId"/>.  The QR payload is a URL pointing to the
+    /// public employee identification page, built from <paramref name="employeeIdBaseUrl"/>.
+    /// </summary>
+    /// <param name="staffId">Primary key of the staff record.</param>
+    /// <param name="employeeIdBaseUrl">
+    /// The base URL for the public employee ID page (e.g.
+    /// <c>http://192.168.1.5:4200/employee-id</c>).
+    /// </param>
+    /// <returns>Base64 string of the QR PNG image.</returns>
+    Task<string> GetQrCodeBase64Async(int staffId, string employeeIdBaseUrl);
+
+    /// <summary>
+    /// Returns the employee identity card data for the staff member with the
+    /// given <paramref name="uniqueCode"/> (e.g. <c>EMP-0001</c>).
+    /// Used by the public (anonymous) employee identification endpoint.
+    /// </summary>
+    Task<StaffIdentityCardDto> GetIdentityCardAsync(string uniqueCode);
 }

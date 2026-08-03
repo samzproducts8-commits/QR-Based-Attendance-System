@@ -297,4 +297,24 @@ public sealed class StaffRepository : IStaffRepository
 
         return (true, photoPath);
     }
+
+    /// <inheritdoc />
+    public Task<StaffIdentityCardDto?> GetIdentityCardByCodeAsync(string uniqueCode)
+    {
+        return _context.Staff
+            .AsNoTracking()
+            .Where(s => s.UniqueCode == uniqueCode)
+            .Select(s => new StaffIdentityCardDto(
+                s.UniqueCode,
+                s.FullName,
+                s.Department.DepartmentName,
+                s.JobTitle ?? string.Empty,
+                s.Profile != null ? s.Profile.PhotoPath : null,
+                s.Gender,
+                s.DateOfBirth,
+                s.PhoneNumber,
+                s.Profile != null ? s.Profile.Address : null,
+                s.Profile != null ? s.Profile.EmergencyContact : null))
+            .FirstOrDefaultAsync();
+    }
 }

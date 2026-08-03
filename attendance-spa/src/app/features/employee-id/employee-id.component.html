@@ -1,0 +1,106 @@
+<div class="id-page-container">
+  <!-- Top Banner / Header -->
+  <div class="id-header">
+    <div class="id-header__brand">
+      <mat-icon class="brand-icon">verified_user</mat-icon>
+      <span>OFFICIAL DIGITAL EMPLOYEE IDENTIFICATION</span>
+    </div>
+  </div>
+
+  <!-- Loading State -->
+  <div class="id-state id-state--loading" *ngIf="loading">
+    <mat-progress-spinner mode="indeterminate" diameter="48"></mat-progress-spinner>
+    <p>Verifying Employee Credentials...</p>
+  </div>
+
+  <!-- Error State -->
+  <div class="id-state id-state--error" *ngIf="!loading && error">
+    <div class="error-card">
+      <mat-icon color="warn" class="error-icon">gpp_bad</mat-icon>
+      <h2>Verification Failed</h2>
+      <p>{{ error }}</p>
+      <small>If you believe this is an error, please contact HR/Administration.</small>
+    </div>
+  </div>
+
+  <!-- Employee ID Card View -->
+  <div class="id-card-wrapper" *ngIf="!loading && cardData">
+    <div class="id-card">
+      <!-- Card Top Accent / Header -->
+      <div class="id-card__banner">
+        <div class="company-logo">
+          <mat-icon>badge</mat-icon>
+          <span>EMPLOYEE ID</span>
+        </div>
+        <div class="verification-pill">
+          <mat-icon inline>check_circle</mat-icon> VERIFIED
+        </div>
+      </div>
+
+      <!-- Photo & Primary Info -->
+      <div class="id-card__hero">
+        <div class="photo-wrapper">
+          <img *ngIf="photoUrl; else placeholderPhoto" [src]="photoUrl" [alt]="cardData.fullName" class="id-photo" />
+          <ng-template #placeholderPhoto>
+            <div class="photo-placeholder">
+              <mat-icon>person</mat-icon>
+            </div>
+          </ng-template>
+        </div>
+
+        <h1 class="employee-name">{{ cardData.fullName }}</h1>
+        <div class="employee-code">{{ cardData.uniqueCode }}</div>
+        <div class="job-title">{{ cardData.jobTitle || 'Staff Member' }}</div>
+        <div class="department-badge">{{ cardData.department }}</div>
+      </div>
+
+      <!-- Detail Grid -->
+      <div class="id-card__details">
+        <div class="detail-group">
+          <span class="detail-label">
+            <mat-icon inline>cake</mat-icon> Date of Birth
+          </span>
+          <span class="detail-value">{{ cardData.dateOfBirth ? cardData.dateOfBirth : 'N/A' }}</span>
+        </div>
+
+        <div class="detail-group">
+          <span class="detail-label">
+            <mat-icon inline>person_outline</mat-icon> Gender
+          </span>
+          <span class="detail-value">{{ cardData.gender || 'N/A' }}</span>
+        </div>
+
+        <div class="detail-group">
+          <span class="detail-label">
+            <mat-icon inline>phone</mat-icon> Phone Number
+          </span>
+          <span class="detail-value">{{ cardData.phoneNumber || 'N/A' }}</span>
+        </div>
+
+        <div class="detail-group detail-group--full">
+          <span class="detail-label">
+            <mat-icon inline>home</mat-icon> Address
+          </span>
+          <span class="detail-value">{{ cardData.address || 'N/A' }}</span>
+        </div>
+
+        <div class="detail-group detail-group--full emergency-box">
+          <span class="detail-label">
+            <mat-icon inline>contact_phone</mat-icon> Emergency Contact
+          </span>
+          <span class="detail-value highlight">{{ cardData.emergencyContact || 'N/A' }}</span>
+        </div>
+      </div>
+
+      <!-- Card Footer -->
+      <div class="id-card__footer">
+        <div class="footer-timestamp">
+          <span>Scanned: {{ scannedAt | date:'medium' }}</span>
+        </div>
+        <div class="footer-security">
+          <mat-icon inline>security</mat-icon> Secure Public ID Profile
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

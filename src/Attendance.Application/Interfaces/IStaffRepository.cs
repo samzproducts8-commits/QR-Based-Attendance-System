@@ -86,4 +86,12 @@ public interface IStaffRepository
     /// none), or <c>(false, null)</c> when no staff with the id exists.
     /// </returns>
     Task<(bool Deleted, string? PhotoPath)> DeleteStaffAsync(int staffId);
+
+    /// <summary>
+    /// Returns the employee identity card data for the staff member with the
+    /// given <paramref name="uniqueCode"/> (e.g. <c>EMP-0001</c>), or
+    /// <see langword="null"/> when no matching record exists.
+    /// Used by the public (anonymous) employee identification endpoint.
+    /// </summary>
+    Task<StaffIdentityCardDto?> GetIdentityCardByCodeAsync(string uniqueCode);
 }

@@ -75,6 +75,25 @@ public record StaffDto(
 );
 
 /// <summary>
+/// Read model for the public employee identification card.
+/// Returned by the anonymous <c>/api/staff/identify/{code}</c> endpoint
+/// when a QR code is scanned. Contains only the information that would
+/// appear on a physical employee badge.
+/// </summary>
+public record StaffIdentityCardDto(
+    string UniqueCode,
+    string FullName,
+    string Department,
+    string JobTitle,
+    string? PhotoUrl,
+    string? Gender,
+    DateOnly? DateOfBirth,
+    string? PhoneNumber,
+    string? Address,
+    string? EmergencyContact
+);
+
+/// <summary>
 /// Filter and pagination parameters for the staff list endpoint.
 /// </summary>
 /// <param name="Department">Optional department name filter.</param>

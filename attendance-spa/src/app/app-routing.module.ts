@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'slots', loadChildren: () => import('./features/attendance-config/attendance-config.module').then(m => m.AttendanceConfigModule) },
   { path: 'kiosk', loadChildren: () => import('./features/kiosk/kiosk.module').then(m => m.KioskModule) },
   { path: 'scan', loadChildren: () => import('./features/scan/scan.module').then(m => m.ScanModule) },
+  { path: 'employee-id', loadChildren: () => import('./features/employee-id/employee-id.module').then(m => m.EmployeeIdModule) },
   { path: 'reports', loadChildren: () => import('./features/reports/reports.module').then(m => m.ReportsModule) },
   { path: '**', redirectTo: 'login' }
 ];

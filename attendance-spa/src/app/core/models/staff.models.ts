@@ -44,3 +44,16 @@ export interface DepartmentDto {
   departmentName: string;
   isActive: boolean;
 }
+
+export interface StaffIdentityCardDto {
+  uniqueCode: string;
+  fullName: string;
+  department: string;
+  jobTitle: string;
+  photoUrl: string | null;
+  gender?: string | null;
+  dateOfBirth?: string | null;
+  phoneNumber?: string | null;
+  address?: string | null;
+  emergencyContact?: string | null;
+}

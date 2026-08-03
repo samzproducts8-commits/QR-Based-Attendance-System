@@ -18,6 +18,7 @@ import { environment } from '../../../environments/environment';
 })
 export class StaffProfileComponent implements OnInit {
   staff: StaffDto | null = null;
+  qrCodeDataUrl: string | null = null;
   loading = true;
 
   constructor(
@@ -39,10 +40,24 @@ export class StaffProfileComponent implements OnInit {
       next: staff => {
         this.staff = staff;
         this.loading = false;
+        this.loadQrCode(staffId);
       },
       error: (err: HttpErrorResponse) => {
         this.loading = false;
         this.errorHandler.show(err);
+      }
+    });
+  }
+
+  private loadQrCode(staffId: number): void {
+    this.staffApi.getQrCode(staffId).subscribe({
+      next: res => {
+        if (res?.qrCodeBase64) {
+          this.qrCodeDataUrl = `data:image/png;base64,${res.qrCodeBase64}`;
+        }
+      },
+      error: (err: HttpErrorResponse) => {
+        console.error('Failed to load QR code:', err);
       }
     });
   }

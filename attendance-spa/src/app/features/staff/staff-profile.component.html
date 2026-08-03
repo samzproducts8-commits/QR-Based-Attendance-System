@@ -1,23 +1,55 @@
 <div class="staff-profile" *ngIf="staff">
-  <mat-card>
-    <img *ngIf="photoUrl" [src]="photoUrl" alt="{{ staff.fullName }}" class="staff-profile__photo" />
+  <div class="staff-profile__grid">
+    <!-- Employee Info Card -->
+    <mat-card class="staff-profile__info-card">
+      <img *ngIf="photoUrl" [src]="photoUrl" alt="{{ staff.fullName }}" class="staff-profile__photo" />
 
-    <mat-card-header>
-      <mat-card-title>{{ staff.fullName }}</mat-card-title>
-      <mat-card-subtitle>{{ staff.uniqueCode }} · {{ staff.department }}</mat-card-subtitle>
-    </mat-card-header>
+      <mat-card-header>
+        <mat-card-title>{{ staff.fullName }}</mat-card-title>
+        <mat-card-subtitle>{{ staff.uniqueCode }} · {{ staff.department }}</mat-card-subtitle>
+      </mat-card-header>
 
-    <mat-card-content>
-      <p><strong>Job Title:</strong> {{ staff.jobTitle }}</p>
-      <p><strong>Status:</strong> {{ staff.status === 1 ? 'Active' : 'Inactive' }}</p>
-    </mat-card-content>
+      <mat-card-content>
+        <p><strong>Job Title:</strong> {{ staff.jobTitle }}</p>
+        <p><strong>Status:</strong> <span class="status-badge" [class.status-badge--active]="staff.status === 1">{{ staff.status === 1 ? 'Active' : 'Inactive' }}</span></p>
+      </mat-card-content>
 
-    <mat-card-actions>
-      <button mat-button color="warn" (click)="deactivate()" *ngIf="staff.status === 1">
-        Deactivate
-      </button>
-    </mat-card-actions>
-  </mat-card>
+      <mat-card-actions>
+        <button mat-button color="warn" (click)="deactivate()" *ngIf="staff.status === 1">
+          Deactivate
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+    <!-- Static Employee Identification QR Code Card -->
+    <mat-card class="staff-profile__qr-card">
+      <mat-card-header>
+        <mat-card-title>Employee Identification QR</mat-card-title>
+        <mat-card-subtitle>Static Permanent ID Code ({{ staff.uniqueCode }})</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content class="staff-profile__qr-content">
+        <div class="qr-container" *ngIf="qrCodeDataUrl; else loadingQr">
+          <img [src]="qrCodeDataUrl" alt="Employee Identification QR Code" class="qr-image" />
+          <div class="qr-label">
+            <mat-icon inline>badge</mat-icon>
+            <span>Scan with any scanner to view digital employee ID card</span>
+          </div>
+        </div>
+        <ng-template #loadingQr>
+          <div class="qr-spinner">
+            <mat-progress-spinner mode="indeterminate" diameter="36"></mat-progress-spinner>
+            <p>Generating static QR code...</p>
+          </div>
+        </ng-template>
+      </mat-card-content>
+
+      <mat-card-actions class="qr-note-footer">
+        <mat-icon color="primary" inline>info</mat-icon>
+        <small>Static ID code — does not expire or rotate. Solely for employee identification.</small>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
 
 <mat-progress-spinner *ngIf="loading" mode="indeterminate" diameter="32"></mat-progress-spinner>

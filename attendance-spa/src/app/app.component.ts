@@ -5,7 +5,7 @@ import { filter, map, startWith } from 'rxjs/operators';
 import { AuthService } from './core/services/auth.service';
 
 /** Routes that render full-screen with no toolbar/sidenav chrome. */
-const CHROMELESS_PREFIXES = ['/login', '/kiosk', '/scan', '/access-denied'];
+const CHROMELESS_PREFIXES = ['/login', '/kiosk', '/scan', '/employee-id', '/access-denied'];
 
 @Component({
   selector: 'app-root',

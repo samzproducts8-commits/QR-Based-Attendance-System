@@ -128,6 +128,8 @@ if (string.IsNullOrWhiteSpace(scanBaseUrl)
     scanBaseUrl = $"http://{scanHost}:{scanPort}/scan";
 }
 
+string employeeIdBaseUrl = Attendance.Api.Controllers.StaffController.BuildEmployeeIdBaseUrl(builder.Configuration);
+
 builder.Services.AddScoped<IQrSessionService>(sp => new QrSessionService(
     sp.GetRequiredService<IQrSessionRepository>(),
     sp.GetRequiredService<IAttendanceHubContext>(),
@@ -206,6 +208,9 @@ await SeedData.SeedAsync(app.Services);
 app.Logger.LogInformation(
     "Kiosk QR deep-link base: {ScanBaseUrl} — phones must be able to reach this host.",
     scanBaseUrl);
+app.Logger.LogInformation(
+    "Public Employee ID QR base URL: {EmployeeIdBaseUrl} — generated QR codes will resolve to this address.",
+    employeeIdBaseUrl);
 
 app.Run();
 

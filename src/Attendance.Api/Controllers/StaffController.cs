@@ -16,10 +16,44 @@ public sealed class StaffController : ControllerBase
 {
     //creating a variable that holds "staff service" called "IStaffService" or we make (Dependency Injection (DI).) .
     private readonly IStaffService _staffService;
+    private readonly string _employeeIdBaseUrl;
 
-    public StaffController(IStaffService staffService)
+    public StaffController(IStaffService staffService, IConfiguration configuration)
     {
         _staffService = staffService;
+        _employeeIdBaseUrl = BuildEmployeeIdBaseUrl(configuration);
+    }
+
+    /// <summary>
+    /// Constructs the absolute base URL for public Employee ID QR codes.
+    /// Guarantees full absolute URL format (e.g., https://192.168.1.30:4200/employee-id).
+    /// </summary>
+    public static string BuildEmployeeIdBaseUrl(IConfiguration configuration)
+    {
+        string? baseUrl = configuration["EmployeeId:BaseUrl"];
+        bool useHttps = configuration.GetValue("EmployeeId:UseHttps", true);
+
+        if (string.IsNullOrWhiteSpace(baseUrl) || baseUrl.Equals("auto", StringComparison.OrdinalIgnoreCase))
+        {
+            string host = Attendance.Api.Services.NetworkHelper.DetectLanIpv4() ?? "localhost";
+            int port = configuration.GetValue("EmployeeId:Port", 4200);
+            string scheme = useHttps ? "https" : "http";
+            return $"{scheme}://{host}:{port}/employee-id";
+        }
+
+        string configuredUrl = baseUrl.Trim();
+        if (useHttps && configuredUrl.StartsWith("http://", StringComparison.OrdinalIgnoreCase))
+        {
+            configuredUrl = "https://" + configuredUrl[7..];
+        }
+        else if (!configuredUrl.StartsWith("http://", StringComparison.OrdinalIgnoreCase) &&
+                 !configuredUrl.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
+        {
+            string scheme = useHttps ? "https" : "http";
+            configuredUrl = $"{scheme}://{configuredUrl.TrimStart('/')}";
+        }
+
+        return configuredUrl;
     }
 
     /// <summary>
@@ -92,4 +126,34 @@ public sealed class StaffController : ControllerBase
     [ProducesResponseType<PagedResult<StaffDto>>(StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAll([FromQuery] StaffFilterRequest filter)
         => Ok(await _staffService.GetAllAsync(filter));
+
+    /// <summary>
+    /// Returns a base64-encoded PNG QR code image for the given staff member.
+    /// The QR encodes a URL to the public employee identification page.
+    /// This QR is static — it never rotates, expires, or changes.
+    /// </summary>
+    /// <response code="200">The QR code base64 string.</response>
+    /// <response code="404">No staff member with the given id exists.</response>
+    [HttpGet("{id:int}/qrcode")]
+    [Authorize(Roles = "Admin,HR")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetQrCode(int id)
+    {
+        string qrBase64 = await _staffService.GetQrCodeBase64Async(id, _employeeIdBaseUrl);
+        return Ok(new { qrCodeBase64 = qrBase64 });
+    }
+
+    /// <summary>
+    /// Public endpoint: returns employee identification data for the staff
+    /// member with the given unique code. No authentication required.
+    /// Intended to be opened when an employee QR code is scanned.
+    /// This endpoint does NOT create, update, or affect any attendance records.
+    /// </summary>
+    /// <response code="200">The employee identity card data.</response>
+    /// <response code="404">No employee found with the given code.</response>
+    [HttpGet("identify/{code}")]
+    [AllowAnonymous]
+    [ProducesResponseType<StaffIdentityCardDto>(StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetIdentityCard(string code)
+        => Ok(await _staffService.GetIdentityCardAsync(code));
 }

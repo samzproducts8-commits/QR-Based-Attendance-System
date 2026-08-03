@@ -115,4 +115,26 @@ public sealed class StaffService : IStaffService
     /// <inheritdoc/>
     public Task<PagedResult<StaffDto>> GetAllAsync(StaffFilterRequest filter)
         => _repository.GetPagedAsync(filter);
+
+    /// <inheritdoc/>
+    public async Task<string> GetQrCodeBase64Async(int staffId, string employeeIdBaseUrl)
+    {
+        StaffDto staff = await GetByIdAsync(staffId);
+        string formattedBaseUrl = employeeIdBaseUrl.TrimEnd('/');
+        if (!formattedBaseUrl.StartsWith("http://", StringComparison.OrdinalIgnoreCase) &&
+            !formattedBaseUrl.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
+        {
+            formattedBaseUrl = $"https://{formattedBaseUrl.TrimStart('/')}";
+        }
+
+        string qrPayload = $"{formattedBaseUrl}/{staff.UniqueCode}";
+        return QrCodeGeneratorHelper.GenerateQrCodeBase64(qrPayload);
+    }
+
+    /// <inheritdoc/>
+    public async Task<StaffIdentityCardDto> GetIdentityCardAsync(string uniqueCode)
+    {
+        StaffIdentityCardDto? card = await _repository.GetIdentityCardByCodeAsync(uniqueCode);
+        return card ?? throw new NotFoundException($"No employee found with code '{uniqueCode}'.");
+    }
 }

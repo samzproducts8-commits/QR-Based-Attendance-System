@@ -8,6 +8,7 @@ import {
   PagedResult,
   StaffDto,
   StaffFilterRequest,
+  StaffIdentityCardDto,
   UpdateStaffRequest
 } from '../models/staff.models';
 
@@ -50,6 +51,16 @@ export class StaffApiService {
   /** Permanently deletes a staff member and all their dependent data. */
   delete(staffId: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/${staffId}`);
+  }
+
+  /** Fetches static QR code base64 image for the staff member. */
+  getQrCode(staffId: number): Observable<{ qrCodeBase64: string }> {
+    return this.http.get<{ qrCodeBase64: string }>(`${this.baseUrl}/${staffId}/qrcode`);
+  }
+
+  /** Fetches public employee identity card information by unique code (e.g. EMP-0001). */
+  getIdentityCard(uniqueCode: string): Observable<StaffIdentityCardDto> {
+    return this.http.get<StaffIdentityCardDto>(`${this.baseUrl}/identify/${uniqueCode}`);
   }
 
   private toFormData(request: CreateStaffRequest): FormData {
