@@ -1230,3 +1230,22 @@ System.InvalidOperationException: Invalid operation. The connection is closed.
 2026-08-03 19:10:34.859 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
 2026-08-03 19:10:54.849 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
 2026-08-03 19:11:14.851 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:11:34.849 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:11:54.842 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:12:14.854 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:12:34.850 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:12:54.851 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:13:14.846 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:13:29.852 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:13:49.857 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:14:09.847 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:14:29.845 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:14:49.862 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:15:09.846 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:15:29.844 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:15:49.853 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:16:09.853 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:16:29.846 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:16:44.853 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:17:03.043 +03:00 [INF] Application is shutting down...
+2026-08-03 19:17:03.062 +03:00 [INF] HTTP GET /hubs/attendance responded 101 in 1488353.8916 ms
