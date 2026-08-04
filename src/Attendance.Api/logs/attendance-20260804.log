@@ -125,3 +125,4 @@ Attendance.Application.Exceptions.DuplicateAttendanceException: You have already
 2026-08-04 12:04:12.976 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 200 in 6.6886 ms
 2026-08-04 12:04:16.585 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
 2026-08-04 12:04:18.255 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 3.9003 ms
+2026-08-04 12:04:36.591 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
