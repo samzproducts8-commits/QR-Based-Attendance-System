@@ -1249,3 +1249,30 @@ System.InvalidOperationException: Invalid operation. The connection is closed.
 2026-08-03 19:16:44.853 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
 2026-08-03 19:17:03.043 +03:00 [INF] Application is shutting down...
 2026-08-03 19:17:03.062 +03:00 [INF] HTTP GET /hubs/attendance responded 101 in 1488353.8916 ms
+2026-08-03 19:22:10.143 +03:00 [WRN] The 'StaffStatus' property 'Status' on entity type 'Staff' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value 'Inactive', since this is the CLR default for the 'StaffStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2026-08-03 19:22:11.725 +03:00 [INF] Kiosk QR deep-link base: http://192.168.1.2:4200/scan — phones must be able to reach this host.
+2026-08-03 19:22:11.727 +03:00 [INF] Public Employee ID QR base URL: https://192.168.1.2:4200/employee-id — generated QR codes will resolve to this address.
+2026-08-03 19:22:11.751 +03:00 [INF] QR token expiry sweep started (interval 5s).
+2026-08-03 19:22:11.781 +03:00 [INF] Now listening on: http://0.0.0.0:5080
+2026-08-03 19:22:11.782 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-03 19:22:11.783 +03:00 [INF] Hosting environment: Development
+2026-08-03 19:22:11.783 +03:00 [INF] Content root path: C:\employer\src\Attendance.Api
+2026-08-03 19:22:16.940 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:22:36.781 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:22:45.924 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 383.3321 ms
+2026-08-03 19:22:46.165 +03:00 [INF] HTTP GET /api/staff responded 200 in 167.8251 ms
+2026-08-03 19:22:56.756 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:23:10.373 +03:00 [INF] HTTP GET /api/staff/2 responded 200 in 34.5630 ms
+2026-08-03 19:23:10.634 +03:00 [INF] HTTP GET /api/staff/2/qrcode responded 200 in 31.1467 ms
+2026-08-03 19:23:11.027 +03:00 [INF] HTTP GET /staff-photos/EMP-0002/EMP-0002.png responded 200 in 16.0455 ms
+2026-08-03 19:23:16.768 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:23:36.789 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:23:56.774 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:24:11.764 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:24:15.966 +03:00 [INF] HTTP GET /api/staff/identify/EMP-0002 responded 200 in 34.5001 ms
+2026-08-03 19:24:16.119 +03:00 [INF] HTTP GET /staff-photos/EMP-0002/EMP-0002.png responded 200 in 1.4704 ms
+2026-08-03 19:24:31.760 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:24:51.759 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:25:11.768 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:25:31.759 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-03 19:25:46.767 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
