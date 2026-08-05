@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { AuthService } from '../../core/services/auth.service';
 import { ErrorHandlerService } from '../../core/services/error-handler.service';
 
@@ -15,17 +16,20 @@ export class LoginComponent {
   form: ReturnType<FormBuilder['group']>;
   submitting = false;
   hidePassword = true;
+  currentYear = new Date().getFullYear();
 
   constructor(
     private readonly fb: FormBuilder,
     private readonly authService: AuthService,
     private readonly errorHandler: ErrorHandlerService,
     private readonly router: Router,
-    private readonly route: ActivatedRoute
+    private readonly route: ActivatedRoute,
+    private readonly snackBar: MatSnackBar
   ) {
     this.form = this.fb.group({
       username: ['', Validators.required],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
+      rememberMe: [false]
     });
   }
 
@@ -49,6 +53,15 @@ export class LoginComponent {
         this.errorHandler.show(err);
       }
     });
+  }
+
+  onForgotPassword(event: Event): void {
+    event.preventDefault();
+    this.snackBar.open(
+      'Please contact your DAFTech HR or IT Administrator to reset your access credentials.',
+      'Close',
+      { duration: 6000, horizontalPosition: 'center', verticalPosition: 'bottom' }
+    );
   }
 
   private defaultRouteFor(): string {
