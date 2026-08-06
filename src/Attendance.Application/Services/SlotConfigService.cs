@@ -102,10 +102,10 @@ public sealed class SlotConfigService : ISlotConfigService
         {
             IReadOnlyList<SlotConfigDto> existing = await _repository.GetAllAsync();
             bool overlaps = existing.Any(s =>
-                s.SlotId != excludeSlotId &&
+                (!excludeSlotId.HasValue || s.SlotId != excludeSlotId.Value) &&
                 s.IsActive &&
-                startTime <= s.EndTime &&
-                endTime >= s.StartTime);
+                startTime < s.EndTime &&
+                endTime > s.StartTime);
 
             if (overlaps)
                 failures.Add(new ValidationFailure(

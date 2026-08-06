@@ -75,8 +75,8 @@ public sealed class ReportExportHelper : IReportExporter
     {
         string title = $"Monthly Attendance Summary — {summary.Year}-{summary.Month:D2}";
 
-        // One row per staff × slot with OnTime / Late / Absent counts.
-        var header = new List<string> { "Staff", "Department", "Slot", "On Time", "Late", "Absent" };
+        // One row per staff × slot with OnTime / Late / Excused Absent / Unexcused Absent counts.
+        var header = new List<string> { "Staff", "Department", "Slot", "On Time", "Late", "Excused Absent", "Unexcused Absent" };
 
         var rows = summary.StaffSummaries
             .SelectMany(staff => staff.SlotSummaries.Select(slot => new List<string>
@@ -86,7 +86,8 @@ public sealed class ReportExportHelper : IReportExporter
                 slot.SlotName,
                 slot.OnTimeCount.ToString(),
                 slot.LateCount.ToString(),
-                slot.AbsentCount.ToString()
+                slot.ExcusedAbsentCount.ToString(),
+                slot.UnexcusedAbsentCount.ToString()
             }))
             .ToList();
 
@@ -112,6 +113,7 @@ public sealed class ReportExportHelper : IReportExporter
             "Total Hours",
             "Overtime Hours",
             "Late Penalties",
+            "Excused Absences",
             "Unpaid Absences"
         };
 
@@ -124,6 +126,7 @@ public sealed class ReportExportHelper : IReportExporter
             staff.TotalHours.ToString("F2"),
             staff.OvertimeHours.ToString("F2"),
             staff.LatePenalties.ToString(),
+            staff.ExcusedAbsences.ToString(),
             staff.UnpaidAbsences.ToString()
         }).ToList();
 
@@ -142,6 +145,7 @@ public sealed class ReportExportHelper : IReportExporter
             summary.TotalHoursWorked.ToString("F2"),
             summary.TotalOvertimeHours.ToString("F2"),
             summary.TotalLatePenalties.ToString(),
+            summary.TotalExcusedAbsences.ToString(),
             summary.TotalUnpaidAbsences.ToString()
         };
 

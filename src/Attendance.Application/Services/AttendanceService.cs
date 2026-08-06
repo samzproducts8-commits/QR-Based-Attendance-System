@@ -218,13 +218,18 @@ public sealed class AttendanceService : IAttendanceService
                 {
                     var slotLogs = staffLogs[slot.SlotId].ToList();
                     // ManualEntry counts as an on-time presence for summary purposes.
-                    // Absent logs (with absence reason) count toward absence/no-scan.
                     int onTime = slotLogs.Count(l => l.StatusFlag == AttendanceStatus.OnTime || l.StatusFlag == AttendanceStatus.ManualEntry);
                     int late   = slotLogs.Count(l => l.StatusFlag == AttendanceStatus.Late);
                     int daysWithPresenceLog = slotLogs.Where(l => l.StatusFlag != AttendanceStatus.Absent).Select(l => l.EventDate).Distinct().Count();
-                    int absent = slot.IsMandatory ? Math.Max(0, workingDays - daysWithPresenceLog) : 0;
+                    int totalAbsent = slot.IsMandatory ? Math.Max(0, workingDays - daysWithPresenceLog) : 0;
 
-                    return new SlotMonthlySummary(slot.SlotId, slot.SlotName, onTime, late, absent);
+                    // Excused = absent logs with an admin-provided reason
+                    int excusedAbsent = slot.IsMandatory
+                        ? slotLogs.Count(l => l.StatusFlag == AttendanceStatus.Absent && !string.IsNullOrWhiteSpace(l.AbsenceReason))
+                        : 0;
+                    int unexcusedAbsent = Math.Max(0, totalAbsent - excusedAbsent);
+
+                    return new SlotMonthlySummary(slot.SlotId, slot.SlotName, onTime, late, excusedAbsent, unexcusedAbsent);
                 })
                 .ToList();
 
@@ -416,12 +421,24 @@ public sealed class AttendanceService : IAttendanceService
             var staffLogs = logsByStaff[s.StaffId].ToList();
             var logsBySlot = staffLogs.ToLookup(l => l.SlotId);
 
-            int daysWorked = staffLogs
+            // Days with a physical presence (scan or manual entry)
+            var physicalPresenceDates = staffLogs
                 .Where(l => l.StatusFlag != AttendanceStatus.Absent)
                 .Select(l => l.EventDate)
                 .Distinct()
-                .Count();
+                .ToHashSet();
 
+            // Days covered by an excused (admin-approved) absence reason
+            var excusedAbsenceDates = staffLogs
+                .Where(l => l.StatusFlag == AttendanceStatus.Absent && !string.IsNullOrWhiteSpace(l.AbsenceReason))
+                .Select(l => l.EventDate)
+                .Distinct()
+                .ToHashSet();
+
+            // Excused days that had no physical presence count toward daysWorked
+            int daysWorked = physicalPresenceDates.Count + excusedAbsenceDates.Except(physicalPresenceDates).Count();
+
+            // Hours from physical presence logs
             decimal totalHours = 0m;
             var workedLogs = staffLogs.Where(l => l.StatusFlag != AttendanceStatus.Absent).ToList();
             foreach (var log in workedLogs)
@@ -434,8 +451,24 @@ public sealed class AttendanceService : IAttendanceService
                     totalHours += (decimal)slotHours;
                 }
             }
+
+            // Credit slot hours for excused absences (approved leave gets full slot hours)
+            var excusedLogs = staffLogs
+                .Where(l => l.StatusFlag == AttendanceStatus.Absent && !string.IsNullOrWhiteSpace(l.AbsenceReason))
+                .ToList();
+            foreach (var log in excusedLogs)
+            {
+                var slot = slots.FirstOrDefault(sl => sl.SlotId == log.SlotId);
+                if (slot is not null)
+                {
+                    double slotHours = (slot.EndTime - slot.StartTime).TotalHours;
+                    if (slotHours < 0) slotHours += 24;
+                    totalHours += (decimal)slotHours;
+                }
+            }
             totalHours = Math.Round(totalHours, 2);
 
+            // Overtime calculated from physical presence only (excused leave doesn't generate overtime)
             var logsByDay = workedLogs.GroupBy(l => l.EventDate);
             decimal overtimeHours = 0m;
             foreach (var dayGroup in logsByDay)
@@ -460,6 +493,7 @@ public sealed class AttendanceService : IAttendanceService
 
             int latePenalties = staffLogs.Count(l => l.StatusFlag == AttendanceStatus.Late);
 
+            int excusedAbsences = 0;
             int unpaidAbsences = 0;
             foreach (var slot in slots.Where(sl => sl.IsMandatory))
             {
@@ -467,6 +501,7 @@ public sealed class AttendanceService : IAttendanceService
                 int presenceCount = slotLogs.Count(l => l.StatusFlag != AttendanceStatus.Absent);
                 int excusedCount  = slotLogs.Count(l => l.StatusFlag == AttendanceStatus.Absent && !string.IsNullOrWhiteSpace(l.AbsenceReason));
                 int missingCount  = Math.Max(0, workingDays - presenceCount);
+                excusedAbsences += excusedCount;
                 unpaidAbsences += Math.Max(0, missingCount - excusedCount);
             }
 
@@ -479,6 +514,7 @@ public sealed class AttendanceService : IAttendanceService
                 totalHours,
                 overtimeHours,
                 latePenalties,
+                excusedAbsences,
                 unpaidAbsences);
         }).ToList();
 
@@ -487,6 +523,7 @@ public sealed class AttendanceService : IAttendanceService
         decimal sumHoursWorked = staffSummaries.Sum(s => s.TotalHours);
         decimal sumOvertimeHours = staffSummaries.Sum(s => s.OvertimeHours);
         int sumLatePenalties = staffSummaries.Sum(s => s.LatePenalties);
+        int sumExcusedAbsences = staffSummaries.Sum(s => s.ExcusedAbsences);
         int sumUnpaidAbsences = staffSummaries.Sum(s => s.UnpaidAbsences);
 
         return new MonthlyPayrollSummaryDto(
@@ -497,6 +534,7 @@ public sealed class AttendanceService : IAttendanceService
             sumHoursWorked,
             sumOvertimeHours,
             sumLatePenalties,
+            sumExcusedAbsences,
             sumUnpaidAbsences,
             staffSummaries);
     }

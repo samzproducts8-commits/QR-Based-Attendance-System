@@ -11,6 +11,7 @@ namespace Attendance.Application.DTOs;
 /// <param name="TotalHours">Total accrued work hours in the month.</param>
 /// <param name="OvertimeHours">Calculated overtime hours accrued in the month.</param>
 /// <param name="LatePenalties">Number of late arrival occurrences in the month.</param>
+/// <param name="ExcusedAbsences">Number of admin-approved absences for mandatory slots (no payroll deduction).</param>
 /// <param name="UnpaidAbsences">Number of unexcused absences for mandatory slots in the month.</param>
 public record StaffPayrollSummaryDto(
     int StaffId,
@@ -21,6 +22,7 @@ public record StaffPayrollSummaryDto(
     decimal TotalHours,
     decimal OvertimeHours,
     int LatePenalties,
+    int ExcusedAbsences,
     int UnpaidAbsences
 );
 
@@ -34,6 +36,7 @@ public record StaffPayrollSummaryDto(
 /// <param name="TotalHoursWorked">Aggregate total hours worked across all staff.</param>
 /// <param name="TotalOvertimeHours">Aggregate overtime hours across all staff.</param>
 /// <param name="TotalLatePenalties">Aggregate count of late arrival penalties across all staff.</param>
+/// <param name="TotalExcusedAbsences">Aggregate count of admin-approved absences across all staff.</param>
 /// <param name="TotalUnpaidAbsences">Aggregate count of unpaid absences across all staff.</param>
 /// <param name="StaffSummaries">Per-staff payroll records.</param>
 public record MonthlyPayrollSummaryDto(
@@ -44,6 +47,7 @@ public record MonthlyPayrollSummaryDto(
     decimal TotalHoursWorked,
     decimal TotalOvertimeHours,
     int TotalLatePenalties,
+    int TotalExcusedAbsences,
     int TotalUnpaidAbsences,
     IReadOnlyList<StaffPayrollSummaryDto> StaffSummaries
 );

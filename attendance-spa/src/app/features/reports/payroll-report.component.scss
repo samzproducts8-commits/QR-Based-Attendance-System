@@ -141,6 +141,11 @@
     border-top: 3px solid #ef4444;
     .kpi-card__value { color: #dc2626; }
   }
+
+  &--info {
+    border-top: 3px solid #3b82f6;
+    .kpi-card__value { color: #2563eb; }
+  }
 }
 
 /* Payroll Table */
@@ -220,6 +225,14 @@
   color: #b45309;
   font-weight: 700;
   background: #fef3c7;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.excused-badge {
+  color: #1d4ed8;
+  font-weight: 700;
+  background: #dbeafe;
   padding: 2px 8px;
   border-radius: 6px;
 }

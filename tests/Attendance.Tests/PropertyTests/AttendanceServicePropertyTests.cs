@@ -418,6 +418,6 @@ public class AttendanceServiceProperty8_ReportCompleteness
             countsConsistent,
             $"loggedDays={loggedDays} | " +
             string.Join("; ", staffSummary.SlotSummaries.Select(s =>
-                $"{s.SlotName}: onTime={s.OnTimeCount} late={s.LateCount} absent={s.AbsentCount}")));
+                $"{s.SlotName}: onTime={s.OnTimeCount} late={s.LateCount} excusedAbsent={s.ExcusedAbsentCount} unexcusedAbsent={s.UnexcusedAbsentCount}")));
     }
 }

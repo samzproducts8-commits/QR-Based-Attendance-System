@@ -68,19 +68,24 @@ public record StaffMonthlySummary(
 );
 
 /// <summary>
-/// Monthly On Time / Late / Absent counts for a single slot within a staff member's summary.
+/// Monthly On Time / Late / Excused Absent / Unexcused Absent counts for a single slot
+/// within a staff member's summary.
 /// </summary>
 /// <param name="SlotId">Slot configuration primary key.</param>
 /// <param name="SlotName">Human-readable slot name.</param>
 /// <param name="OnTimeCount">Number of days the staff member scanned on time this month.</param>
 /// <param name="LateCount">Number of days the staff member scanned late this month.</param>
-/// <param name="AbsentCount">
-/// Number of working days the staff member had no log for this mandatory slot.
+/// <param name="ExcusedAbsentCount">
+/// Number of working days the staff member was absent with an admin-approved reason.
+/// </param>
+/// <param name="UnexcusedAbsentCount">
+/// Number of working days the staff member was absent without an approved reason.
 /// </param>
 public record SlotMonthlySummary(
     int SlotId,
     string SlotName,
     int OnTimeCount,
     int LateCount,
-    int AbsentCount
+    int ExcusedAbsentCount,
+    int UnexcusedAbsentCount
 );

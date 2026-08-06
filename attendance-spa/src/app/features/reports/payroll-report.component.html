@@ -82,6 +82,10 @@
         <span class="kpi-card__label">Late Penalties</span>
         <span class="kpi-card__value">{{ payrollSummary.totalLatePenalties }}</span>
       </div>
+      <div class="kpi-card kpi-card--info">
+        <span class="kpi-card__label">Excused Absences</span>
+        <span class="kpi-card__value">{{ payrollSummary.totalExcusedAbsences }}</span>
+      </div>
       <div class="kpi-card kpi-card--danger">
         <span class="kpi-card__label">Unpaid Absences</span>
         <span class="kpi-card__value">{{ payrollSummary.totalUnpaidAbsences }}</span>
@@ -102,6 +106,7 @@
                 <th class="text-right">Total Hours</th>
                 <th class="text-right">Overtime</th>
                 <th class="text-right">Late Penalties</th>
+                <th class="text-right">Excused Absences</th>
                 <th class="text-right">Unpaid Absences</th>
               </tr>
             </thead>
@@ -125,6 +130,11 @@
                   </span>
                 </td>
                 <td class="text-right">
+                  <span [class.excused-badge]="staff.excusedAbsences > 0">
+                    {{ staff.excusedAbsences }}
+                  </span>
+                </td>
+                <td class="text-right">
                   <span [class.unpaid-badge]="staff.unpaidAbsences > 0">
                     {{ staff.unpaidAbsences }}
                   </span>
@@ -138,6 +148,7 @@
                 <td class="text-right"><strong>{{ payrollSummary.totalHoursWorked | number:'1.2-2' }} h</strong></td>
                 <td class="text-right"><strong>{{ payrollSummary.totalOvertimeHours | number:'1.2-2' }} h</strong></td>
                 <td class="text-right"><strong>{{ payrollSummary.totalLatePenalties }}</strong></td>
+                <td class="text-right"><strong>{{ payrollSummary.totalExcusedAbsences }}</strong></td>
                 <td class="text-right"><strong>{{ payrollSummary.totalUnpaidAbsences }}</strong></td>
               </tr>
             </tfoot>

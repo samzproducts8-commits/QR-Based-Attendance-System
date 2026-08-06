@@ -340,3 +340,1230 @@ System.InvalidOperationException: Invalid operation. The connection is closed.
 2026-08-06 12:15:27.578 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
 2026-08-06 12:15:42.595 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
 2026-08-06 12:16:02.587 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:16:22.589 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:16:42.574 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:16:57.593 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:17:17.580 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:17:37.589 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:17:57.591 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:18:17.586 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:18:37.585 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:18:57.588 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:19:17.577 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:19:32.590 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:19:52.579 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:20:07.593 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:20:27.577 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:20:47.579 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:21:07.578 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:21:22.594 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:21:42.581 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:22:02.577 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:22:17.595 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:22:37.582 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:22:57.575 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:23:12.586 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:23:32.588 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:23:52.582 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:24:12.579 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:24:32.599 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:24:52.582 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:25:12.584 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:25:32.582 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:25:52.593 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:26:12.582 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:26:32.580 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:26:47.600 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:27:07.576 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:27:27.584 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:27:47.597 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:28:07.583 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:28:09.361 +03:00 [INF] HTTP GET /hubs/attendance responded 101 in 1381026.2992 ms
+2026-08-06 12:28:27.593 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:28:47.578 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:29:07.586 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:29:27.587 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:29:47.584 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:30:07.593 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:30:27.576 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:30:47.573 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:31:02.585 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:31:22.588 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:31:42.583 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:32:02.575 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:32:22.592 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:32:42.591 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:33:02.577 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:33:17.598 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:33:37.589 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:33:57.584 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:34:17.579 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:34:37.585 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:34:57.580 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:35:17.577 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:35:32.603 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:35:52.584 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:36:12.570 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:36:32.579 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:36:52.576 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:37:07.579 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:37:27.582 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:37:47.576 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:38:07.574 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:38:22.583 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:38:42.570 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:39:02.577 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:39:22.583 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:39:42.575 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:39:57.583 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:40:17.581 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:40:37.572 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:40:52.583 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:41:12.584 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:41:32.573 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:41:52.585 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:42:12.597 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:42:32.577 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:42:47.584 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:43:07.579 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:43:27.582 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:43:47.575 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:44:07.574 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:44:27.572 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:44:42.580 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:45:02.574 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:45:22.580 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:45:42.587 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:46:02.586 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:46:22.579 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:46:42.577 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:47:02.584 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:47:22.572 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:47:37.581 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:47:57.579 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:48:17.580 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:48:37.579 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:48:57.574 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:49:12.576 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:49:32.570 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:49:47.584 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:50:08.654 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:50:23.658 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:50:43.666 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:50:58.672 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:51:18.670 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:51:38.659 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:51:58.661 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:52:13.669 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:52:33.666 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:52:53.664 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:53:08.675 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:53:28.659 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:53:48.667 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:54:08.676 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:54:28.659 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:54:48.658 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:55:08.660 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:55:28.669 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:55:48.657 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:56:08.656 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:56:23.667 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:56:43.660 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:57:03.655 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:57:18.658 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:57:33.665 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:57:53.655 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:58:08.669 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:58:28.664 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:58:48.670 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:59:08.668 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:59:28.667 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:59:43.675 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 13:00:03.659 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 13:00:23.679 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 13:00:43.675 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 13:01:03.662 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 13:01:21.502 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 13:01:36.508 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 13:01:51.521 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 13:02:11.514 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:12:26.020 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:12:41.034 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:13:01.024 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:13:16.028 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:13:36.031 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:13:56.020 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:14:11.026 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:14:31.024 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:14:46.039 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:15:06.027 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:15:26.018 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:15:41.023 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:15:56.033 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:16:16.026 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:16:36.036 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:16:56.028 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:17:16.029 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:17:36.032 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:17:56.023 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:18:16.020 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:18:31.035 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:18:51.024 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:19:06.043 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:19:26.034 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:19:46.033 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:20:06.026 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:20:21.032 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:20:41.024 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:20:56.030 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:21:16.029 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:21:31.036 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:21:51.020 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:22:06.035 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:22:26.036 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:22:46.036 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:23:06.031 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:23:26.030 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:23:46.030 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:24:06.023 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:24:21.032 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:24:41.039 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:25:01.032 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:25:21.022 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:25:36.032 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:25:56.023 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:26:16.031 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:26:36.018 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:26:46.610 +03:00 [INF] Application is shutting down...
+2026-08-06 14:27:01.804 +03:00 [WRN] The 'StaffStatus' property 'Status' on entity type 'Staff' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value 'Inactive', since this is the CLR default for the 'StaffStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2026-08-06 14:27:02.525 +03:00 [INF] Kiosk QR deep-link base: http://192.168.1.19:4200/scan — phones must be able to reach this host.
+2026-08-06 14:27:02.526 +03:00 [INF] Public Employee ID QR base URL: https://192.168.1.19:4200/employee-id — generated QR codes will resolve to this address.
+2026-08-06 14:27:02.542 +03:00 [INF] QR token expiry sweep started (interval 5s).
+2026-08-06 14:27:02.575 +03:00 [INF] Now listening on: http://0.0.0.0:5080
+2026-08-06 14:27:02.575 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-06 14:27:02.576 +03:00 [INF] Hosting environment: Development
+2026-08-06 14:27:02.576 +03:00 [INF] Content root path: C:\employer\src\Attendance.Api
+2026-08-06 14:27:07.728 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:27:27.566 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:27:47.564 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:28:07.561 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:28:22.573 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:28:35.582 +03:00 [INF] Application is shutting down...
+2026-08-06 14:30:12.682 +03:00 [WRN] The 'StaffStatus' property 'Status' on entity type 'Staff' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value 'Inactive', since this is the CLR default for the 'StaffStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2026-08-06 14:30:13.361 +03:00 [INF] Kiosk QR deep-link base: http://192.168.1.19:4200/scan — phones must be able to reach this host.
+2026-08-06 14:30:13.362 +03:00 [INF] Public Employee ID QR base URL: https://192.168.1.19:4200/employee-id — generated QR codes will resolve to this address.
+2026-08-06 14:30:13.379 +03:00 [INF] QR token expiry sweep started (interval 5s).
+2026-08-06 14:30:13.408 +03:00 [INF] Now listening on: http://0.0.0.0:5080
+2026-08-06 14:30:13.409 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-06 14:30:13.409 +03:00 [INF] Hosting environment: Development
+2026-08-06 14:30:13.409 +03:00 [INF] Content root path: C:\employer\src\Attendance.Api
+2026-08-06 14:30:18.570 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:30:38.406 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:30:58.390 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:31:05.654 +03:00 [INF] HTTP POST /hubs/attendance/negotiate responded 200 in 63.5211 ms
+2026-08-06 14:31:06.334 +03:00 [INF] HTTP POST /hubs/attendance/negotiate responded 200 in 2.3195 ms
+2026-08-06 14:31:06.384 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 401 in 51.9174 ms
+2026-08-06 14:31:13.406 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:31:20.418 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 150.5498 ms
+2026-08-06 14:31:20.564 +03:00 [INF] HTTP GET /api/staff responded 200 in 107.6887 ms
+2026-08-06 14:31:22.599 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 200 in 52.3484 ms
+2026-08-06 14:31:27.222 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 25.8904 ms
+2026-08-06 14:31:33.405 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:31:44.118 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 15.4436 ms
+2026-08-06 14:31:53.417 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:31:55.417 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 200 in 4.8104 ms
+2026-08-06 14:31:57.565 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 20.9081 ms
+2026-08-06 14:32:13.389 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:32:18.284 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 7.6855 ms
+2026-08-06 14:32:28.402 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:32:48.398 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:33:08.398 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:33:19.494 +03:00 [INF] HTTP GET /api/slots responded 200 in 22.4475 ms
+2026-08-06 14:33:21.459 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 9.0216 ms
+2026-08-06 14:33:24.238 +03:00 [INF] HTTP GET /api/reports/daily/export responded 200 in 138.5922 ms
+2026-08-06 14:33:28.396 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:33:29.110 +03:00 [INF] HTTP GET /api/reports/daily/export responded 200 in 15.0474 ms
+2026-08-06 14:33:48.393 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:33:59.851 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 200 in 4.3411 ms
+2026-08-06 14:34:02.835 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 2.4910 ms
+2026-08-06 14:34:03.403 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:34:07.189 +03:00 [INF] HTTP GET /api/reports/payroll/export responded 200 in 751.6186 ms
+2026-08-06 14:34:23.398 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:34:43.396 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:34:58.398 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:35:11.196 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 8.2357 ms
+2026-08-06 14:35:18.390 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:35:33.412 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:35:48.029 +03:00 [INF] HTTP POST /hubs/attendance/negotiate responded 200 in 0.2458 ms
+2026-08-06 14:35:53.409 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:36:13.401 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:36:33.402 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:36:53.406 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:37:13.403 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:37:33.397 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:37:48.412 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:38:08.399 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:38:23.401 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:38:43.395 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:39:03.396 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:39:18.409 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:39:38.411 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:39:44.247 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 63.6508 ms
+2026-08-06 14:39:53.812 +03:00 [INF] QR scan attempt: StaffId=1 Token=8ef18ad1… Outcome="TokenExpired" Ip=127.0.0.1
+2026-08-06 14:39:53.815 +03:00 [INF] HTTP POST /api/attendance/scan responded 410 in 34.5739 ms
+2026-08-06 14:39:58.410 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:40:03.058 +03:00 [INF] HTTP GET /api/slots responded 200 in 3.1621 ms
+2026-08-06 14:40:18.398 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:40:22.897 +03:00 [INF] QR scan attempt: StaffId=1 Token=18591ab9… Outcome="Success" Ip=127.0.0.1
+2026-08-06 14:40:22.904 +03:00 [ERR] HTTP POST /api/attendance/scan responded 500 in 15.3644 ms
+Attendance.Application.Exceptions.OutsideScheduleException: No attendance slot is open at this time.
+   at Attendance.Application.Services.AttendanceService.RecordAttendanceAsync(Int32 staffId, Int32 qrSessionId) in C:\employer\src\Attendance.Application\Services\AttendanceService.cs:line 65
+   at Attendance.Api.Controllers.AttendanceController.Scan(ScanRequestDto request) in C:\employer\src\Attendance.Api\Controllers\AttendanceController.cs:line 68
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 14:40:22.938 +03:00 [WRN] Request fault 422 on POST /api/attendance/scan: No attendance slot is open at this time.
+2026-08-06 14:40:38.392 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:40:46.326 +03:00 [ERR] HTTP PUT /api/slots/3 responded 500 in 14.9891 ms
+FluentValidation.ValidationException: Validation failed: 
+ -- StartTime: The slot window overlaps an existing active slot. Severity: Error
+   at Attendance.Application.Services.SlotConfigService.ValidateAsync(String slotName, TimeOnly startTime, TimeOnly endTime, Nullable`1 excludeSlotId) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 117
+   at Attendance.Application.Services.SlotConfigService.UpdateSlotAsync(Int32 slotId, UpdateSlotRequest request) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 41
+   at Attendance.Api.Controllers.SlotConfigController.Update(Int32 id, UpdateSlotRequest request) in C:\employer\src\Attendance.Api\Controllers\SlotConfigController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 14:40:46.331 +03:00 [WRN] Request fault 400 on PUT /api/slots/3: Validation failed: 
+ -- StartTime: The slot window overlaps an existing active slot. Severity: Error
+2026-08-06 14:40:58.397 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:41:18.407 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:41:38.401 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:41:49.040 +03:00 [ERR] HTTP PUT /api/slots/3 responded 500 in 2.4291 ms
+FluentValidation.ValidationException: Validation failed: 
+ -- StartTime: The slot window overlaps an existing active slot. Severity: Error
+   at Attendance.Application.Services.SlotConfigService.ValidateAsync(String slotName, TimeOnly startTime, TimeOnly endTime, Nullable`1 excludeSlotId) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 117
+   at Attendance.Application.Services.SlotConfigService.UpdateSlotAsync(Int32 slotId, UpdateSlotRequest request) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 41
+   at Attendance.Api.Controllers.SlotConfigController.Update(Int32 id, UpdateSlotRequest request) in C:\employer\src\Attendance.Api\Controllers\SlotConfigController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 14:41:49.043 +03:00 [WRN] Request fault 400 on PUT /api/slots/3: Validation failed: 
+ -- StartTime: The slot window overlaps an existing active slot. Severity: Error
+2026-08-06 14:41:58.402 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:42:07.781 +03:00 [INF] HTTP GET /hubs/attendance responded 101 in 660803.8129 ms
+2026-08-06 14:42:08.077 +03:00 [INF] HTTP GET /api/slots responded 200 in 1.3821 ms
+2026-08-06 14:42:18.400 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:42:30.679 +03:00 [ERR] HTTP PUT /api/slots/3 responded 500 in 2.7483 ms
+FluentValidation.ValidationException: Validation failed: 
+ -- StartTime: The slot window overlaps an existing active slot. Severity: Error
+   at Attendance.Application.Services.SlotConfigService.ValidateAsync(String slotName, TimeOnly startTime, TimeOnly endTime, Nullable`1 excludeSlotId) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 117
+   at Attendance.Application.Services.SlotConfigService.UpdateSlotAsync(Int32 slotId, UpdateSlotRequest request) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 41
+   at Attendance.Api.Controllers.SlotConfigController.Update(Int32 id, UpdateSlotRequest request) in C:\employer\src\Attendance.Api\Controllers\SlotConfigController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 14:42:30.682 +03:00 [WRN] Request fault 400 on PUT /api/slots/3: Validation failed: 
+ -- StartTime: The slot window overlaps an existing active slot. Severity: Error
+2026-08-06 14:42:37.792 +03:00 [ERR] HTTP PUT /api/slots/3 responded 500 in 1.5589 ms
+FluentValidation.ValidationException: Validation failed: 
+ -- StartTime: The slot window overlaps an existing active slot. Severity: Error
+   at Attendance.Application.Services.SlotConfigService.ValidateAsync(String slotName, TimeOnly startTime, TimeOnly endTime, Nullable`1 excludeSlotId) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 117
+   at Attendance.Application.Services.SlotConfigService.UpdateSlotAsync(Int32 slotId, UpdateSlotRequest request) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 41
+   at Attendance.Api.Controllers.SlotConfigController.Update(Int32 id, UpdateSlotRequest request) in C:\employer\src\Attendance.Api\Controllers\SlotConfigController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 14:42:37.795 +03:00 [WRN] Request fault 400 on PUT /api/slots/3: Validation failed: 
+ -- StartTime: The slot window overlaps an existing active slot. Severity: Error
+2026-08-06 14:42:38.400 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:42:58.391 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:43:18.409 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:43:38.399 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:43:58.390 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:44:18.387 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:44:33.393 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:44:53.389 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:45:08.393 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:45:28.395 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:45:48.395 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:46:08.398 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:46:28.396 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:46:48.394 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:47:03.408 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:47:23.389 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:47:38.398 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:49:17.046 +03:00 [WRN] The 'StaffStatus' property 'Status' on entity type 'Staff' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value 'Inactive', since this is the CLR default for the 'StaffStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2026-08-06 14:49:17.749 +03:00 [INF] Kiosk QR deep-link base: http://192.168.1.19:4200/scan — phones must be able to reach this host.
+2026-08-06 14:49:17.751 +03:00 [INF] Public Employee ID QR base URL: https://192.168.1.19:4200/employee-id — generated QR codes will resolve to this address.
+2026-08-06 14:49:17.772 +03:00 [INF] QR token expiry sweep started (interval 5s).
+2026-08-06 14:49:17.802 +03:00 [INF] Now listening on: http://0.0.0.0:5080
+2026-08-06 14:49:17.803 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-06 14:49:17.803 +03:00 [INF] Hosting environment: Development
+2026-08-06 14:49:17.804 +03:00 [INF] Content root path: C:\employer\src\Attendance.Api
+2026-08-06 14:49:22.954 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:49:42.796 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:49:49.457 +03:00 [INF] HTTP GET /api/slots responded 401 in 99.4199 ms
+2026-08-06 14:50:00.226 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 188.6470 ms
+2026-08-06 14:50:00.482 +03:00 [INF] HTTP GET /api/staff responded 200 in 159.7423 ms
+2026-08-06 14:50:02.787 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:50:03.852 +03:00 [INF] HTTP GET /api/slots responded 200 in 21.4997 ms
+2026-08-06 14:50:15.238 +03:00 [INF] HTTP PUT /api/slots/3 responded 200 in 43.2185 ms
+2026-08-06 14:50:15.867 +03:00 [INF] HTTP GET /api/slots responded 200 in 4.0695 ms
+2026-08-06 14:50:22.782 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:50:32.076 +03:00 [INF] HTTP POST /hubs/attendance/negotiate responded 200 in 2.0799 ms
+2026-08-06 14:50:37.795 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:50:43.129 +03:00 [INF] QR scan attempt: StaffId=1 Token=079370be… Outcome="Success" Ip=127.0.0.1
+2026-08-06 14:50:43.228 +03:00 [INF] HTTP POST /api/attendance/scan responded 200 in 137.1112 ms
+2026-08-06 14:50:55.959 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 44.0096 ms
+2026-08-06 14:51:02.796 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:51:22.781 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:51:30.407 +03:00 [INF] HTTP GET /api/staff responded 200 in 7.2703 ms
+2026-08-06 14:51:33.175 +03:00 [INF] HTTP GET /api/staff/1 responded 200 in 25.0295 ms
+2026-08-06 14:51:33.408 +03:00 [INF] HTTP GET /api/staff/1/qrcode responded 200 in 9.0286 ms
+2026-08-06 14:51:33.808 +03:00 [INF] HTTP GET /staff-photos/EMP-0001/EMP-0001.png responded 200 in 6.5410 ms
+2026-08-06 14:51:42.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:51:43.704 +03:00 [INF] HTTP GET /api/staff/identify/EMP-0001 responded 200 in 19.4195 ms
+2026-08-06 14:51:43.803 +03:00 [INF] HTTP GET /staff-photos/EMP-0001/EMP-0001.png responded 200 in 0.7320 ms
+2026-08-06 14:51:57.791 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:52:17.787 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:52:30.828 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 200 in 23.1481 ms
+2026-08-06 14:52:31.415 +03:00 [INF] HTTP POST /hubs/attendance/negotiate responded 200 in 0.4518 ms
+2026-08-06 14:52:31.699 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 25.6527 ms
+2026-08-06 14:52:37.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:52:52.792 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:52:56.427 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 2.4796 ms
+2026-08-06 14:52:59.135 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 3.0928 ms
+2026-08-06 14:53:09.672 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 7.8836 ms
+2026-08-06 14:53:12.783 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:53:27.789 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:53:35.979 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 8.2770 ms
+2026-08-06 14:53:47.791 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:54:07.786 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:54:27.786 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:54:47.790 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:55:07.778 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:55:27.797 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:55:47.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:56:07.786 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:56:22.793 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:56:42.784 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:57:02.784 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:57:17.791 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:57:37.787 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:57:57.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:58:17.789 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:58:32.786 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:58:52.778 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:59:07.784 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:59:22.793 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:59:42.786 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 14:59:57.795 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:00:17.784 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:00:37.792 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:00:44.048 +03:00 [INF] HTTP GET /api/slots responded 200 in 3.8904 ms
+2026-08-06 15:00:57.786 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:01:12.789 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:01:32.792 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:01:52.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:02:12.793 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:02:32.777 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:02:47.788 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:03:07.792 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:03:27.776 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:03:42.786 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:03:57.790 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:04:17.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:04:32.783 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:04:52.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:05:12.775 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:05:27.788 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:05:47.787 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:06:07.774 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:06:08.612 +03:00 [INF] HTTP GET /hubs/attendance responded 101 in 935911.1603 ms
+2026-08-06 15:06:22.787 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:06:42.781 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:07:02.776 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:07:22.778 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:07:37.790 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:07:57.786 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:08:17.778 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:08:32.801 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:08:52.781 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:09:00.444 +03:00 [INF] HTTP PUT /api/slots/1 responded 401 in 0.8121 ms
+2026-08-06 15:09:12.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:09:15.623 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 59.1966 ms
+2026-08-06 15:09:15.825 +03:00 [INF] HTTP GET /api/staff responded 200 in 6.0856 ms
+2026-08-06 15:09:20.724 +03:00 [INF] HTTP GET /api/slots responded 200 in 2.5859 ms
+2026-08-06 15:09:27.789 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:09:29.426 +03:00 [ERR] HTTP PUT /api/slots/1 responded 500 in 1.8484 ms
+FluentValidation.ValidationException: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+   at Attendance.Application.Services.SlotConfigService.ValidateAsync(String slotName, TimeOnly startTime, TimeOnly endTime, Nullable`1 excludeSlotId) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 117
+   at Attendance.Application.Services.SlotConfigService.UpdateSlotAsync(Int32 slotId, UpdateSlotRequest request) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 41
+   at Attendance.Api.Controllers.SlotConfigController.Update(Int32 id, UpdateSlotRequest request) in C:\employer\src\Attendance.Api\Controllers\SlotConfigController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 15:09:29.443 +03:00 [WRN] Request fault 400 on PUT /api/slots/1: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+2026-08-06 15:09:47.723 +03:00 [ERR] HTTP PUT /api/slots/1 responded 500 in 1.0800 ms
+FluentValidation.ValidationException: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+   at Attendance.Application.Services.SlotConfigService.ValidateAsync(String slotName, TimeOnly startTime, TimeOnly endTime, Nullable`1 excludeSlotId) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 117
+   at Attendance.Application.Services.SlotConfigService.UpdateSlotAsync(Int32 slotId, UpdateSlotRequest request) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 41
+   at Attendance.Api.Controllers.SlotConfigController.Update(Int32 id, UpdateSlotRequest request) in C:\employer\src\Attendance.Api\Controllers\SlotConfigController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 15:09:47.726 +03:00 [WRN] Request fault 400 on PUT /api/slots/1: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+2026-08-06 15:09:47.781 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:09:48.058 +03:00 [ERR] HTTP PUT /api/slots/1 responded 500 in 0.7007 ms
+FluentValidation.ValidationException: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+   at Attendance.Application.Services.SlotConfigService.ValidateAsync(String slotName, TimeOnly startTime, TimeOnly endTime, Nullable`1 excludeSlotId) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 117
+   at Attendance.Application.Services.SlotConfigService.UpdateSlotAsync(Int32 slotId, UpdateSlotRequest request) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 41
+   at Attendance.Api.Controllers.SlotConfigController.Update(Int32 id, UpdateSlotRequest request) in C:\employer\src\Attendance.Api\Controllers\SlotConfigController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 15:09:48.062 +03:00 [WRN] Request fault 400 on PUT /api/slots/1: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+2026-08-06 15:10:07.775 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:10:22.787 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:10:26.270 +03:00 [ERR] HTTP PUT /api/slots/2 responded 500 in 3.4774 ms
+FluentValidation.ValidationException: Validation failed: 
+ -- StartTime: The slot window overlaps an existing active slot. Severity: Error
+   at Attendance.Application.Services.SlotConfigService.ValidateAsync(String slotName, TimeOnly startTime, TimeOnly endTime, Nullable`1 excludeSlotId) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 117
+   at Attendance.Application.Services.SlotConfigService.UpdateSlotAsync(Int32 slotId, UpdateSlotRequest request) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 41
+   at Attendance.Api.Controllers.SlotConfigController.Update(Int32 id, UpdateSlotRequest request) in C:\employer\src\Attendance.Api\Controllers\SlotConfigController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 15:10:26.273 +03:00 [WRN] Request fault 400 on PUT /api/slots/2: Validation failed: 
+ -- StartTime: The slot window overlaps an existing active slot. Severity: Error
+2026-08-06 15:10:42.787 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:11:02.800 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:11:22.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:11:42.782 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:11:59.850 +03:00 [INF] HTTP PUT /api/slots/1 responded 200 in 16.0295 ms
+2026-08-06 15:12:00.104 +03:00 [INF] HTTP GET /api/slots responded 200 in 2.2598 ms
+2026-08-06 15:12:02.799 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:12:22.786 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:12:42.797 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:12:50.299 +03:00 [ERR] HTTP PUT /api/slots/1 responded 500 in 1.5997 ms
+FluentValidation.ValidationException: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+   at Attendance.Application.Services.SlotConfigService.ValidateAsync(String slotName, TimeOnly startTime, TimeOnly endTime, Nullable`1 excludeSlotId) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 117
+   at Attendance.Application.Services.SlotConfigService.UpdateSlotAsync(Int32 slotId, UpdateSlotRequest request) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 41
+   at Attendance.Api.Controllers.SlotConfigController.Update(Int32 id, UpdateSlotRequest request) in C:\employer\src\Attendance.Api\Controllers\SlotConfigController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 15:12:50.305 +03:00 [WRN] Request fault 400 on PUT /api/slots/1: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+2026-08-06 15:13:01.134 +03:00 [ERR] HTTP PUT /api/slots/1 responded 500 in 1.6729 ms
+FluentValidation.ValidationException: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+   at Attendance.Application.Services.SlotConfigService.ValidateAsync(String slotName, TimeOnly startTime, TimeOnly endTime, Nullable`1 excludeSlotId) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 117
+   at Attendance.Application.Services.SlotConfigService.UpdateSlotAsync(Int32 slotId, UpdateSlotRequest request) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 41
+   at Attendance.Api.Controllers.SlotConfigController.Update(Int32 id, UpdateSlotRequest request) in C:\employer\src\Attendance.Api\Controllers\SlotConfigController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 15:13:01.141 +03:00 [WRN] Request fault 400 on PUT /api/slots/1: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+2026-08-06 15:13:02.799 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:13:22.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:13:42.794 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:14:02.803 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:14:22.788 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:14:36.297 +03:00 [INF] HTTP PUT /api/slots/4 responded 200 in 12.6240 ms
+2026-08-06 15:14:36.548 +03:00 [INF] HTTP GET /api/slots responded 200 in 2.7927 ms
+2026-08-06 15:14:42.796 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:15:02.791 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:15:22.785 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:15:42.791 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:15:48.395 +03:00 [INF] HTTP PUT /api/slots/3 responded 200 in 10.8828 ms
+2026-08-06 15:15:48.650 +03:00 [INF] HTTP GET /api/slots responded 200 in 3.3206 ms
+2026-08-06 15:16:02.784 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:16:22.784 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:16:37.793 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:16:57.796 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:17:17.789 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:17:37.798 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:17:57.781 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:18:12.793 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:18:32.809 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:18:52.786 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:19:12.797 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:19:32.807 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:19:52.796 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:20:12.798 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:20:32.783 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:20:47.796 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:21:07.783 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:21:27.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:21:42.801 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:22:02.800 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:22:22.790 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:22:42.779 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:23:02.786 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:23:08.528 +03:00 [INF] HTTP PUT /api/slots/2 responded 200 in 14.4258 ms
+2026-08-06 15:23:08.764 +03:00 [INF] HTTP GET /api/slots responded 200 in 2.4084 ms
+2026-08-06 15:23:17.792 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:23:37.791 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:23:57.805 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:24:17.801 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:24:37.796 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:24:57.788 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:25:17.788 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:25:37.807 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:25:57.782 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:26:12.811 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:26:32.793 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:26:42.031 +03:00 [INF] Application is shutting down...
+2026-08-06 15:26:42.044 +03:00 [INF] HTTP GET /hubs/attendance responded 101 in 2050011.1771 ms
+2026-08-06 15:39:25.175 +03:00 [WRN] The 'StaffStatus' property 'Status' on entity type 'Staff' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value 'Inactive', since this is the CLR default for the 'StaffStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2026-08-06 15:39:26.731 +03:00 [INF] Kiosk QR deep-link base: http://192.168.1.6:4200/scan — phones must be able to reach this host.
+2026-08-06 15:39:26.732 +03:00 [INF] Public Employee ID QR base URL: https://192.168.1.6:4200/employee-id — generated QR codes will resolve to this address.
+2026-08-06 15:39:26.754 +03:00 [INF] QR token expiry sweep started (interval 5s).
+2026-08-06 15:39:26.788 +03:00 [INF] Now listening on: http://0.0.0.0:5080
+2026-08-06 15:39:26.789 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-06 15:39:26.790 +03:00 [INF] Hosting environment: Development
+2026-08-06 15:39:26.791 +03:00 [INF] Content root path: C:\employer\src\Attendance.Api
+2026-08-06 15:39:31.566 +03:00 [INF] HTTP GET /api/slots responded 401 in 128.6717 ms
+2026-08-06 15:39:32.208 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:39:46.270 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 269.9304 ms
+2026-08-06 15:39:46.477 +03:00 [INF] HTTP GET /api/staff responded 200 in 154.6481 ms
+2026-08-06 15:39:51.800 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:40:06.297 +03:00 [INF] HTTP POST /hubs/attendance/negotiate responded 200 in 4.0070 ms
+2026-08-06 15:40:06.561 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 200 in 94.8996 ms
+2026-08-06 15:40:11.775 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:40:26.769 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:40:27.977 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 44.1722 ms
+2026-08-06 15:40:31.784 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:40:39.136 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 30.0372 ms
+2026-08-06 15:40:43.549 +03:00 [INF] HTTP GET /api/slots responded 200 in 33.6214 ms
+2026-08-06 15:40:46.789 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:40:51.774 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:41:06.804 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:41:11.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:41:13.740 +03:00 [INF] HTTP PUT /api/slots/1 responded 200 in 75.1024 ms
+2026-08-06 15:41:14.369 +03:00 [INF] HTTP GET /api/slots responded 200 in 5.1916 ms
+2026-08-06 15:41:26.767 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:41:31.775 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:41:33.483 +03:00 [ERR] HTTP PUT /api/slots/1 responded 500 in 2.8792 ms
+FluentValidation.ValidationException: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+   at Attendance.Application.Services.SlotConfigService.ValidateAsync(String slotName, TimeOnly startTime, TimeOnly endTime, Nullable`1 excludeSlotId) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 117
+   at Attendance.Application.Services.SlotConfigService.UpdateSlotAsync(Int32 slotId, UpdateSlotRequest request) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 41
+   at Attendance.Api.Controllers.SlotConfigController.Update(Int32 id, UpdateSlotRequest request) in C:\employer\src\Attendance.Api\Controllers\SlotConfigController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 15:41:33.500 +03:00 [WRN] Request fault 400 on PUT /api/slots/1: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+2026-08-06 15:41:40.192 +03:00 [ERR] HTTP PUT /api/slots/1 responded 500 in 1.4151 ms
+FluentValidation.ValidationException: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+   at Attendance.Application.Services.SlotConfigService.ValidateAsync(String slotName, TimeOnly startTime, TimeOnly endTime, Nullable`1 excludeSlotId) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 117
+   at Attendance.Application.Services.SlotConfigService.UpdateSlotAsync(Int32 slotId, UpdateSlotRequest request) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 41
+   at Attendance.Api.Controllers.SlotConfigController.Update(Int32 id, UpdateSlotRequest request) in C:\employer\src\Attendance.Api\Controllers\SlotConfigController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 15:41:40.199 +03:00 [WRN] Request fault 400 on PUT /api/slots/1: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+2026-08-06 15:41:46.768 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:41:51.767 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:42:06.777 +03:00 [INF] Expired 2 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:42:26.775 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:42:46.768 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:43:01.782 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:43:21.777 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:43:41.771 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:44:01.772 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:44:21.769 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:44:41.770 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:45:01.766 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:45:14.703 +03:00 [ERR] HTTP PUT /api/slots/2 responded 500 in 1.5410 ms
+FluentValidation.ValidationException: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+   at Attendance.Application.Services.SlotConfigService.ValidateAsync(String slotName, TimeOnly startTime, TimeOnly endTime, Nullable`1 excludeSlotId) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 117
+   at Attendance.Application.Services.SlotConfigService.UpdateSlotAsync(Int32 slotId, UpdateSlotRequest request) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 41
+   at Attendance.Api.Controllers.SlotConfigController.Update(Int32 id, UpdateSlotRequest request) in C:\employer\src\Attendance.Api\Controllers\SlotConfigController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 15:45:14.710 +03:00 [WRN] Request fault 400 on PUT /api/slots/2: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+2026-08-06 15:45:21.765 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:45:36.782 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:45:51.300 +03:00 [INF] HTTP PUT /api/slots/1 responded 200 in 9.4908 ms
+2026-08-06 15:45:51.946 +03:00 [INF] HTTP GET /api/slots responded 200 in 2.7118 ms
+2026-08-06 15:45:56.777 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:46:16.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:46:36.778 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:46:56.776 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:47:16.766 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:47:36.786 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:47:51.925 +03:00 [ERR] HTTP PUT /api/slots/2 responded 500 in 1.8642 ms
+FluentValidation.ValidationException: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+   at Attendance.Application.Services.SlotConfigService.ValidateAsync(String slotName, TimeOnly startTime, TimeOnly endTime, Nullable`1 excludeSlotId) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 117
+   at Attendance.Application.Services.SlotConfigService.UpdateSlotAsync(Int32 slotId, UpdateSlotRequest request) in C:\employer\src\Attendance.Application\Services\SlotConfigService.cs:line 41
+   at Attendance.Api.Controllers.SlotConfigController.Update(Int32 id, UpdateSlotRequest request) in C:\employer\src\Attendance.Api\Controllers\SlotConfigController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-06 15:47:51.931 +03:00 [WRN] Request fault 400 on PUT /api/slots/2: Validation failed: 
+ -- EndTime: EndTime must be after StartTime. Severity: Error
+2026-08-06 15:47:56.765 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:48:11.821 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 6.2608 ms
+2026-08-06 15:48:15.159 +03:00 [INF] HTTP GET /api/slots responded 200 in 3.1640 ms
+2026-08-06 15:48:16.778 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:48:36.764 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:48:56.769 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:49:16.770 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:49:36.771 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:49:56.775 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:50:16.778 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:50:36.767 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:50:56.773 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:51:16.764 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:51:31.775 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:51:51.773 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:52:11.778 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:52:31.769 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:52:51.768 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:53:11.774 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:53:31.768 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:53:46.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:54:06.764 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:54:21.776 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:54:41.768 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:55:01.777 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:55:21.770 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:55:27.814 +03:00 [INF] HTTP PUT /api/slots/3 responded 401 in 1.1255 ms
+2026-08-06 15:55:38.876 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 111.8042 ms
+2026-08-06 15:55:39.038 +03:00 [INF] HTTP GET /api/staff responded 200 in 6.4128 ms
+2026-08-06 15:55:41.764 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:55:42.570 +03:00 [INF] HTTP GET /api/slots responded 200 in 2.8119 ms
+2026-08-06 15:55:56.772 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:56:16.774 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:56:36.779 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:56:56.771 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:57:16.771 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:57:36.782 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:57:56.768 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:58:11.777 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:58:31.770 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:58:51.779 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:59:11.767 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:59:31.761 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 15:59:46.773 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:00:06.784 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:00:26.771 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:00:46.765 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:01:01.772 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:01:21.768 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:01:41.762 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:02:01.775 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:02:21.776 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:02:41.770 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:03:01.776 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:03:21.778 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:03:41.772 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:04:01.771 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:04:21.775 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:04:41.769 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:05:01.769 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:05:21.765 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:05:36.778 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:05:56.769 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:06:16.778 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:06:36.777 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:06:56.777 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:07:16.767 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:07:36.772 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:07:56.768 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:08:16.780 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:08:36.774 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:08:56.779 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:09:16.770 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:09:36.781 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:09:56.771 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:10:16.768 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:10:36.772 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:10:56.763 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:11:11.777 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:11:31.765 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:11:51.772 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:12:11.771 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:12:31.779 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:12:51.777 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:13:11.772 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:13:31.787 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:13:51.775 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:14:11.771 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:14:31.778 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:14:51.776 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:14:54.923 +03:00 [INF] HTTP PUT /api/slots/3 responded 401 in 0.8627 ms
+2026-08-06 16:15:06.796 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 122.0872 ms
+2026-08-06 16:15:06.932 +03:00 [INF] HTTP GET /api/staff responded 200 in 17.0483 ms
+2026-08-06 16:15:09.431 +03:00 [INF] HTTP GET /api/slots responded 200 in 4.2092 ms
+2026-08-06 16:15:11.765 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:15:21.666 +03:00 [INF] HTTP PUT /api/slots/3 responded 200 in 10.5148 ms
+2026-08-06 16:15:22.302 +03:00 [INF] HTTP GET /api/slots responded 200 in 2.8103 ms
+2026-08-06 16:15:31.771 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:15:51.772 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:16:04.856 +03:00 [INF] HTTP PUT /api/slots/2 responded 200 in 13.6931 ms
+2026-08-06 16:16:05.497 +03:00 [INF] HTTP GET /api/slots responded 200 in 2.6095 ms
+2026-08-06 16:16:11.776 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:16:31.777 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:16:51.779 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:17:11.767 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:17:31.775 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:17:51.779 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:18:11.781 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:18:31.772 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:18:51.771 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:18:54.145 +03:00 [INF] HTTP PUT /api/slots/2 responded 200 in 13.2086 ms
+2026-08-06 16:18:54.391 +03:00 [INF] HTTP GET /api/slots responded 200 in 2.3533 ms
+2026-08-06 16:19:11.803 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:19:31.763 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:19:51.774 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:20:11.773 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:20:31.771 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:20:51.768 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:21:07.777 +03:00 [INF] HTTP PUT /api/slots/2 responded 200 in 13.7204 ms
+2026-08-06 16:21:08.031 +03:00 [INF] HTTP GET /api/slots responded 200 in 4.5014 ms
+2026-08-06 16:21:11.790 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:21:31.776 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:21:51.764 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:22:11.779 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:22:31.768 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:22:51.774 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:23:11.771 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:23:31.769 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:23:46.777 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:24:06.774 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:24:26.782 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:24:46.771 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:25:06.777 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:25:26.776 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:25:27.512 +03:00 [INF] HTTP PUT /api/slots/3 responded 200 in 10.8259 ms
+2026-08-06 16:25:27.753 +03:00 [INF] HTTP GET /api/slots responded 200 in 2.5066 ms
+2026-08-06 16:25:46.773 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:26:06.767 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:26:09.638 +03:00 [INF] HTTP PUT /api/slots/3 responded 200 in 14.1940 ms
+2026-08-06 16:26:09.889 +03:00 [INF] HTTP GET /api/slots responded 200 in 2.8025 ms
+2026-08-06 16:26:26.781 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:26:46.777 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:27:06.773 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:27:26.773 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:27:32.534 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 13.3699 ms
+2026-08-06 16:27:46.794 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:28:06.770 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:28:26.769 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:28:46.773 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:31:22.783 +03:00 [WRN] The 'StaffStatus' property 'Status' on entity type 'Staff' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value 'Inactive', since this is the CLR default for the 'StaffStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2026-08-06 16:31:24.208 +03:00 [INF] Kiosk QR deep-link base: http://192.168.1.6:4200/scan — phones must be able to reach this host.
+2026-08-06 16:31:24.209 +03:00 [INF] Public Employee ID QR base URL: https://192.168.1.6:4200/employee-id — generated QR codes will resolve to this address.
+2026-08-06 16:31:24.226 +03:00 [INF] QR token expiry sweep started (interval 5s).
+2026-08-06 16:31:24.252 +03:00 [INF] Now listening on: http://0.0.0.0:5080
+2026-08-06 16:31:24.253 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-06 16:31:24.254 +03:00 [INF] Hosting environment: Development
+2026-08-06 16:31:24.255 +03:00 [INF] Content root path: C:\employer\src\Attendance.Api
+2026-08-06 16:31:29.457 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:31:42.114 +03:00 [INF] HTTP GET /api/reports/daily responded 401 in 128.1622 ms
+2026-08-06 16:31:49.262 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:32:04.255 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:32:05.290 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 265.8111 ms
+2026-08-06 16:32:05.517 +03:00 [INF] HTTP GET /api/staff responded 200 in 161.0170 ms
+2026-08-06 16:32:10.168 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 81.3973 ms
+2026-08-06 16:32:12.530 +03:00 [INF] HTTP GET /api/staff responded 200 in 8.1107 ms
+2026-08-06 16:32:24.251 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:32:25.170 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 6.2079 ms
+2026-08-06 16:32:26.504 +03:00 [INF] HTTP GET /api/slots responded 200 in 36.2264 ms
+2026-08-06 16:32:44.241 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:33:04.261 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:33:24.266 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:33:34.162 +03:00 [INF] HTTP GET /api/staff responded 200 in 18.8379 ms
+2026-08-06 16:33:37.570 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 8.7547 ms
+2026-08-06 16:33:41.684 +03:00 [INF] HTTP POST /hubs/attendance/negotiate responded 200 in 3.5674 ms
+2026-08-06 16:33:42.690 +03:00 [INF] HTTP POST /hubs/attendance/negotiate responded 200 in 0.9965 ms
+2026-08-06 16:33:44.256 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:33:56.156 +03:00 [INF] HTTP GET /api/slots responded 200 in 3.9478 ms
+2026-08-06 16:34:04.243 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:34:19.255 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:34:38.139 +03:00 [INF] HTTP PUT /api/slots/4 responded 200 in 76.7638 ms
+2026-08-06 16:34:38.770 +03:00 [INF] HTTP GET /api/slots responded 200 in 3.2316 ms
+2026-08-06 16:34:39.244 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:34:56.019 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 6.1006 ms
+2026-08-06 16:34:59.240 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:35:19.086 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 90.2239 ms
+2026-08-06 16:35:19.244 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:35:21.486 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 91.4322 ms
+2026-08-06 16:35:36.008 +03:00 [INF] QR scan attempt: StaffId=2 Token=e53b93fa… Outcome="TokenExpired" Ip=127.0.0.1
+2026-08-06 16:35:36.012 +03:00 [INF] HTTP POST /api/attendance/scan responded 410 in 48.1450 ms
+2026-08-06 16:35:39.239 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:35:43.032 +03:00 [INF] QR scan attempt: StaffId=2 Token=e53b93fa… Outcome="TokenExpired" Ip=127.0.0.1
+2026-08-06 16:35:43.035 +03:00 [INF] HTTP POST /api/attendance/scan responded 410 in 6.5480 ms
+2026-08-06 16:35:59.243 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:36:05.566 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 90.3865 ms
+2026-08-06 16:36:10.761 +03:00 [INF] QR scan attempt: StaffId=2 Token=1b2a9f4d… Outcome="Success" Ip=127.0.0.1
+2026-08-06 16:36:10.881 +03:00 [INF] HTTP POST /api/attendance/scan responded 200 in 132.0829 ms
+2026-08-06 16:36:22.709 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 5.2932 ms
+2026-08-06 16:36:29.244 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:36:36.119 +03:00 [INF] HTTP GET /api/reports/daily/export responded 200 in 1251.2685 ms
+2026-08-06 16:36:49.248 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:37:02.540 +03:00 [INF] HTTP GET /api/slots responded 200 in 3.1803 ms
+2026-08-06 16:37:07.938 +03:00 [INF] HTTP POST /hubs/attendance/negotiate responded 200 in 0.4500 ms
+2026-08-06 16:37:07.955 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 200 in 17.5822 ms
+2026-08-06 16:37:09.247 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:37:17.605 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 49.4769 ms
+2026-08-06 16:37:24.252 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:37:29.244 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:37:44.250 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:37:49.255 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:38:04.240 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:38:09.248 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:38:19.250 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:38:29.252 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:38:39.245 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:38:46.500 +03:00 [INF] HTTP GET /api/staff responded 200 in 5.2582 ms
+2026-08-06 16:38:49.145 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 4.9346 ms
+2026-08-06 16:38:49.243 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:38:53.605 +03:00 [INF] HTTP GET /api/staff responded 200 in 3.5184 ms
+2026-08-06 16:38:55.846 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 200 in 6.8940 ms
+2026-08-06 16:38:58.642 +03:00 [INF] HTTP GET /api/staff responded 200 in 3.9301 ms
+2026-08-06 16:38:59.239 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:39:09.256 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:39:19.241 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:39:29.241 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:39:39.244 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:39:49.243 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:39:59.243 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:40:09.236 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:40:19.236 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:40:29.246 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:40:39.241 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:40:49.245 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:40:59.249 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:41:09.236 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:41:19.254 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:41:29.235 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:41:39.234 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:41:44.244 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:41:54.245 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:42:04.239 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:42:14.237 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:42:24.244 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:42:34.251 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:42:44.242 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:42:54.244 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:43:04.241 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:43:14.248 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:43:19.247 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:43:34.247 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:43:35.603 +03:00 [INF] HTTP GET /api/departments responded 200 in 23.6403 ms
+2026-08-06 16:43:39.239 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:43:54.240 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:43:59.238 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:44:14.250 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:44:19.238 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:44:34.241 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:44:39.248 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:44:54.241 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:44:59.243 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:45:14.244 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:45:19.246 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:45:34.248 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:45:39.242 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:45:54.239 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:45:59.253 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:46:14.239 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:46:19.241 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:46:34.240 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:46:39.240 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:46:49.243 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:46:59.235 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:47:09.244 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:47:19.245 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:47:29.234 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:47:39.246 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:47:44.246 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:47:59.232 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:48:04.242 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:48:14.246 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:48:24.241 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:48:29.250 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:48:44.252 +03:00 [INF] Expired 2 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:48:45.654 +03:00 [INF] HTTP POST /api/staff responded 401 in 1.0181 ms
+2026-08-06 16:49:03.587 +03:00 [WRN] Failed login attempt for user 'admin' from 127.0.0.1.
+2026-08-06 16:49:03.588 +03:00 [INF] HTTP POST /api/auth/login responded 401 in 71.7853 ms
+2026-08-06 16:49:04.233 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:49:12.212 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 56.8340 ms
+2026-08-06 16:49:12.843 +03:00 [INF] HTTP GET /api/staff responded 200 in 2.3565 ms
+2026-08-06 16:49:16.391 +03:00 [INF] HTTP GET /api/departments responded 200 in 2.4696 ms
+2026-08-06 16:49:24.229 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:49:39.235 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:49:54.242 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:50:14.234 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:50:34.254 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:50:54.236 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:51:09.246 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:51:12.972 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-06 16:51:13.083 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-06 16:51:13.158 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-08-06 16:51:13.185 +03:00 [INF] HTTP POST /api/staff responded 201 in 306.2625 ms
+2026-08-06 16:51:13.222 +03:00 [INF] HTTP GET /api/staff/3 responded 200 in 21.6091 ms
+2026-08-06 16:51:13.845 +03:00 [INF] HTTP GET /staff-photos/EMP-0003/EMP-0003.png responded 200 in 6.1275 ms
+2026-08-06 16:51:13.849 +03:00 [INF] HTTP GET /api/staff/3/qrcode responded 200 in 10.7498 ms
+2026-08-06 16:51:29.237 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:51:44.244 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:51:46.094 +03:00 [INF] HTTP GET /api/staff/identify/EMP-0003 responded 200 in 20.0961 ms
+2026-08-06 16:51:46.259 +03:00 [INF] HTTP GET /staff-photos/EMP-0003/EMP-0003.png responded 200 in 4.9771 ms
+2026-08-06 16:52:04.244 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:52:24.245 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:52:44.235 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:52:59.240 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:53:19.240 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:53:39.236 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:53:59.235 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:54:19.232 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:54:34.244 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:54:40.622 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 55.5690 ms
+2026-08-06 16:54:47.709 +03:00 [INF] QR scan attempt: StaffId=3 Token=1a041976… Outcome="Success" Ip=127.0.0.1
+2026-08-06 16:54:47.713 +03:00 [INF] HTTP POST /api/attendance/scan responded 200 in 8.9115 ms
+2026-08-06 16:54:47.724 +03:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[SlotId], [a].[SlotName], [a].[StartTime], [a].[EndTime], [a].[GracePeriodMinutes], [a].[IsMandatory], [a].[IsActive]
+FROM [AttendanceSlotConfig] AS [a]
+WHERE [a].[IsActive] = CAST(1 AS bit)
+ORDER BY [a].[StartTime]
+2026-08-06 16:54:47.738 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Attendance.Infrastructure.Data.ApplicationDbContext'.
+System.InvalidOperationException: Invalid operation. The connection is closed.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: Invalid operation. The connection is closed.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-08-06 16:54:52.594 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 12.9194 ms
+2026-08-06 16:55:00.188 +03:00 [INF] HTTP GET /api/reports/daily/export responded 200 in 10.6910 ms
+2026-08-06 16:55:04.237 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:55:14.897 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 2.4289 ms
+2026-08-06 16:55:19.247 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:55:37.213 +03:00 [INF] HTTP GET /api/slots responded 200 in 2.9499 ms
+2026-08-06 16:55:39.239 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:55:41.206 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 2.1695 ms
+2026-08-06 16:55:59.237 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:56:14.244 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:56:28.113 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 2.6879 ms
+2026-08-06 16:56:34.236 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:56:43.304 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 2.3026 ms
+2026-08-06 16:56:46.062 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 2.3274 ms
+2026-08-06 16:56:49.276 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 2.3307 ms
+2026-08-06 16:56:52.139 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 2.0696 ms
+2026-08-06 16:56:54.241 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:56:57.628 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 2.4634 ms
+2026-08-06 16:57:04.970 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 2.4759 ms
+2026-08-06 16:57:11.000 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 2.1334 ms
+2026-08-06 16:57:14.233 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 16:57:26.635 +03:00 [INF] Application is shutting down...
+2026-08-06 16:57:26.648 +03:00 [INF] HTTP GET /hubs/attendance responded 101 in 1218088.8796 ms
+2026-08-06 16:57:26.648 +03:00 [INF] HTTP GET /hubs/attendance responded 101 in 1423322.9315 ms
+2026-08-06 16:57:26.649 +03:00 [INF] HTTP POST /hubs/attendance/negotiate responded 200 in 0.2038 ms

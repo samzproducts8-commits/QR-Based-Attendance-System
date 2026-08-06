@@ -24,7 +24,7 @@
       <th mat-header-cell *matHeaderCellDef>Per-Slot Counts</th>
       <td mat-cell *matCellDef="let s">
         <span *ngFor="let slot of s.slotSummaries" class="monthly-report__slot">
-          {{ slot.slotName }}: {{ slot.onTimeCount }} on-time / {{ slot.lateCount }} late / {{ slot.absentCount }} absent
+          {{ slot.slotName }}: {{ slot.onTimeCount }} on-time / {{ slot.lateCount }} late / {{ slot.excusedAbsentCount }} excused / {{ slot.unexcusedAbsentCount }} unexcused
         </span>
       </td>
     </ng-container>

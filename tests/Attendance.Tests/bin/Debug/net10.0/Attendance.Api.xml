@@ -187,6 +187,12 @@
             <see cref="T:Attendance.Application.Interfaces.IStaffService"/>.
             </summary>
         </member>
+        <member name="M:Attendance.Api.Controllers.StaffController.BuildEmployeeIdBaseUrl(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructs the absolute base URL for public Employee ID QR codes.
+            Guarantees full absolute URL format (e.g., https://192.168.1.30:4200/employee-id).
+            </summary>
+        </member>
         <member name="M:Attendance.Api.Controllers.StaffController.Create(Attendance.Application.DTOs.CreateStaffRequest,Microsoft.AspNetCore.Http.IFormFile)">
             <summary>
             Registers a new staff member with a mandatory PNG profile photo
@@ -220,6 +226,25 @@
         </member>
         <member name="M:Attendance.Api.Controllers.StaffController.GetAll(Attendance.Application.DTOs.StaffFilterRequest)">
             <summary>Returns a paginated, filterable staff list.</summary>
+        </member>
+        <member name="M:Attendance.Api.Controllers.StaffController.GetQrCode(System.Int32)">
+            <summary>
+            Returns a base64-encoded PNG QR code image for the given staff member.
+            The QR encodes a URL to the public employee identification page.
+            This QR is static — it never rotates, expires, or changes.
+            </summary>
+            <response code="200">The QR code base64 string.</response>
+            <response code="404">No staff member with the given id exists.</response>
+        </member>
+        <member name="M:Attendance.Api.Controllers.StaffController.GetIdentityCard(System.String)">
+            <summary>
+            Public endpoint: returns employee identification data for the staff
+            member with the given unique code. No authentication required.
+            Intended to be opened when an employee QR code is scanned.
+            This endpoint does NOT create, update, or affect any attendance records.
+            </summary>
+            <response code="200">The employee identity card data.</response>
+            <response code="404">No employee found with the given code.</response>
         </member>
         <member name="T:Attendance.Api.Hubs.AttendanceHub">
             <summary>

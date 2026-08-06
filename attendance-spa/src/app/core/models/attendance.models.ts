@@ -44,7 +44,8 @@ export interface SlotMonthlySummary {
   slotName: string;
   onTimeCount: number;
   lateCount: number;
-  absentCount: number;
+  excusedAbsentCount: number;
+  unexcusedAbsentCount: number;
 }
 
 export interface StaffMonthlySummary {
@@ -88,6 +89,7 @@ export interface StaffPayrollSummary {
   totalHours: number;
   overtimeHours: number;
   latePenalties: number;
+  excusedAbsences: number;
   unpaidAbsences: number;
 }
 
@@ -99,6 +101,7 @@ export interface MonthlyPayrollSummary {
   totalHoursWorked: number;
   totalOvertimeHours: number;
   totalLatePenalties: number;
+  totalExcusedAbsences: number;
   totalUnpaidAbsences: number;
   staffSummaries: StaffPayrollSummary[];
 }
