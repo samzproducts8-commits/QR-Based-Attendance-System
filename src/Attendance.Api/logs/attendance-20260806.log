@@ -1,0 +1,342 @@
+2026-08-06 11:09:19.318 +03:00 [WRN] The 'StaffStatus' property 'Status' on entity type 'Staff' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value 'Inactive', since this is the CLR default for the 'StaffStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2026-08-06 11:09:21.272 +03:00 [INF] Kiosk QR deep-link base: http://192.168.1.19:4200/scan — phones must be able to reach this host.
+2026-08-06 11:09:21.274 +03:00 [INF] Public Employee ID QR base URL: https://192.168.1.19:4200/employee-id — generated QR codes will resolve to this address.
+2026-08-06 11:09:21.320 +03:00 [INF] QR token expiry sweep started (interval 5s).
+2026-08-06 11:09:21.387 +03:00 [INF] Now listening on: http://0.0.0.0:5080
+2026-08-06 11:09:21.388 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-06 11:09:21.389 +03:00 [INF] Hosting environment: Development
+2026-08-06 11:09:21.390 +03:00 [INF] Content root path: C:\employer\src\Attendance.Api
+2026-08-06 11:09:26.551 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:09:46.341 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:10:01.346 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:10:21.342 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:10:41.334 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:11:01.361 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:11:21.356 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:11:41.335 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:11:59.498 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 423.5678 ms
+2026-08-06 11:11:59.841 +03:00 [INF] HTTP GET /api/staff responded 200 in 251.6345 ms
+2026-08-06 11:12:01.331 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:12:21.339 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:12:41.331 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:12:56.347 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:13:16.340 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:13:26.329 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 97.3801 ms
+2026-08-06 11:13:32.690 +03:00 [INF] HTTP GET /api/slots responded 200 in 47.3277 ms
+2026-08-06 11:13:36.330 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:13:39.259 +03:00 [INF] HTTP POST /hubs/attendance/negotiate responded 200 in 7.3629 ms
+2026-08-06 11:13:39.294 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 200 in 41.9686 ms
+2026-08-06 11:13:46.391 +03:00 [INF] HTTP GET /api/staff responded 200 in 8.6527 ms
+2026-08-06 11:13:48.042 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 6.8262 ms
+2026-08-06 11:13:51.342 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:13:59.352 +03:00 [INF] HTTP GET /api/reports/payroll/export responded 200 in 4237.4710 ms
+2026-08-06 11:14:11.338 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:14:31.338 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:14:51.328 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:15:06.337 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:15:26.341 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:15:46.334 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:16:06.328 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:16:26.329 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:16:41.344 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:17:01.337 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:17:21.329 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:17:36.341 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:17:56.338 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:18:16.338 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:18:36.338 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:18:39.490 +03:00 [INF] HTTP GET /api/reports/payroll/export responded 200 in 18.6302 ms
+2026-08-06 11:18:49.977 +03:00 [INF] HTTP GET /api/reports/payroll/export responded 200 in 7.5775 ms
+2026-08-06 11:18:56.344 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:19:11.345 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:19:31.344 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:19:51.343 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:20:11.345 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:20:31.332 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:20:46.342 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:21:06.332 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:21:26.334 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:21:41.344 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:22:01.341 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:22:21.347 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:22:41.345 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:23:01.342 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:23:21.342 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:23:41.339 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:24:01.335 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:24:21.341 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:24:41.330 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:24:47.771 +03:00 [INF] HTTP GET /api/slots responded 200 in 4.7215 ms
+2026-08-06 11:24:50.941 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 25.5635 ms
+2026-08-06 11:25:01.339 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:25:13.208 +03:00 [INF] HTTP PUT /api/reports/absence-reason responded 204 in 132.3302 ms
+2026-08-06 11:25:13.355 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 5.4334 ms
+2026-08-06 11:25:19.754 +03:00 [INF] HTTP GET /api/staff responded 200 in 22.1075 ms
+2026-08-06 11:25:21.332 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:25:23.394 +03:00 [INF] HTTP GET /api/slots responded 200 in 5.4943 ms
+2026-08-06 11:25:26.975 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 5.1774 ms
+2026-08-06 11:25:34.639 +03:00 [INF] HTTP GET /api/reports/daily/export responded 200 in 639.5756 ms
+2026-08-06 11:25:37.804 +03:00 [INF] HTTP GET /api/reports/daily/export responded 200 in 22.5351 ms
+2026-08-06 11:25:41.331 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:26:01.333 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:26:13.390 +03:00 [INF] HTTP GET /api/reports/daily/export responded 200 in 12.8924 ms
+2026-08-06 11:26:21.335 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:26:28.139 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 4.1897 ms
+2026-08-06 11:26:37.989 +03:00 [INF] HTTP GET /api/reports/payroll/export responded 200 in 10.6436 ms
+2026-08-06 11:26:41.337 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:27:01.336 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:27:21.339 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:27:41.337 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:28:01.330 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:28:02.610 +03:00 [INF] HTTP GET /api/reports/daily responded 401 in 11.5654 ms
+2026-08-06 11:28:16.342 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:28:18.981 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 103.8064 ms
+2026-08-06 11:28:19.134 +03:00 [INF] HTTP GET /api/staff responded 200 in 4.1707 ms
+2026-08-06 11:28:24.819 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 4.4806 ms
+2026-08-06 11:28:36.334 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:28:38.390 +03:00 [INF] HTTP GET /api/reports/daily/export responded 200 in 9.7306 ms
+2026-08-06 11:28:56.325 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:29:11.334 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:29:31.342 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:29:40.887 +03:00 [INF] HTTP GET /api/reports/daily/export responded 200 in 17.2410 ms
+2026-08-06 11:29:46.012 +03:00 [INF] HTTP GET /api/reports/daily/export responded 200 in 38.0578 ms
+2026-08-06 11:29:51.332 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:30:11.330 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:30:31.341 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:30:51.330 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:31:06.344 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:31:26.329 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:31:41.338 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:32:01.331 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:32:21.329 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:32:41.328 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:33:01.330 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:33:21.330 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:33:36.338 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:33:56.335 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:34:16.341 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:34:36.334 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:34:56.330 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:35:16.323 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:35:31.335 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:35:51.328 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:36:11.334 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:36:26.345 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:36:46.335 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:36:51.293 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 4.6449 ms
+2026-08-06 11:37:06.343 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:37:26.337 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:37:46.340 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:38:06.329 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:38:21.340 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:38:41.342 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:39:01.343 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:39:21.329 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:39:41.338 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:40:01.331 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:40:16.338 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:40:36.340 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:40:56.340 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:41:16.339 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:41:36.332 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:41:56.331 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:42:16.330 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:42:36.334 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:42:56.329 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:43:11.338 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:43:31.338 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:43:51.342 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:44:11.330 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:44:31.327 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:44:51.342 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:45:11.342 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:45:31.331 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:45:51.336 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:46:11.349 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:46:31.336 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:46:51.339 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:47:11.342 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:47:31.330 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:47:46.335 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:48:06.335 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:48:26.333 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:48:41.341 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:49:01.339 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:49:21.335 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:49:41.341 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:50:01.342 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:50:21.340 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:50:41.336 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:51:01.339 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:51:21.337 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:51:41.338 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:52:01.332 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:52:21.341 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:52:41.344 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:53:01.330 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:53:16.337 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:53:36.347 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:53:56.340 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:54:16.333 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:54:36.330 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:54:56.349 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:55:16.338 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:55:36.336 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:55:56.338 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:56:16.336 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:56:36.328 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:56:56.355 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:57:16.340 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:57:36.342 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:57:56.332 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:58:16.360 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:58:22.247 +03:00 [INF] HTTP GET /hubs/attendance responded 101 in 2682358.2678 ms
+2026-08-06 11:58:22.695 +03:00 [INF] HTTP GET /api/reports/payroll responded 401 in 1.2928 ms
+2026-08-06 11:58:36.337 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:58:37.820 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 124.3386 ms
+2026-08-06 11:58:37.994 +03:00 [INF] HTTP GET /api/staff responded 200 in 13.0849 ms
+2026-08-06 11:58:40.750 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 14.3222 ms
+2026-08-06 11:58:56.345 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:59:09.434 +03:00 [INF] HTTP PUT /api/reports/absence-reason responded 204 in 32.7254 ms
+2026-08-06 11:59:09.450 +03:00 [ERR] Failed executing DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StaffId], [s].[UniqueCode], [s].[FullName], [s].[DepartmentId], [d].[DepartmentName]
+FROM [Staff] AS [s]
+INNER JOIN [Department] AS [d] ON [s].[DepartmentId] = [d].[DepartmentId]
+WHERE [s].[Status] = CAST(1 AS tinyint)
+ORDER BY [s].[UniqueCode]
+2026-08-06 11:59:09.471 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Attendance.Infrastructure.Data.ApplicationDbContext'.
+System.InvalidOperationException: Invalid operation. The connection is closed.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: Invalid operation. The connection is closed.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-08-06 11:59:10.171 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 92.8231 ms
+2026-08-06 11:59:12.785 +03:00 [INF] HTTP GET /api/reports/daily/export responded 200 in 12.8149 ms
+2026-08-06 11:59:16.356 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:59:36.341 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 11:59:53.458 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 14.4053 ms
+2026-08-06 11:59:56.335 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:00:16.326 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:00:31.344 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:00:37.183 +03:00 [INF] HTTP GET /api/reports/daily/export responded 200 in 21.3406 ms
+2026-08-06 12:00:42.500 +03:00 [INF] HTTP GET /api/reports/daily/export responded 200 in 30.5413 ms
+2026-08-06 12:00:51.334 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:01:11.329 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:01:26.351 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:01:38.181 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 10.4582 ms
+2026-08-06 12:01:43.969 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 4.6551 ms
+2026-08-06 12:01:46.341 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:02:06.347 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:02:25.755 +03:00 [INF] Application is shutting down...
+2026-08-06 12:02:42.742 +03:00 [WRN] The 'StaffStatus' property 'Status' on entity type 'Staff' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value 'Inactive', since this is the CLR default for the 'StaffStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2026-08-06 12:02:43.507 +03:00 [INF] Kiosk QR deep-link base: http://192.168.1.19:4200/scan — phones must be able to reach this host.
+2026-08-06 12:02:43.509 +03:00 [INF] Public Employee ID QR base URL: https://192.168.1.19:4200/employee-id — generated QR codes will resolve to this address.
+2026-08-06 12:02:43.529 +03:00 [INF] QR token expiry sweep started (interval 5s).
+2026-08-06 12:02:43.560 +03:00 [INF] Now listening on: http://0.0.0.0:5080
+2026-08-06 12:02:43.561 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-06 12:02:43.562 +03:00 [INF] Hosting environment: Development
+2026-08-06 12:02:43.562 +03:00 [INF] Content root path: C:\employer\src\Attendance.Api
+2026-08-06 12:02:48.731 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:03:08.565 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:03:13.047 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 346.9544 ms
+2026-08-06 12:03:20.809 +03:00 [INF] HTTP GET /api/reports/daily/export responded 200 in 1453.8565 ms
+2026-08-06 12:03:28.560 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:03:48.550 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:03:58.961 +03:00 [INF] Application is shutting down...
+2026-08-06 12:04:46.854 +03:00 [WRN] The 'StaffStatus' property 'Status' on entity type 'Staff' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value 'Inactive', since this is the CLR default for the 'StaffStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2026-08-06 12:04:47.548 +03:00 [INF] Kiosk QR deep-link base: http://192.168.1.19:4200/scan — phones must be able to reach this host.
+2026-08-06 12:04:47.549 +03:00 [INF] Public Employee ID QR base URL: https://192.168.1.19:4200/employee-id — generated QR codes will resolve to this address.
+2026-08-06 12:04:47.568 +03:00 [INF] QR token expiry sweep started (interval 5s).
+2026-08-06 12:04:47.594 +03:00 [INF] Now listening on: http://0.0.0.0:5080
+2026-08-06 12:04:47.594 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-06 12:04:47.595 +03:00 [INF] Hosting environment: Development
+2026-08-06 12:04:47.595 +03:00 [INF] Content root path: C:\employer\src\Attendance.Api
+2026-08-06 12:04:52.778 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:05:03.253 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 358.4630 ms
+2026-08-06 12:05:07.712 +03:00 [INF] HTTP POST /hubs/attendance/negotiate responded 200 in 7.3997 ms
+2026-08-06 12:05:08.384 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 200 in 47.7734 ms
+2026-08-06 12:05:09.433 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 10.7062 ms
+2026-08-06 12:05:12.597 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:05:15.717 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 200 in 7.4540 ms
+2026-08-06 12:05:16.517 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 5.9205 ms
+2026-08-06 12:05:21.849 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 200 in 7.2889 ms
+2026-08-06 12:05:27.584 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:05:30.025 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 56.9061 ms
+2026-08-06 12:05:32.587 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:05:47.608 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:05:52.622 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:05:54.233 +03:00 [INF] HTTP GET /api/slots responded 200 in 38.9845 ms
+2026-08-06 12:06:07.584 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:06:12.585 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:06:27.585 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:06:32.591 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:06:47.604 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:06:52.582 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:07:07.588 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:07:12.583 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:07:27.586 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:07:32.590 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:07:39.858 +03:00 [INF] HTTP GET /api/reports/payroll responded 200 in 13.5686 ms
+2026-08-06 12:07:41.472 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 200 in 6.4162 ms
+2026-08-06 12:07:47.582 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:07:48.149 +03:00 [INF] HTTP GET /api/reports/daily responded 200 in 3.8330 ms
+2026-08-06 12:07:51.672 +03:00 [INF] HTTP GET /api/reports/live-dashboard responded 200 in 6.5584 ms
+2026-08-06 12:07:52.580 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:08:07.590 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:08:12.577 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:08:27.584 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:08:32.582 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:08:47.575 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:08:52.591 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:09:07.596 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:09:12.596 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:09:27.583 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:09:32.585 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:09:42.595 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:09:52.578 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:10:02.596 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:10:12.588 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:10:17.593 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:10:32.580 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:10:37.582 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:10:47.590 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:10:57.591 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:11:07.582 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:11:17.581 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:11:22.600 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:11:37.587 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:11:42.577 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:11:57.584 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:12:02.575 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:12:17.590 +03:00 [INF] Expired 2 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:12:37.582 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:12:52.590 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:13:12.588 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:13:32.588 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:13:52.595 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:14:12.592 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:14:32.590 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:14:52.587 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:15:07.593 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:15:27.578 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:15:42.595 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-06 12:16:02.587 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.

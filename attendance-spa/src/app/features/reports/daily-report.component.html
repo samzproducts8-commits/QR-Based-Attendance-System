@@ -39,10 +39,7 @@
           <div class="daily-report__chips">
             <div *ngFor="let entry of sheet.entries" class="daily-report__chip-wrap">
               <span [class]="badgeClass(entry.statusLabel)">
-                {{ entry.slotName }}: {{ entry.statusLabel }}
-                <span *ngIf="entry.absenceReason" class="daily-report__reason-text">
-                  ({{ entry.absenceReason }})
-                </span>
+                {{ entry.slotName }}: {{ entry.absenceReason || entry.statusLabel }}
               </span>
               <button
                 *ngIf="entry.statusLabel === 'Absent'"

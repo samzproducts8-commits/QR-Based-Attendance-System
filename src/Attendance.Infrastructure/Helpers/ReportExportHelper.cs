@@ -42,11 +42,21 @@ public sealed class ReportExportHelper : IReportExporter
             foreach (string slotName in slotNames)
             {
                 DailySlotEntry? entry = sheet.Entries.FirstOrDefault(e => e.SlotName == slotName);
-                row.Add(entry is null
-                    ? "-"
-                    : entry.EventTimestamp is null
-                        ? entry.StatusLabel
-                        : $"{entry.EventTimestamp:HH:mm} ({entry.StatusLabel})");
+                if (entry is null)
+                {
+                    row.Add("-");
+                }
+                else if (entry.EventTimestamp is not null)
+                {
+                    row.Add($"{entry.EventTimestamp:HH:mm} ({entry.StatusLabel})");
+                }
+                else
+                {
+                    // Use admin-provided absence reason when available; fall back to status label
+                    row.Add(!string.IsNullOrWhiteSpace(entry.AbsenceReason)
+                        ? entry.AbsenceReason
+                        : entry.StatusLabel);
+                }
             }
             return row;
         }).ToList();
