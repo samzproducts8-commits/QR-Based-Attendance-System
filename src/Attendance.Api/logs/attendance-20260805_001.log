@@ -1032,3 +1032,5 @@ System.OperationCanceledException: The operation was canceled.
 2026-08-05 16:41:18.719 +03:00 [INF] HTTP GET /hubs/attendance responded 101 in 841849.3463 ms
 2026-08-05 16:41:35.006 +03:00 [INF] HTTP POST /hubs/attendance/negotiate responded 200 in 0.8989 ms
 2026-08-05 16:41:36.580 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-05 16:41:51.588 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
+2026-08-05 16:41:56.587 +03:00 [INF] Expired 1 stale QR token(s); a replacement was pushed to the kiosk.
